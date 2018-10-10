@@ -230,6 +230,7 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
  '(package-selected-packages
    (quote
     (yasnippet-snippets yaml-mode smarty-mode powerline nlinum-hl nlinum monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter geben flymd flycheck-color-mode-line flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
+ '(powerline-default-separator (quote arrow-fade))
  '(powerline-gui-use-vcs-glyph t)
  '(size-indication-mode nil))
 
@@ -238,7 +239,10 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
  '(mode-line ((t ("#49483E" nil "#F8F8F0" :background :box nil))))
  '(mode-line-buffer-id ((t (:foreground "white smoke" :weight bold))))
  '(mode-line-inactive ((t ("#000000" nil "#75715E" :background :box nil))))
- '(nlinum-current-line ((t (:foreground "yellow green" :weight bold)))))
+ '(nlinum-current-line ((t (:foreground "turquoise2" :weight bold))))
+ '(powerline-active0 ((t (:background "turquoise4"))))
+ '(powerline-active1 ((t (:background "turquoise3" :foreground "gray10" :weight bold))))
+ '(powerline-active2 ((t (:background "black" :foreground "white smoke")))))
 
 (load-theme 'monokai t)
 (provide 'init)
