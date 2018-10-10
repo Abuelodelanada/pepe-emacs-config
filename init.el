@@ -20,9 +20,6 @@
 (global-highlight-parentheses-mode t)
 (set-frame-font "Ubuntu Mono derivative Powerline 11")
 (powerline-default-theme)
-(defvar monokai-background)
-(setq monokai-background "#000000")
-(load-theme 'monokai t)
 (set-cursor-color "#d2ff27")
 (setq-default kill-read-only-ok t)
 (put 'upcase-region 'disabled nil)
@@ -229,6 +226,7 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
   )
 
 (custom-set-variables
+ '(monokai-background "#000000")
  '(nlinum-highlight-current-line t)
  '(package-selected-packages
    (quote
@@ -237,5 +235,6 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 (custom-set-faces
  '(nlinum-current-line ((t (:foreground "yellow green" :weight bold)))))
 
+(load-theme 'monokai t)
 (provide 'init)
 ;;; init.el ends here
