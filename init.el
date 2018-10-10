@@ -38,13 +38,13 @@
                              yas-ido-prompt
                              yas-completing-prompt))
 
+(eval-after-load "flycheck"
+  '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
 (defvar path-to-ctags)
 (setq path-to-ctags "/usr/bin/ctags") ;; <- your ctags path here
 (put 'downcase-region 'disabled nil)
 (set-default 'case-fold-search nil) ; Case sensitive TAGS search
 (global-diff-hl-mode)
-(defvar flycheck-highlighting-mode)
-(setq flycheck-highlighting-mode 'lines)
 (autoload 'adoc-mode "adoc-mode" nil t) ; adoc-mode
 (autoload 'geben "geben" "DBGp protocol frontend, a script debugger" t) ; Geben
 (autoload 'markdown-mode "markdown-mode"
@@ -70,9 +70,6 @@
 (add-hook 'php-mode-hook 'php-enable-psr2-coding-style)
 (add-hook 'js2-mode-hook 'jquery-doc-setup)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
-(add-hook 'after-init-hook #'global-flycheck-mode)
-(eval-after-load "flycheck"
-  '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
 
 ;; Shortcuts
 (global-set-key (kbd "C-l") 'goto-line)
@@ -226,6 +223,8 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
   )
 
 (custom-set-variables
+ '(flycheck-highlighting-mode (quote lines))
+ '(global-flycheck-mode t)
  '(monokai-background "#000000")
  '(nlinum-highlight-current-line t)
  '(package-selected-packages
