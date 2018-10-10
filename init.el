@@ -18,7 +18,7 @@
 (global-nlinum-mode 1) ;; Show line-number
 (global-auto-complete-mode t) ;; Enable auto-complete
 (global-highlight-parentheses-mode t)
-(set-frame-font "Ubuntu Mono derivative Powerline 11")
+(set-frame-font "Ubuntu Mono 11")
 (powerline-default-theme)
 (set-cursor-color "#d2ff27")
 (setq-default kill-read-only-ok t)
