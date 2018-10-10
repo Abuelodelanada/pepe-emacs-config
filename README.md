@@ -1,2 +1,2 @@
 # pepe-emacs-config
-My personal emacs config
+This is my personal emacs config
