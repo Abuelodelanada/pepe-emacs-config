@@ -242,7 +242,7 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
  '(nlinum-current-line ((t (:foreground "turquoise2" :weight bold))))
  '(powerline-active0 ((t (:background "turquoise4"))))
  '(powerline-active1 ((t (:background "turquoise3" :foreground "gray10" :weight bold))))
- '(powerline-active2 ((t (:background "black" :foreground "white smoke")))))
+ '(powerline-active2 ((t (:background "black" :foreground "turquoise1")))))
 
 (load-theme 'monokai t)
 (provide 'init)
