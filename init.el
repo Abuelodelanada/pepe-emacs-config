@@ -229,7 +229,8 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
  '(nlinum-highlight-current-line t)
  '(package-selected-packages
    (quote
-    (yasnippet-snippets yaml-mode smarty-mode powerline nlinum-hl nlinum monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter geben flymd flycheck-color-mode-line flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag))))
+    (yasnippet-snippets yaml-mode smarty-mode powerline nlinum-hl nlinum monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter geben flymd flycheck-color-mode-line flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
+ '(powerline-gui-use-vcs-glyph t))
 
 (custom-set-faces
  '(flycheck-color-mode-line-error-face ((t (:foreground "red2" :weight bold))))
