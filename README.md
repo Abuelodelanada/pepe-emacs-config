@@ -29,7 +29,7 @@ This emacs config have some useful modules:
 
 1. Install the required dependencies:
 ```shell
-$ sudo apt-get install emacs exuberant-ctags git silversearcher-ag
+$ sudo apt-get install emacs exuberant-ctags git silversearcher-ag pylint pep8
 ```
 
 2. Download the init.el and init-packages.el files and place it in your ~/.emacs.d folder.

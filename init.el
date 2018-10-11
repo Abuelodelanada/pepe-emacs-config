@@ -41,6 +41,9 @@
 
 (eval-after-load "flycheck"
   '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
+(global-flycheck-mode 1)
+(with-eval-after-load 'flycheck
+  (add-hook 'flycheck-mode-hook #'flycheck-pycheckers-setup))
 (defvar path-to-ctags)
 (setq path-to-ctags "/usr/bin/ctags") ;; <- your ctags path here
 (put 'downcase-region 'disabled nil)
@@ -225,6 +228,7 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 
 (custom-set-variables
  '(flycheck-highlighting-mode (quote lines))
+ '(flycheck-pycheckers-checkers (quote (pylint pep8)))
  '(global-flycheck-mode t)
  '(monokai-background "#000000")
  '(nlinum-highlight-current-line t)
