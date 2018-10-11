@@ -19,7 +19,7 @@ This emacs config have some useful modules:
 * yasnippet
 * ...
 
-[gif]: https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.gif "pepe-emacs-config"
+![pepe-emacs-config](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.gif "pepe-emacs-config")
 
 ## Install | Upgrade
 
