@@ -1,6 +1,6 @@
 # pepe-emacs-config
 
-Inspired by the great Juan Pedro Fisanotti and it's wonderful [fisa-vim-config](https://github.com/fisadev/fisa-vim-config), I share my EMACS config.
+Inspired by the great Juan Pedro Fisanotti and his wonderful [fisa-vim-config](https://github.com/fisadev/fisa-vim-config), I share my EMACS config.
 This is my personal Emacs configuration, built according to my personal preferences, without any justification to think it's the best possible emacs configuration. If you like it, great! :) It's mainly oriented to PHP software development, but many of its features are useful for other languages and editing tasks.
 
 This emacs config have some useful modules:
