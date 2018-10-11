@@ -76,8 +76,6 @@
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 
 ;; Shortcuts
-(global-set-key (kbd "C-g") 'dumb-jump-go)
-(global-set-key (kbd "C-p") 'dumb-jump-back)
 (global-set-key (kbd "C-l") 'goto-line)
 (global-set-key (kbd "M-<down>") 'enlarge-window)
 (global-set-key (kbd "M-<up>") 'shrink-window)
