@@ -107,13 +107,18 @@
 
 ;; Functions
 (defun get-point (symbol &optional arg)
-  "Get the point"
+  "Get the point.
+SYMBOL.
+ARG."
   (funcall symbol arg)
   (point)
   )
 
 (defun copy-thing (begin-of-thing end-of-thing &optional arg)
-  "Copy thing between beg & end into kill ring"
+  "Copy thing between beg & end into kill ring.
+BEGIN-OF-THING.
+END-OF-THING.
+ARG."
   (save-excursion
     (let ((beg (get-point begin-of-thing 1))
 	  (end (get-point end-of-thing arg)))
@@ -135,7 +140,8 @@
     ))
 
 (defun copy-word (&optional arg)
-  "Copy words at point into kill-ring"
+  "Copy words at point into ‘kill-ring’.
+ARG."
   (interactive "P")
   (copy-thing 'backward-word 'forward-word arg)
   (message "Copying word at point into kill-ring...")
@@ -143,6 +149,7 @@
   )
 
 (defun duplicate-current-line ()
+  "Duplicate the current line."
   (interactive)
   (beginning-of-line nil)
   (let ((b (point)))
@@ -155,7 +162,7 @@
 
 
 (defun edit-current-file-as-root ()
-  "Edit the file that is associated with the current buffer as root"
+  "Edit the file that is associated with the current buffer as root."
   (interactive)
   (let ((filep (buffer-file-name)))
     (kill-buffer (current-buffer))
@@ -164,33 +171,38 @@
 
 ; ctags
 (defun crear-tags (dir-name)
-  "Create tags file."
+  "Create tags file.
+DIR-NAME."
   (interactive "DDirectory: ")
   (shell-command
    (format "%s -f %s/TAGS -R --languages='php' --exclude='cache' %s" path-to-ctags dir-name (directory-file-name dir-name)))
 )
 
 (defun match-paren (arg)
-  "Go to the matching paren if on a paren; otherwise insert %."
+  "Go to the matching paren if on a paren; otherwise insert %.
+ARG."
   (interactive "p")
   (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
         ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
         (t (self-insert-command (or arg 1)))))
 
 (defun copy-line (&optional arg)
-  "Do a kill-line but copy rather than kill.  This function directly calls
-kill-line, so see documentation of kill-line for how to use it including prefix
+"Do a ‘kill-line’ but copy rather than kill.
+This function directly calls ‘kill-line’, so see documentation of ‘kill-line’
+for how to use it including prefix
 argument and relevant variables.  This function works by temporarily making the
-buffer read-only, so I suggest setting kill-read-only-ok to t."
+buffer read-only, so I suggest setting ‘kill-read-only-ok’ to t.
+ARG."
   (interactive "P")
-  (toggle-read-only 1)
+  (read-only-mode 1)
   (kill-line arg)
-  (toggle-read-only 0))
+  (read-only-mode 0))
 
 
 ;; iedit
 (defun iedit-dwim (arg)
-  "Starts iedit but uses \\[narrow-to-defun] to limit its scope."
+  "Start iedit but use \\[narrow-to-defun] to limit its scope.
+ARG."
   (interactive "P")
   (if arg
       (iedit-mode)
@@ -220,6 +232,7 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 
 ; xml-format
 (defun xml-format ()
+  "Xml-format."
   (interactive)
   (save-excursion
     (shell-command-on-region (mark) (point) "xmllint --format -" (buffer-name) t)
