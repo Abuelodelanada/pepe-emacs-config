@@ -40,7 +40,7 @@ $ sudo apt-get install emacs exuberant-ctags git silversearcher-ag
 ## Shortcuts
 
 * "%":  go to match paren
-* "<F12>": toggle menu bar mode
+* "F12": toggle menu bar mode
 * "C-;": activate iedit-dwim
 * "C-c C-k": copy line
 * "C-c C-w": copy word
@@ -50,11 +50,11 @@ $ sudo apt-get install emacs exuberant-ctags git silversearcher-ag
 * "C-d":  duplicate current line
 * "C-l": go to line
 * "C-t": create ctags
-* "M-<down>" : enlarge window
-* "M-<left>": enlarge window horizontally
-* "M-<right>": shrink window horizontally
-* "M-<up>": shrink window
-* "S-<down>": windmove down
-* "S-<left>": 'windmove left
-* "S-<right>": windmove right
-* "S-<up>": windmove up
+* "M-down" : enlarge window
+* "M-left": enlarge window horizontally
+* "M-right": shrink window horizontally
+* "M-up": shrink window
+* "S-down": windmove down
+* "S-left": 'windmove left
+* "S-right": windmove right
+* "S-up": windmove up
