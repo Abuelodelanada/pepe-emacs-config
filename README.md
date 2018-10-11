@@ -19,7 +19,7 @@ This emacs config have some useful modules:
 * yasnippet
 * ...
 
-(https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.gif)
+[gif]: https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.gif "pepe-emacs-config"
 
 ## Install | Upgrade
 
@@ -39,22 +39,22 @@ $ sudo apt-get install emacs exuberant-ctags git silversearcher-ag
 
 ## Shortcuts
 
-"%":  go to match paren
-"<F12>": toggle menu bar mode
-"C-;": activate iedit-dwim
-"C-c C-k": copy line
-"C-c C-w": copy word
-"C-c C-z":  term stop subjob
-"C-c c":  comment region
-"C-c u": uncomment region
-"C-d":  duplicate current line
-"C-l": go to line
-"C-t": create ctags
-"M-<down>" : enlarge window
-"M-<left>": enlarge window horizontally
-"M-<right>": shrink window horizontally
-"M-<up>": shrink window
-"S-<down>": windmove down
-"S-<left>": 'windmove left
-"S-<right>": windmove right
-"S-<up>": windmove up
+* "%":  go to match paren
+* "<F12>": toggle menu bar mode
+* "C-;": activate iedit-dwim
+* "C-c C-k": copy line
+* "C-c C-w": copy word
+* "C-c C-z":  term stop subjob
+* "C-c c":  comment region
+* "C-c u": uncomment region
+* "C-d":  duplicate current line
+* "C-l": go to line
+* "C-t": create ctags
+* "M-<down>" : enlarge window
+* "M-<left>": enlarge window horizontally
+* "M-<right>": shrink window horizontally
+* "M-<up>": shrink window
+* "S-<down>": windmove down
+* "S-<left>": 'windmove left
+* "S-<right>": windmove right
+* "S-<up>": windmove up
