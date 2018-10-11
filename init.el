@@ -7,6 +7,7 @@
 (provide 'init)
 
 ;; Global settings
+(require 'iedit)
 (setq inhibit-startup-message t) ;; Disable startup messages
 (add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; Maximize window at startup
 (setq make-backup-files nil) ;; No backup files ~
@@ -86,7 +87,7 @@
 (global-set-key (kbd "C-c u") 'uncomment-region) ; Descomentar regiones marcadas (C-c u):
 (global-set-key (kbd "C-c C-k") 'copy-line)
 (global-set-key (kbd "C-;") 'iedit-dwim)
-(global-set-key (kbd "\C-t") 'crear-tags) ;; Create tags shortcut
+(global-set-key (kbd "C-t") 'crear-tags) ;; Create tags shortcut
 (global-set-key (kbd "S-<left>")  'windmove-left)
 (global-set-key (kbd "S-<right>") 'windmove-right)
 (global-set-key (kbd "S-<up>")    'windmove-up)
