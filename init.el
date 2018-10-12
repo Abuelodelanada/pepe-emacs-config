@@ -21,7 +21,6 @@
 (global-highlight-parentheses-mode t)
 (set-frame-font "Ubuntu Mono 11")
 (powerline-default-theme)
-(set-cursor-color "#d2ff27")
 (setq-default kill-read-only-ok t)
 (put 'upcase-region 'disabled nil)
 (yas-global-mode 1)
@@ -234,6 +233,7 @@ ARG."
   )
 
 (custom-set-variables
+ '(blink-cursor-mode t)
  '(flycheck-highlighting-mode (quote lines))
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
  '(global-flycheck-mode t)
@@ -247,6 +247,7 @@ ARG."
  '(size-indication-mode nil))
 
 (custom-set-faces
+ '(cursor ((t (:background "turquoise1" :foreground "white smoke" :inverse-video t))))
  '(flycheck-color-mode-line-error-face ((t (:foreground "red2" :weight bold))))
  '(mode-line ((t ("#49483E" nil "#F8F8F0" :background :box nil))))
  '(mode-line-buffer-id ((t (:foreground "white smoke" :weight bold))))
