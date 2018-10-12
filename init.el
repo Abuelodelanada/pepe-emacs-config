@@ -248,8 +248,10 @@ ARG."
 
 (custom-set-faces
  '(cursor ((t (:background "turquoise1" :foreground "white smoke" :inverse-video t))))
- '(flycheck-color-mode-line-error-face ((t (:foreground "red2" :weight bold))))
- '(mode-line ((t ("#49483E" nil "#F8F8F0" :background :box nil))))
+ '(flycheck-color-mode-line-error-face ((t (:box (:line-width 1 :color "DeepPink3") :weight bold))))
+ '(flycheck-color-mode-line-warning-face ((t (:box (:line-width 1 :color "orange")))))
+ '(flycheck-error ((t (:underline "#F92672"))))
+ '(mode-line ((t (:background "#49483E" :foreground "#F8F8F0" :box (:line-width 1 :color "black")))))
  '(mode-line-buffer-id ((t (:foreground "white smoke" :weight bold))))
  '(mode-line-inactive ((t ("#000000" nil "#75715E" :background :box nil))))
  '(nlinum-current-line ((t (:foreground "turquoise2" :weight bold))))
