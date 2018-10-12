@@ -21,7 +21,6 @@
 (global-highlight-parentheses-mode t)
 (set-frame-font "Ubuntu Mono 11")
 (powerline-default-theme)
-(set-cursor-color "#d2ff27")
 (setq-default kill-read-only-ok t)
 (put 'upcase-region 'disabled nil)
 (yas-global-mode 1)
@@ -30,6 +29,8 @@
 (defvar ido-enable-flex-matching)
 (setq ido-enable-flex-matching t)
 (dumb-jump-mode 1) ;dumb-jump
+(defvar dumb-jump-prefer-searcher)
+(setq dumb-jump-prefer-searcher 'rg)
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -107,13 +108,18 @@
 
 ;; Functions
 (defun get-point (symbol &optional arg)
-  "Get the point"
+  "Get the point.
+SYMBOL.
+ARG."
   (funcall symbol arg)
   (point)
   )
 
 (defun copy-thing (begin-of-thing end-of-thing &optional arg)
-  "Copy thing between beg & end into kill ring"
+  "Copy thing between beg & end into kill ring.
+BEGIN-OF-THING.
+END-OF-THING.
+ARG."
   (save-excursion
     (let ((beg (get-point begin-of-thing 1))
 	  (end (get-point end-of-thing arg)))
@@ -135,7 +141,8 @@
     ))
 
 (defun copy-word (&optional arg)
-  "Copy words at point into kill-ring"
+  "Copy words at point into ‘kill-ring’.
+ARG."
   (interactive "P")
   (copy-thing 'backward-word 'forward-word arg)
   (message "Copying word at point into kill-ring...")
@@ -143,6 +150,7 @@
   )
 
 (defun duplicate-current-line ()
+  "Duplicate the current line."
   (interactive)
   (beginning-of-line nil)
   (let ((b (point)))
@@ -154,43 +162,40 @@
   (back-to-indentation))
 
 
-(defun edit-current-file-as-root ()
-  "Edit the file that is associated with the current buffer as root"
-  (interactive)
-  (let ((filep (buffer-file-name)))
-    (kill-buffer (current-buffer))
-    (if filep (find-file (concat "/sudo::" filep))
-      (message "Current buffer does not have an associated file."))))
-
 ; ctags
 (defun crear-tags (dir-name)
-  "Create tags file."
+  "Create tags file.
+DIR-NAME."
   (interactive "DDirectory: ")
   (shell-command
    (format "%s -f %s/TAGS -R --languages='php' --exclude='cache' %s" path-to-ctags dir-name (directory-file-name dir-name)))
 )
 
 (defun match-paren (arg)
-  "Go to the matching paren if on a paren; otherwise insert %."
+  "Go to the matching paren if on a paren; otherwise insert %.
+ARG."
   (interactive "p")
   (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
         ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
         (t (self-insert-command (or arg 1)))))
 
 (defun copy-line (&optional arg)
-  "Do a kill-line but copy rather than kill.  This function directly calls
-kill-line, so see documentation of kill-line for how to use it including prefix
+"Do a ‘kill-line’ but copy rather than kill.
+This function directly calls ‘kill-line’, so see documentation of ‘kill-line’
+for how to use it including prefix
 argument and relevant variables.  This function works by temporarily making the
-buffer read-only, so I suggest setting kill-read-only-ok to t."
+buffer read-only, so I suggest setting ‘kill-read-only-ok’ to t.
+ARG."
   (interactive "P")
-  (toggle-read-only 1)
+  (read-only-mode 1)
   (kill-line arg)
-  (toggle-read-only 0))
+  (read-only-mode 0))
 
 
 ;; iedit
 (defun iedit-dwim (arg)
-  "Starts iedit but uses \\[narrow-to-defun] to limit its scope."
+  "Start iedit but use \\[narrow-to-defun] to limit its scope.
+ARG."
   (interactive "P")
   (if arg
       (iedit-mode)
@@ -220,6 +225,7 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
 
 ; xml-format
 (defun xml-format ()
+  "Xml-format."
   (interactive)
   (save-excursion
     (shell-command-on-region (mark) (point) "xmllint --format -" (buffer-name) t)
@@ -227,6 +233,7 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
   )
 
 (custom-set-variables
+ '(blink-cursor-mode t)
  '(flycheck-highlighting-mode (quote lines))
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
  '(global-flycheck-mode t)
@@ -240,8 +247,11 @@ buffer read-only, so I suggest setting kill-read-only-ok to t."
  '(size-indication-mode nil))
 
 (custom-set-faces
- '(flycheck-color-mode-line-error-face ((t (:foreground "red2" :weight bold))))
- '(mode-line ((t ("#49483E" nil "#F8F8F0" :background :box nil))))
+ '(cursor ((t (:background "turquoise1" :foreground "white smoke" :inverse-video t))))
+ '(flycheck-color-mode-line-error-face ((t (:box (:line-width 1 :color "DeepPink3") :weight bold))))
+ '(flycheck-color-mode-line-warning-face ((t (:box (:line-width 1 :color "orange")))))
+ '(flycheck-error ((t (:underline "#F92672"))))
+ '(mode-line ((t (:background "#49483E" :foreground "#F8F8F0" :box (:line-width 1 :color "black")))))
  '(mode-line-buffer-id ((t (:foreground "white smoke" :weight bold))))
  '(mode-line-inactive ((t ("#000000" nil "#75715E" :background :box nil))))
  '(nlinum-current-line ((t (:foreground "turquoise2" :weight bold))))
