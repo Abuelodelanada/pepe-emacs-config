@@ -42,6 +42,8 @@ $ sudo apt-get install emacs exuberant-ctags git silversearcher-ag pylint pep8 p
 * "%":  go to match paren
 * "F12": toggle menu bar mode
 * "C-;": activate iedit-dwim
+* "C-c down": flycheck-next-error
+* "C-c up": flycheck-previous-error
 * "C-c C-k": copy line
 * "C-c C-w": copy word
 * "C-c C-z":  term stop subjob
