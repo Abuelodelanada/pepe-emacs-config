@@ -30,6 +30,8 @@
 (defvar ido-enable-flex-matching)
 (setq ido-enable-flex-matching t)
 (dumb-jump-mode 1) ;dumb-jump
+(defvar dumb-jump-prefer-searcher)
+(setq dumb-jump-prefer-searcher 'rg)
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
