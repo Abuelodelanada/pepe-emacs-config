@@ -96,6 +96,8 @@
 (global-set-key (kbd "S-<right>") 'windmove-right)
 (global-set-key (kbd "S-<up>")    'windmove-up)
 (global-set-key (kbd "S-<down>")  'windmove-down)
+(global-set-key (kbd "C-c <down>") 'flycheck-next-error)
+(global-set-key (kbd "C-c <up>") 'flycheck-previous-error)
 
 ;; Alias
 (defalias 'bkr 'browse-kill-ring)
