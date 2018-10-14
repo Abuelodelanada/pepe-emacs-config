@@ -14,7 +14,7 @@
 ; list the packages you want
 (defvar package-list)
 (setq package-list
-    '(ac-js2 ac-php adoc-mode all-the-icons auto-complete auto-indent-mode company-php company ac-php-core diff-hl dumb-jump ecb f flycheck flycheck-color-mode-line flycheck-pycheckers flycheck-mypy flymd  geben git-gutter highlight highlight-parentheses iedit jquery-doc let-alist markdown-mode+ markdown-mode markup-faces memoize monokai-theme nlinum nlinum-hl php-mode pkg-info epl popup powerline seq skewer-mode js2-mode simple-httpd smarty-mode xcscope yaml-mode yasnippet ag s yasnippet-snippets))
+      '(ac-js2 ac-php ac-php-core adoc-mode ag all-the-icons auto-complete auto-indent-mode company company-php diff-hl dumb-jump ecb epl f flycheck flycheck-color-mode-line flycheck-mypy flycheck-pycheckers flymd geben git-gutter highlight highlight-parentheses iedit jquery-doc js2-mode let-alist markdown-mode markdown-mode+ markup-faces memoize monokai-theme nlinum nlinum-hl php-mode pkg-info popup powerline s seq simple-httpd skewer-mode smarty-mode xcscope yaml-mode yasnippet yasnippet-snippets))
 ; activate all the packages
 (package-initialize)
 
