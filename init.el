@@ -236,6 +236,7 @@ ARG."
 
 (custom-set-variables
  '(blink-cursor-mode t)
+ '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
  '(flycheck-highlighting-mode (quote lines))
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
  '(global-flycheck-mode t)
