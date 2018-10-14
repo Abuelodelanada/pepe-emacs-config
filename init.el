@@ -4,7 +4,6 @@
 
 (package-initialize)
 (load "~/.emacs.d/init-packages")
-(provide 'init)
 
 ;; Global settings
 (require 'iedit)
