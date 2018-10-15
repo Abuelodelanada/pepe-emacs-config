@@ -39,9 +39,10 @@
                              yas-ido-prompt
                              yas-completing-prompt))
 
+(add-hook 'after-init-hook #'global-flycheck-mode)
 (eval-after-load "flycheck"
   '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
-(global-flycheck-mode 1)
+
 (with-eval-after-load 'flycheck
   (add-hook 'flycheck-mode-hook #'flycheck-pycheckers-setup))
 (defvar path-to-ctags)
@@ -61,11 +62,11 @@
 (add-to-list 'auto-mode-alist '("\\.engine$" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl.php$" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist (cons "\\.adoc\\'" 'adoc-mode))
-
 
 ;; Hooks
 (add-hook 'window-setup-hook 'on-after-init)
@@ -238,7 +239,6 @@ ARG."
  '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
  '(flycheck-highlighting-mode (quote lines))
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
- '(global-flycheck-mode t)
  '(monokai-background "#000000")
  '(nlinum-highlight-current-line t)
  '(package-selected-packages
