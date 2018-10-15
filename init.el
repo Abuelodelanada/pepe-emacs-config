@@ -251,6 +251,8 @@ ARG."
 (custom-set-faces
  '(cursor ((t (:background "turquoise1" :foreground "white smoke" :inverse-video t))))
  '(flycheck-color-mode-line-error-face ((t (:box (:line-width 1 :color "DeepPink3") :weight bold))))
+ '(flycheck-color-mode-line-info-face ((t (:box (:line-width 1 :color "turquoise1")))))
+ '(flycheck-color-mode-line-success-face ((t (:box (:line-width 1 :color "turquoise1")))))
  '(flycheck-color-mode-line-warning-face ((t (:box (:line-width 1 :color "orange")))))
  '(flycheck-error ((t (:underline "#F92672"))))
  '(mode-line ((t (:background "#49483E" :foreground "#F8F8F0" :box (:line-width 1 :color "black")))))
