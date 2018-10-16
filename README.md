@@ -29,7 +29,11 @@ This emacs config have some useful modules:
 
 1. Install the required dependencies:
 ```shell
-$ sudo apt-get install emacs exuberant-ctags git silversearcher-ag pylint pep8 phpmd
+$ sudo apt-get install emacs exuberant-ctags git silversearcher-ag pylint pep8 php-pear
+
+$ sudo pear channel-update pear.php.net
+
+$ sudo pear install PHP_CodeSniffer
 ```
 
 2. Download the init.el and init-packages.el files and place it in your ~/.emacs.d folder.
@@ -52,6 +56,7 @@ $ sudo apt-get install emacs exuberant-ctags git silversearcher-ag pylint pep8 p
 * "C-d":  duplicate current line
 * "C-l": go to line
 * "C-t": create ctags
+* "C-x p": run phpcbf --standard=PSR2 to the current buffer
 * "M-down" : enlarge window
 * "M-left": enlarge window horizontally
 * "M-right": shrink window horizontally
