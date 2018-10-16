@@ -77,27 +77,28 @@
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 
 ;; Shortcuts
-(global-set-key (kbd "C-l") 'goto-line)
-(global-set-key (kbd "M-<down>") 'enlarge-window)
-(global-set-key (kbd "M-<up>") 'shrink-window)
-(global-set-key (kbd "M-<left>") 'enlarge-window-horizontally)
-(global-set-key (kbd "M-<right>") 'shrink-window-horizontally)
-(global-set-key (kbd "C-d") 'duplicate-current-line)
-(global-set-key (kbd "C-c C-z") 'term-stop-subjob)
-(global-set-key (kbd "C-c C-w") 'copy-word)
-(global-set-key (kbd "<f12>") 'menu-bar-mode)
 (global-set-key (kbd "%") 'match-paren) ;; Ir al cierre-apertura de ([{
+(global-set-key (kbd "<f12>") 'menu-bar-mode)
+(global-set-key (kbd "C-;") 'iedit-dwim)
+(global-set-key (kbd "C-c <down>") 'flycheck-next-error)
+(global-set-key (kbd "C-c <up>") 'flycheck-previous-error)
+(global-set-key (kbd "C-c C-k") 'copy-line)
+(global-set-key (kbd "C-c C-w") 'copy-word)
+(global-set-key (kbd "C-c C-z") 'term-stop-subjob)
 (global-set-key (kbd "C-c c") 'comment-region) ; Comentar regiones marcadas (C-c c):
 (global-set-key (kbd "C-c u") 'uncomment-region) ; Descomentar regiones marcadas (C-c u):
-(global-set-key (kbd "C-c C-k") 'copy-line)
-(global-set-key (kbd "C-;") 'iedit-dwim)
+(global-set-key (kbd "C-d") 'duplicate-current-line)
+(global-set-key (kbd "C-l") 'goto-line)
 (global-set-key (kbd "C-t") 'crear-tags) ;; Create tags shortcut
+(global-set-key (kbd "C-x p") 'phpcbf)
+(global-set-key (kbd "M-<down>") 'enlarge-window)
+(global-set-key (kbd "M-<left>") 'enlarge-window-horizontally)
+(global-set-key (kbd "M-<right>") 'shrink-window-horizontally)
+(global-set-key (kbd "M-<up>") 'shrink-window)
+(global-set-key (kbd "S-<down>")  'windmove-down)
 (global-set-key (kbd "S-<left>")  'windmove-left)
 (global-set-key (kbd "S-<right>") 'windmove-right)
 (global-set-key (kbd "S-<up>")    'windmove-up)
-(global-set-key (kbd "S-<down>")  'windmove-down)
-(global-set-key (kbd "C-c <down>") 'flycheck-next-error)
-(global-set-key (kbd "C-c <up>") 'flycheck-previous-error)
 
 ;; Alias
 (defalias 'bkr 'browse-kill-ring)
@@ -240,6 +241,7 @@ ARG."
  '(flycheck-highlighting-mode (quote lines))
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
  '(monokai-background "#000000")
+ '(phpcbf-standard "PSR2")
  '(nlinum-highlight-current-line t)
  '(package-selected-packages
    (quote
