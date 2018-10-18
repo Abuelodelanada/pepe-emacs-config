@@ -79,6 +79,7 @@
 ;; Shortcuts
 (global-set-key (kbd "%") 'match-paren) ;; Ir al cierre-apertura de ([{
 (global-set-key (kbd "<f12>") 'menu-bar-mode)
+(global-set-key (kbd "<f8>") 'neotree-toggle)
 (global-set-key (kbd "C-;") 'iedit-dwim)
 (global-set-key (kbd "C-c <down>") 'flycheck-next-error)
 (global-set-key (kbd "C-c <up>") 'flycheck-previous-error)
@@ -241,11 +242,12 @@ ARG."
  '(flycheck-highlighting-mode (quote lines))
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
  '(monokai-background "#000000")
- '(phpcbf-standard "PSR2")
+ '(neo-autorefresh t)
  '(nlinum-highlight-current-line t)
  '(package-selected-packages
    (quote
     (yasnippet-snippets yaml-mode smarty-mode powerline nlinum-hl nlinum monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter geben flymd flycheck-color-mode-line flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
+ '(phpcbf-standard "PSR2")
  '(powerline-default-separator (quote arrow-fade))
  '(powerline-gui-use-vcs-glyph t)
  '(size-indication-mode nil))
