@@ -171,7 +171,7 @@ ARG."
 DIR-NAME."
   (interactive "DDirectory: ")
   (shell-command
-   (format "%s -f %s/TAGS -R --languages='php' --exclude='cache' %s" path-to-ctags dir-name (directory-file-name dir-name)))
+   (format "%s -f %s/TAGS -R -e --languages='php' --exclude='cache' %s" path-to-ctags dir-name (directory-file-name dir-name)))
 )
 
 (defun match-paren (arg)
