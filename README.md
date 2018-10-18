@@ -44,6 +44,7 @@ $ sudo pear install PHP_CodeSniffer
 ## Shortcuts
 
 * "%":  go to match paren
+* "F8": toggle neotree
 * "F12": toggle menu bar mode
 * "C-;": activate iedit-dwim
 * "C-c down": flycheck-next-error
