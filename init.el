@@ -18,7 +18,6 @@
 (global-nlinum-mode 1) ;; Show line-number
 (global-auto-complete-mode t) ;; Enable auto-complete
 (global-highlight-parentheses-mode t)
-(set-frame-font "Ubuntu Mono 11")
 (powerline-default-theme)
 (setq-default kill-read-only-ok t)
 (put 'upcase-region 'disabled nil)
@@ -253,12 +252,14 @@ ARG."
  '(size-indication-mode nil))
 
 (custom-set-faces
+ '(default ((t (:background "#000000" :foreground "#F8F8F2" :weight bold :height 110 :family "Ubuntu Mono"))))
  '(cursor ((t (:background "turquoise1" :foreground "white smoke" :inverse-video t))))
  '(flycheck-color-mode-line-error-face ((t (:box (:line-width 1 :color "DeepPink3") :weight bold))))
  '(flycheck-color-mode-line-info-face ((t (:box (:line-width 1 :color "turquoise1")))))
  '(flycheck-color-mode-line-success-face ((t (:box (:line-width 1 :color "turquoise1")))))
  '(flycheck-color-mode-line-warning-face ((t (:box (:line-width 1 :color "orange")))))
  '(flycheck-error ((t (:underline "#F92672"))))
+ '(highlight ((t (:background "black" :foreground "white"))))
  '(mode-line ((t (:background "#49483E" :foreground "#F8F8F0" :box (:line-width 1 :color "black")))))
  '(mode-line-buffer-id ((t (:foreground "white smoke" :weight bold))))
  '(mode-line-inactive ((t ("#000000" nil "#75715E" :background :box nil))))
