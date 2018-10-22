@@ -27,6 +27,12 @@ This emacs config have some useful modules:
     Your ~/.emacs.d folder should be empty. If you have one, rename it or move to a different location (to keep a backup, just in case you want to go back).
     Also rename or move your ~/.emacs file (to keep a backup, just in case you want to go back).
 
+```shell
+$ cd ~
+$ mv .emacs.d .emacs.d.bak
+$ mv .emacs .emacs.bak
+```
+
 1. Install the required dependencies:
 ```shell
 $ sudo apt-get install emacs exuberant-ctags git silversearcher-ag pylint pep8 php-pear
@@ -36,7 +42,11 @@ $ sudo pear channel-update pear.php.net
 $ sudo pear install PHP_CodeSniffer
 ```
 
-2. Download the init.el and init-packages.el files and place it in your ~/.emacs.d folder.
+2. Clone the repository.
+
+```
+$ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
+```
 
 3. Open emacs and it will continue the installation by itself installing packages from melpa and elpa. Wait for it to finish... and done! You now have your new shiny powerful emacs :)
 
