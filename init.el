@@ -54,6 +54,8 @@
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
 
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+
 (add-to-list 'auto-mode-alist '("\\.php" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.module$" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
@@ -242,6 +244,7 @@ ARG."
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
  '(monokai-background "#000000")
  '(neo-autorefresh t)
+ '(neo-smart-open t)
  '(nlinum-highlight-current-line t)
  '(package-selected-packages
    (quote
