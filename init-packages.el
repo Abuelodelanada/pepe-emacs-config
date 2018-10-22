@@ -25,7 +25,8 @@
 ; install the missing packages
 (dolist (package package-list)
   (unless (package-installed-p package)
-    (package-install package)))
+    (package-install package)
+    (all-the-icons-install-fonts)))
 
 (provide 'init-packages)
 ;;; init-packages.el ends here
