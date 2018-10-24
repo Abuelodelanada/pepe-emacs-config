@@ -68,6 +68,8 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist (cons "\\.adoc\\'" 'adoc-mode))
+(add-to-list 'auto-mode-alist (cons "\\.xml'" 'xml-mode))
+(add-to-list 'auto-mode-alist (cons "\\.xul'" 'xml-mode))
 
 ;; Hooks
 (add-hook 'window-setup-hook 'on-after-init)
