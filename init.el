@@ -49,7 +49,6 @@
 (put 'downcase-region 'disabled nil)
 (set-default 'case-fold-search nil) ; Case sensitive TAGS search
 (global-diff-hl-mode)
-(autoload 'adoc-mode "adoc-mode" nil t) ; adoc-mode
 (autoload 'geben "geben" "DBGp protocol frontend, a script debugger" t) ; Geben
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
@@ -66,8 +65,10 @@
 (add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist (cons "\\.adoc\\'" 'adoc-mode))
+(add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.adoc" . adoc-mode))
+(add-to-list 'auto-mode-alist '("\\.xml" . xml-mode))
+(add-to-list 'auto-mode-alist '("\\.xul" . xml-mode))
 
 ;; Hooks
 (add-hook 'window-setup-hook 'on-after-init)
@@ -263,6 +264,9 @@ ARG."
  '(flycheck-color-mode-line-warning-face ((t (:box (:line-width 1 :color "orange")))))
  '(flycheck-error ((t (:underline "#F92672"))))
  '(highlight ((t (:background "black" :foreground "white"))))
+ '(ido-first-match ((t (:foreground "cyan" :weight normal))))
+ '(ido-incomplete-regexp ((t (:foreground "DeepPink1" :weight bold))))
+ '(ido-only-match ((t (:background "cyan" :foreground "black" :weight bold))))
  '(mode-line ((t (:background "#49483E" :foreground "#F8F8F0" :box (:line-width 1 :color "black")))))
  '(mode-line-buffer-id ((t (:foreground "white smoke" :weight bold))))
  '(mode-line-inactive ((t ("#000000" nil "#75715E" :background :box nil))))
