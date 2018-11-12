@@ -49,7 +49,6 @@
 (put 'downcase-region 'disabled nil)
 (set-default 'case-fold-search nil) ; Case sensitive TAGS search
 (global-diff-hl-mode)
-(autoload 'adoc-mode "adoc-mode" nil t) ; adoc-mode
 (autoload 'geben "geben" "DBGp protocol frontend, a script debugger" t) ; Geben
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
@@ -66,10 +65,10 @@
 (add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist (cons "\\.adoc\\'" 'adoc-mode))
-(add-to-list 'auto-mode-alist (cons "\\.xml'" 'xml-mode))
-(add-to-list 'auto-mode-alist (cons "\\.xul'" 'xml-mode))
+(add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.adoc" . adoc-mode))
+(add-to-list 'auto-mode-alist '("\\.xml" . xml-mode))
+(add-to-list 'auto-mode-alist '("\\.xul" . xml-mode))
 
 ;; Hooks
 (add-hook 'window-setup-hook 'on-after-init)
