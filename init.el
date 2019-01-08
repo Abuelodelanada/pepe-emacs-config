@@ -15,8 +15,7 @@
 (scroll-bar-mode -1) ;; Hide scrollbar
 (menu-bar-mode -1) ;; Hide menubar
 (column-number-mode 1) ;; Show column number
-(global-linum-mode 1) ;; Show line-number
-(hlinum-activate)
+(global-nlinum-mode 1) ;; Show line-number
 (global-auto-complete-mode t) ;; Enable auto-complete
 (global-highlight-parentheses-mode t)
 (powerline-default-theme)
@@ -242,13 +241,13 @@ ARG."
  '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
  '(flycheck-highlighting-mode (quote lines))
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
- '(linum-highlight-current-line t)
  '(monokai-background "#000000")
  '(neo-autorefresh t)
  '(neo-smart-open t)
+ '(nlinum-highlight-current-line t)
  '(package-selected-packages
    (quote
-    (yasnippet-snippets yaml-mode smarty-mode powerline hlinum linum monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter geben flymd flycheck-color-mode-line flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
+    (yasnippet-snippets yaml-mode smarty-mode powerline nlinum nlinum-hl monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter geben flymd flycheck-color-mode-line flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
  '(phpcbf-standard "PSR2")
  '(powerline-default-separator (quote arrow-fade))
  '(powerline-gui-use-vcs-glyph t)
@@ -266,10 +265,10 @@ ARG."
  '(ido-first-match ((t (:foreground "cyan" :weight normal))))
  '(ido-incomplete-regexp ((t (:foreground "DeepPink1" :weight bold))))
  '(ido-only-match ((t (:background "cyan" :foreground "black" :weight bold))))
- '(linum-highlight-face ((t (:foreground "turquoise2" :weight bold))))
  '(mode-line ((t (:background "#49483E" :foreground "#F8F8F0" :box (:line-width 1 :color "black")))))
  '(mode-line-buffer-id ((t (:foreground "white smoke" :weight bold))))
  '(mode-line-inactive ((t ("#000000" nil "#75715E" :background :box nil))))
+ '(nlinum-current-line ((t (:foreground "turquoise2" :weight bold))))
  '(powerline-active0 ((t (:background "turquoise4"))))
  '(powerline-active1 ((t (:background "turquoise3" :foreground "gray10" :weight bold))))
  '(powerline-active2 ((t (:background "black" :foreground "turquoise1")))))
