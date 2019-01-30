@@ -85,12 +85,12 @@
 (global-set-key (kbd "C-;") 'iedit-dwim)
 (global-set-key (kbd "C-c <down>") 'flycheck-next-error)
 (global-set-key (kbd "C-c <up>") 'flycheck-previous-error)
-(global-set-key (kbd "C-c C-f") 'sqlformat)
+(global-set-key (kbd "C-c C-q") 'sqlformat)
 (global-set-key (kbd "C-c C-k") 'copy-line)
 (global-set-key (kbd "C-c C-w") 'copy-word)
 (global-set-key (kbd "C-c C-z") 'term-stop-subjob)
-(global-set-key (kbd "C-c c") 'comment-region) ; Comentar regiones marcadas (C-c c):
-(global-set-key (kbd "C-c u") 'uncomment-region) ; Descomentar regiones marcadas (C-c u):
+(global-set-key (kbd "C-c c") 'comment-region)
+(global-set-key (kbd "C-c u") 'uncomment-region)
 (global-set-key (kbd "C-d") 'duplicate-current-line)
 (global-set-key (kbd "C-l") 'goto-line)
 (global-set-key (kbd "C-t") 'crear-tags) ;; Create tags shortcut
