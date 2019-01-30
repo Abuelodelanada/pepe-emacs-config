@@ -42,12 +42,12 @@ $ sudo pear channel-update pear.php.net
 
 $ sudo pear install PHP_CodeSniffer
 
-$ sudo pip install sqlparse 
+$ sudo pip install sqlparse
 ```
 
 2. Clone the repository.
 
-```
+```shell
 $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 ```
 
@@ -62,7 +62,7 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 * "C-;": activate iedit-dwim
 * "C-c down": flycheck-next-error
 * "C-c up": flycheck-previous-error
-* "C-c C-f": format sql
+* "C-c C-q": format sql
 * "C-c C-k": copy line
 * "C-c C-w": copy word
 * "C-c C-z":  term stop subjob
