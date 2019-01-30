@@ -18,6 +18,7 @@
 (global-nlinum-mode 1) ;; Show line-number
 (global-auto-complete-mode t) ;; Enable auto-complete
 (global-highlight-parentheses-mode t)
+(global-whitespace-mode t)
 (powerline-default-theme)
 (setq-default kill-read-only-ok t)
 (put 'upcase-region 'disabled nil)
@@ -240,6 +241,9 @@ ARG."
 
 (custom-set-variables
  '(blink-cursor-mode t)
+ '(custom-safe-themes
+   (quote
+    ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
  '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
  '(flycheck-highlighting-mode (quote lines))
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
@@ -253,7 +257,9 @@ ARG."
  '(phpcbf-standard "PSR2")
  '(powerline-default-separator (quote arrow-fade))
  '(powerline-gui-use-vcs-glyph t)
- '(size-indication-mode nil))
+ '(size-indication-mode nil)
+ '(whitespace-display-mappings (quote ((tab-mark 9 [187]))))
+ '(whitespace-line-column 85))
 
 (custom-set-faces
  '(default ((t (:background "#000000" :foreground "#F8F8F2" :weight bold :height 110 :family "Ubuntu Mono"))))
@@ -273,7 +279,13 @@ ARG."
  '(nlinum-current-line ((t (:foreground "turquoise2" :weight bold))))
  '(powerline-active0 ((t (:background "turquoise4"))))
  '(powerline-active1 ((t (:background "turquoise3" :foreground "gray10" :weight bold))))
- '(powerline-active2 ((t (:background "black" :foreground "turquoise1")))))
+ '(powerline-active2 ((t (:background "black" :foreground "turquoise1"))))
+ '(trailing-whitespace ((t (:background "deep pink" :foreground "white"))))
+ '(whitespace-line ((t nil)))
+ '(whitespace-newline ((t nil)))
+ '(whitespace-space ((t nil)))
+ '(whitespace-tab ((t (:foreground "#FD971F" :weight bold))))
+ '(whitespace-trailing ((t (:foreground "deep pink" :inverse-video t)))))
 
 (load-theme 'monokai t)
 (provide 'init)
