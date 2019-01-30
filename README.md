@@ -17,6 +17,7 @@ This emacs config have some useful modules:
 * dumb-jump
 * powerline
 * yasnippet
+* sqlformat
 * ...
 
 ![pepe-emacs-config](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.gif "pepe-emacs-config")
@@ -40,6 +41,8 @@ $ sudo apt-get install emacs exuberant-ctags git silversearcher-ag pylint pep8 p
 $ sudo pear channel-update pear.php.net
 
 $ sudo pear install PHP_CodeSniffer
+
+$ sudo pip install sqlparse 
 ```
 
 2. Clone the repository.
@@ -59,6 +62,7 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 * "C-;": activate iedit-dwim
 * "C-c down": flycheck-next-error
 * "C-c up": flycheck-previous-error
+* "C-c C-f": format sql
 * "C-c C-k": copy line
 * "C-c C-w": copy word
 * "C-c C-z":  term stop subjob
