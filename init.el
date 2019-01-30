@@ -75,6 +75,7 @@
 ;(add-hook 'php-mode-hook 'php-enable-psr2-coding-style)
 (add-hook 'js2-mode-hook 'jquery-doc-setup)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
+(add-hook 'sql-mode-hook 'sqlformat-on-save-mode)
 
 ;; Shortcuts
 (global-set-key (kbd "%") 'match-paren) ;; Ir al cierre-apertura de ([{
@@ -83,6 +84,7 @@
 (global-set-key (kbd "C-;") 'iedit-dwim)
 (global-set-key (kbd "C-c <down>") 'flycheck-next-error)
 (global-set-key (kbd "C-c <up>") 'flycheck-previous-error)
+(global-set-key (kbd "C-c C-f") 'sqlformat)
 (global-set-key (kbd "C-c C-k") 'copy-line)
 (global-set-key (kbd "C-c C-w") 'copy-word)
 (global-set-key (kbd "C-c C-z") 'term-stop-subjob)
@@ -96,10 +98,10 @@
 (global-set-key (kbd "M-<left>") 'enlarge-window-horizontally)
 (global-set-key (kbd "M-<right>") 'shrink-window-horizontally)
 (global-set-key (kbd "M-<up>") 'shrink-window)
-(global-set-key (kbd "S-<down>")  'windmove-down)
-(global-set-key (kbd "S-<left>")  'windmove-left)
+(global-set-key (kbd "S-<down>") 'windmove-down)
+(global-set-key (kbd "S-<left>") 'windmove-left)
 (global-set-key (kbd "S-<right>") 'windmove-right)
-(global-set-key (kbd "S-<up>")    'windmove-up)
+(global-set-key (kbd "S-<up>") 'windmove-up)
 
 ;; Alias
 (defalias 'bkr 'browse-kill-ring)
