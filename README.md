@@ -62,7 +62,7 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 * "C-;": activate iedit-dwim
 * "C-c down": flycheck-next-error
 * "C-c up": flycheck-previous-error
-* "C-c C-q": format sql
+* "C-c <tab>": format sql
 * "C-c C-k": copy line
 * "C-c C-w": copy word
 * "C-c C-z":  term stop subjob

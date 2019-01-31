@@ -85,7 +85,7 @@
 (global-set-key (kbd "C-;") 'iedit-dwim)
 (global-set-key (kbd "C-c <down>") 'flycheck-next-error)
 (global-set-key (kbd "C-c <up>") 'flycheck-previous-error)
-(global-set-key (kbd "C-c C-q") 'sqlformat)
+(global-set-key (kbd "C-c <tab>") 'sqlformat)
 (global-set-key (kbd "C-c C-k") 'copy-line)
 (global-set-key (kbd "C-c C-w") 'copy-word)
 (global-set-key (kbd "C-c C-z") 'term-stop-subjob)
