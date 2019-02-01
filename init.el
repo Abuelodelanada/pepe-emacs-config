@@ -7,6 +7,7 @@
 
 ;; Global settings
 (require 'iedit)
+(setq auto-window-vscroll nil)
 (setq inhibit-startup-message t) ;; Disable startup messages
 (add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; Maximize window at startup
 (setq make-backup-files nil) ;; No backup files ~
@@ -247,10 +248,19 @@ ARG."
  '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
  '(flycheck-highlighting-mode (quote lines))
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
+ '(font-lock-maximum-decoration t)
+ '(font-lock-support-mode (quote jit-lock-mode))
+ '(global-whitespace-mode t)
+ '(jit-lock-context-time 0.01)
+ '(jit-lock-contextually t)
+ '(jit-lock-defer-time 0.03)
+ '(jit-lock-stealth-nice 0.5)
+ '(jit-lock-stealth-time 1)
  '(monokai-background "#000000")
  '(neo-autorefresh t)
  '(neo-smart-open t)
  '(nlinum-highlight-current-line t)
+ '(nlinum-use-right-margin nil)
  '(package-selected-packages
    (quote
     (yasnippet-snippets yaml-mode smarty-mode powerline nlinum nlinum-hl monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter geben flymd flycheck-color-mode-line flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
@@ -259,7 +269,10 @@ ARG."
  '(powerline-gui-use-vcs-glyph t)
  '(size-indication-mode nil)
  '(whitespace-display-mappings (quote ((tab-mark 9 [187]))))
- '(whitespace-line-column 85))
+ '(whitespace-line-column nil)
+ '(whitespace-style
+   (quote
+    (face trailing tabs spaces newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark))))
 
 (custom-set-faces
  '(default ((t (:background "#000000" :foreground "#F8F8F2" :weight bold :height 110 :family "Ubuntu Mono"))))
@@ -273,6 +286,7 @@ ARG."
  '(ido-first-match ((t (:foreground "cyan" :weight normal))))
  '(ido-incomplete-regexp ((t (:foreground "DeepPink1" :weight bold))))
  '(ido-only-match ((t (:background "cyan" :foreground "black" :weight bold))))
+ '(iedit-occurrence ((t (:foreground "green yellow"))))
  '(mode-line ((t (:background "#49483E" :foreground "#F8F8F0" :box (:line-width 1 :color "black")))))
  '(mode-line-buffer-id ((t (:foreground "white smoke" :weight bold))))
  '(mode-line-inactive ((t ("#000000" nil "#75715E" :background :box nil))))
