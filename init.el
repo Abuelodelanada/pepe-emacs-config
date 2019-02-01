@@ -7,47 +7,58 @@
 
 ;; Global settings
 (require 'iedit)
+
+(defvar ido-enable-flex-matching)
+(defvar dumb-jump-prefer-searcher)
+(defvar yas-prompt-functions)
+(defvar path-to-ctags)
+
 (setq auto-window-vscroll nil)
 (setq inhibit-startup-message t) ;; Disable startup messages
-(add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; Maximize window at startup
 (setq make-backup-files nil) ;; No backup files ~
 (setq auto-save-default nil) ;; Stop creating auto #autosave# files
-(tool-bar-mode -1) ;; Hide toolbar
-(scroll-bar-mode -1) ;; Hide scrollbar
-(menu-bar-mode -1) ;; Hide menubar
-(column-number-mode 1) ;; Show column number
-(global-nlinum-mode 1) ;; Show line-number
-(global-auto-complete-mode t) ;; Enable auto-complete
-(global-highlight-parentheses-mode t)
-(global-whitespace-mode t)
-(powerline-default-theme)
-(setq-default kill-read-only-ok t)
-(put 'upcase-region 'disabled nil)
-(yas-global-mode 1)
-(setq frame-resize-pixelwise t)
-(ido-mode 1)
-(defvar ido-enable-flex-matching)
 (setq ido-enable-flex-matching t)
-(dumb-jump-mode 1) ;dumb-jump
-(defvar dumb-jump-prefer-searcher)
+(setq frame-resize-pixelwise t)
 (setq dumb-jump-prefer-searcher 'rg)
 (setq scroll-step 1) ;; keyboard scroll one line at a time
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
-(defvar yas-prompt-functions)
+(setq path-to-ctags "/usr/bin/ctags") ;; <- your ctags path here
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 (setq yas-prompt-functions '(yas-dropdown-prompt
                              yas-ido-prompt
                              yas-completing-prompt))
 
+(setq-default kill-read-only-ok t)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+
+;; Alias
+(defalias 'bkr 'browse-kill-ring)
+(defalias 'lb 'list-buffers)
+(defalias 'yes-or-no-p 'y-or-n-p)
+(defalias 'gf 'grep-find)
+(defalias 'fd 'find-dired)
+(defalias 'tt 'tramp-term)
+
+
+(add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; Maximize window at startup
+(tool-bar-mode -1) ;; Hide toolbar
+(scroll-bar-mode -1) ;; Hide scrollbar
+(menu-bar-mode -1) ;; Hide menubar
+(column-number-mode 1) ;; Show column number
+(global-linum-mode 1) ;; Show line-number
+(global-auto-complete-mode t) ;; Enable auto-complete
+(global-highlight-parentheses-mode t)
+(powerline-default-theme)
+(put 'upcase-region 'disabled nil)
+(yas-global-mode 1)
+(ido-mode 1)
+(dumb-jump-mode 1) ;dumb-jump
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (eval-after-load "flycheck"
   '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
-
 (with-eval-after-load 'flycheck
   (add-hook 'flycheck-mode-hook #'flycheck-pycheckers-setup))
-(defvar path-to-ctags)
-(setq path-to-ctags "/usr/bin/ctags") ;; <- your ctags path here
 (put 'downcase-region 'disabled nil)
 (set-default 'case-fold-search nil) ; Case sensitive TAGS search
 (global-diff-hl-mode)
@@ -55,7 +66,7 @@
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
 
-(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+
 
 (add-to-list 'auto-mode-alist '("\\.php" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.module$" . php-mode))
@@ -105,14 +116,6 @@
 (global-set-key (kbd "S-<right>") 'windmove-right)
 (global-set-key (kbd "S-<up>") 'windmove-up)
 
-;; Alias
-(defalias 'bkr 'browse-kill-ring)
-(defalias 'lb 'list-buffers)
-(defalias 'yes-or-no-p 'y-or-n-p)
-(defalias 'gf 'grep-find)
-(defalias 'fd 'find-dired)
-(defalias 'tt 'tramp-term)
-
 
 ;; Functions
 (defun get-point (symbol &optional arg)
@@ -130,21 +133,21 @@ END-OF-THING.
 ARG."
   (save-excursion
     (let ((beg (get-point begin-of-thing 1))
-	  (end (get-point end-of-thing arg)))
+          (end (get-point end-of-thing arg)))
       (copy-region-as-kill beg end)))
   )
 
 (defun paste-to-mark(&optional arg)
   "Paste things to mark, or to the prompt in shell-mode"
   (let ((pasteMe
-     	 (lambda()
-     	   (if (string= "shell-mode" major-mode)
-	       (progn (comint-next-prompt 25535) (yank))
-	     (progn (goto-char (mark)) (yank) )))))
+         (lambda()
+           (if (string= "shell-mode" major-mode)
+               (progn (comint-next-prompt 25535) (yank))
+             (progn (goto-char (mark)) (yank) )))))
     (if arg
-	(if (= arg 1)
-	    nil
-	  (funcall pasteMe))
+        (if (= arg 1)
+            nil
+          (funcall pasteMe))
       (funcall pasteMe))
     ))
 
@@ -248,22 +251,16 @@ ARG."
  '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
  '(flycheck-highlighting-mode (quote lines))
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
- '(font-lock-maximum-decoration t)
- '(font-lock-support-mode (quote jit-lock-mode))
  '(global-whitespace-mode t)
- '(jit-lock-context-time 0.01)
- '(jit-lock-contextually t)
- '(jit-lock-defer-time 0.03)
- '(jit-lock-stealth-nice 0.5)
- '(jit-lock-stealth-time 1)
+ '(linum-format " %d ")
+ '(linum-highlight-current-line t)
+ '(linum-use-right-margin nil)
  '(monokai-background "#000000")
  '(neo-autorefresh t)
  '(neo-smart-open t)
- '(nlinum-highlight-current-line t)
- '(nlinum-use-right-margin nil)
  '(package-selected-packages
    (quote
-    (yasnippet-snippets yaml-mode smarty-mode powerline nlinum nlinum-hl monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter geben flymd flycheck-color-mode-line flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
+    (yasnippet-snippets yaml-mode smarty-mode powerline linum linum-hl monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter geben flymd flycheck-color-mode-line flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
  '(phpcbf-standard "PSR2")
  '(powerline-default-separator (quote arrow-fade))
  '(powerline-gui-use-vcs-glyph t)
@@ -287,10 +284,10 @@ ARG."
  '(ido-incomplete-regexp ((t (:foreground "DeepPink1" :weight bold))))
  '(ido-only-match ((t (:background "cyan" :foreground "black" :weight bold))))
  '(iedit-occurrence ((t (:foreground "green yellow"))))
+ '(linum-current-line ((t (:foreground "turquoise2" :weight bold))))
  '(mode-line ((t (:background "#49483E" :foreground "#F8F8F0" :box (:line-width 1 :color "black")))))
  '(mode-line-buffer-id ((t (:foreground "white smoke" :weight bold))))
  '(mode-line-inactive ((t ("#000000" nil "#75715E" :background :box nil))))
- '(nlinum-current-line ((t (:foreground "turquoise2" :weight bold))))
  '(powerline-active0 ((t (:background "turquoise4"))))
  '(powerline-active1 ((t (:background "turquoise3" :foreground "gray10" :weight bold))))
  '(powerline-active2 ((t (:background "black" :foreground "turquoise1"))))
