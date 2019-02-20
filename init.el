@@ -107,6 +107,7 @@
 (global-set-key (kbd "C-l") 'goto-line)
 (global-set-key (kbd "C-t") 'crear-tags) ;; Create tags shortcut
 (global-set-key (kbd "C-x p") 'phpcbf)
+(global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "M-<down>") 'enlarge-window)
 (global-set-key (kbd "M-<left>") 'enlarge-window-horizontally)
 (global-set-key (kbd "M-<right>") 'shrink-window-horizontally)

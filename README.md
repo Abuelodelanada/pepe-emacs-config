@@ -36,7 +36,7 @@ $ mv .emacs .emacs.bak
 
 1. Install the required dependencies:
 ```shell
-$ sudo apt-get install emacs exuberant-ctags git silversearcher-ag pylint pep8 php-pear
+$ sudo apt-get install emacs exuberant-ctags git silversearcher-ag pylint pep8 php-pear python-pip
 
 $ sudo pear channel-update pear.php.net
 
@@ -60,17 +60,18 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 * "F8": toggle neotree
 * "F12": toggle menu bar mode
 * "C-;": activate iedit-dwim
-* "C-c down": flycheck-next-error
-* "C-c up": flycheck-previous-error
-* "C-c TAB": format sql
 * "C-c C-k": copy line
 * "C-c C-w": copy word
 * "C-c C-z":  term stop subjob
+* "C-c TAB": format sql
 * "C-c c":  comment region
+* "C-c down": flycheck-next-error
 * "C-c u": uncomment region
+* "C-c up": flycheck-previous-error
 * "C-d":  duplicate current line
 * "C-l": go to line
 * "C-t": create ctags
+* "C-x g": magit-status
 * "C-x p": run phpcbf --standard=PSR2 to the current buffer
 * "M-down" : enlarge window
 * "M-left": enlarge window horizontally
