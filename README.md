@@ -1,9 +1,9 @@
 # The Pepe Emacs config
 
 <center>
-   <img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.png" alt="Emacs" style="width:100px;height:100px;">
-   <img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/magit.png" alt="Magit!" style="width:100px;height:100px;">
-   <img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/flycheck.png" alt="Flycheck" style="width:186px;height:75px;">
+   <img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.png" alt="Emacs" align="left">
+   <img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/magit.png" alt="Magit!" align="left">
+   <img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/flycheck.png" alt="Flycheck" align="left">
 </center>
 
 
