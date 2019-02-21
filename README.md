@@ -2,8 +2,8 @@
 
 <center>
    <img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.png" alt="Emacs" style="width:100px;height:100px;">
-   <img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/magit-400x400px.png" alt="Magit!" style="width:100px;height:100px;">
-   <img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/logo.png" alt="Flycheck" style="width:186px;height:75px;">
+   <img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/magit.png" alt="Magit!" style="width:100px;height:100px;">
+   <img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/flycheck.png" alt="Flycheck" style="width:186px;height:75px;">
 </center>
 
 
