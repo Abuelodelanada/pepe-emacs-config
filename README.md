@@ -1,23 +1,34 @@
-# pepe-emacs-config
+# The Pepe Emacs config
 
-Inspired by the great Juan Pedro Fisanotti and his wonderful [fisa-vim-config](https://github.com/fisadev/fisa-vim-config), I share my EMACS config.
+<center>
+   <img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.png" alt="Emacs" style="width:100px;height:100px;">
+   <img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/magit-400x400px.png" alt="Magit!" style="width:100px;height:100px;">
+   <img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/logo.png" alt="Flycheck" style="width:186px;height:75px;">
+</center>
+
+
+
+Inspired by the great Juan Pedro Fisanotti and his wonderful [fisa-vim-config](https://github.com/fisadev/fisa-vim-config), I share my [Emacs](https://www.gnu.org/software/emacs/) config.
 This is my personal Emacs configuration, built according to my personal preferences, without any justification to think it's the best possible emacs configuration. If you like it, great! :) It's mainly oriented to PHP software development, but many of its features are useful for other languages and editing tasks.
 
-This emacs config have some useful modules:
+This Emacs config have some useful modules:
 
-* flycheck
-* iedit
-* geben
-* php-mode
-* markdown-mode
-* smarty-mode
-* js2-mode
 * adoc-mode
 * auto-complete
 * dumb-jump
+* flycheck
+* geben
+* iedit
+* js2-mode
+* magit
+* magit-gitflow
+* markdown-mode
+* neo-tree
+* php-mode
 * powerline
-* yasnippet
+* smarty-mode
 * sqlformat
+* yasnippet
 * ...
 
 ![pepe-emacs-config](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.gif "pepe-emacs-config")
@@ -28,14 +39,14 @@ This emacs config have some useful modules:
     Your ~/.emacs.d folder should be empty. If you have one, rename it or move to a different location (to keep a backup, just in case you want to go back).
     Also rename or move your ~/.emacs file (to keep a backup, just in case you want to go back).
 
-```shell
+```bash
 $ cd ~
 $ mv .emacs.d .emacs.d.bak
 $ mv .emacs .emacs.bak
 ```
 
 1. Install the required dependencies:
-```shell
+```bash
 $ sudo apt-get install emacs exuberant-ctags git silversearcher-ag pylint pep8 php-pear python-pip
 
 $ sudo pear channel-update pear.php.net
@@ -45,9 +56,9 @@ $ sudo pear install PHP_CodeSniffer
 $ sudo pip install sqlparse
 ```
 
-2. Clone the repository.
+2. Clone the repository:
 
-```shell
+```bash
 $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 ```
 
@@ -85,7 +96,7 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 
 ## Powerline screenshots
 
-Flycheck is activated and notifies in the powerline if there is a warning or an error
+[Flycheck](http://www.flycheck.org/) is activated and notifies in the powerline if there is a warning or an error
 
 ![powerline-flycheck-ok](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/powerline-flycheck-ok.png "powerline-flycheck-ok")
 

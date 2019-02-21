@@ -54,6 +54,7 @@
 (yas-global-mode 1)
 (ido-mode 1)
 (dumb-jump-mode 1) ;dumb-jump
+(savehist-mode 1)
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (eval-after-load "flycheck"
   '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
@@ -89,6 +90,7 @@
 (add-hook 'js2-mode-hook 'jquery-doc-setup)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 (add-hook 'sql-mode-hook 'sqlformat-on-save-mode)
+(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
 
 ;; Shortcuts
 (global-set-key (kbd "%") 'match-paren) ;; Ir al cierre-apertura de ([{
@@ -247,8 +249,8 @@ ARG."
 (custom-set-variables
  '(blink-cursor-mode t)
  '(custom-safe-themes
-   (quote
-    ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
+        (quote
+         ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
  '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
  '(flycheck-highlighting-mode (quote lines))
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
@@ -260,8 +262,8 @@ ARG."
  '(neo-autorefresh t)
  '(neo-smart-open t)
  '(package-selected-packages
-   (quote
-    (yasnippet-snippets yaml-mode smarty-mode powerline linum linum-hl monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter geben flymd flycheck-color-mode-line flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
+        (quote
+         (yasnippet-snippets yaml-mode smarty-mode powerline linum linum-hl monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter geben flymd flycheck-color-mode-line flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
  '(phpcbf-standard "PSR2")
  '(powerline-default-separator (quote arrow-fade))
  '(powerline-gui-use-vcs-glyph t)
@@ -269,8 +271,8 @@ ARG."
  '(whitespace-display-mappings (quote ((tab-mark 9 [187]))))
  '(whitespace-line-column nil)
  '(whitespace-style
-   (quote
-    (face trailing tabs spaces newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark))))
+        (quote
+         (face trailing tabs spaces newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark))))
 
 (custom-set-faces
  '(default ((t (:background "#000000" :foreground "#F8F8F2" :weight bold :height 110 :family "Ubuntu Mono"))))
@@ -286,6 +288,15 @@ ARG."
  '(ido-only-match ((t (:background "cyan" :foreground "black" :weight bold))))
  '(iedit-occurrence ((t (:foreground "green yellow"))))
  '(linum-current-line ((t (:foreground "turquoise2" :weight bold))))
+ '(magit-branch-local ((t (:foreground "turquoise1"))))
+ '(magit-filename ((t (:foreground "DarkOrange1" :weight normal))))
+ '(magit-hash ((t (:foreground "orange"))))
+ '(magit-log-author ((t (:foreground "aquamarine1"))))
+ '(magit-log-date ((t (:foreground "orange"))))
+ '(magit-log-graph ((t (:foreground "#75715E"))))
+ '(magit-section-heading ((t (:foreground "aquamarine1" :weight bold))))
+ '(magit-section-highlight ((t (:background "turquoise4"))))
+ '(magit-tag ((t (:foreground "orange" :weight bold))))
  '(mode-line ((t (:background "#49483E" :foreground "#F8F8F0" :box (:line-width 1 :color "black")))))
  '(mode-line-buffer-id ((t (:foreground "white smoke" :weight bold))))
  '(mode-line-inactive ((t ("#000000" nil "#75715E" :background :box nil))))
