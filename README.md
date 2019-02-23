@@ -1,11 +1,12 @@
 # The Pepe Emacs config
 
-<center>
-   <img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.png" alt="Emacs" style="width:100px;height:100px;">
-   <img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/magit-400x400px.png" alt="Magit!" style="width:100px;height:100px;">
-   <img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/logo.png" alt="Flycheck" style="width:186px;height:75px;">
-</center>
-
+ <table style="width:100%; border:0px; align:center">
+  <tr>
+    <td><img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.png" alt="Emacs"></td>
+    <td><img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/magit.png" alt="Magit!"></td>
+    <td><img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/flycheck.png" alt="Flycheck"></td>
+  </tr>
+</table> 
 
 
 Inspired by the great Juan Pedro Fisanotti and his wonderful [fisa-vim-config](https://github.com/fisadev/fisa-vim-config), I share my [Emacs](https://www.gnu.org/software/emacs/) config.

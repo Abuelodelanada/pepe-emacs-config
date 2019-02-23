@@ -43,8 +43,8 @@
 (custom-set-variables
  '(blink-cursor-mode t)
  '(custom-safe-themes
-        (quote
-         ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
+   (quote
+    ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
  '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
  '(flycheck-highlighting-mode (quote lines))
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
@@ -56,17 +56,18 @@
  '(neo-autorefresh t)
  '(neo-smart-open t)
  '(package-selected-packages
-        (quote
-         (yasnippet-snippets yaml-mode smarty-mode powerline linum linum-hl monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter geben flymd flycheck-color-mode-line flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
+   (quote
+    (yasnippet-snippets yaml-mode smarty-mode powerline linum linum-hl monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter geben flymd flycheck-color-mode-line flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
  '(phpcbf-standard "PSR2")
  '(powerline-default-separator (quote arrow-fade))
  '(powerline-gui-use-vcs-glyph t)
+ '(powerline-height 18)
  '(size-indication-mode nil)
  '(whitespace-display-mappings (quote ((tab-mark 9 [187]))))
  '(whitespace-line-column nil)
  '(whitespace-style
-        (quote
-         (face trailing tabs spaces newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark))))
+   (quote
+    (face trailing tabs spaces newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark))))
 
 (custom-set-faces
  '(default ((t (:background "#000000" :foreground "#F8F8F2" :weight bold :height 110 :family "Ubuntu Mono"))))
