@@ -4,6 +4,7 @@
 
 (package-initialize)
 (load "~/.emacs.d/init-packages")
+(load "~/.emacs.d/alias")
 
 ;; Global settings
 (require 'iedit)
@@ -31,14 +32,6 @@
 (setq-default kill-read-only-ok t)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
-
-;; Alias
-(defalias 'bkr 'browse-kill-ring)
-(defalias 'lb 'list-buffers)
-(defalias 'yes-or-no-p 'y-or-n-p)
-(defalias 'gf 'grep-find)
-(defalias 'fd 'find-dired)
-(defalias 'tt 'tramp-term)
 
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; Maximize window at startup
