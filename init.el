@@ -6,6 +6,7 @@
 (load "~/.emacs.d/init-packages")
 (load "~/.emacs.d/alias")
 (load "~/.emacs.d/automode")
+(load "~/.emacs.d/hooks")
 
 ;; Global settings
 (require 'iedit)
@@ -62,14 +63,6 @@
   "Major mode for editing Markdown files" t)
 
 
-
-;; Hooks
-(add-hook 'window-setup-hook 'on-after-init)
-;(add-hook 'php-mode-hook 'php-enable-psr2-coding-style)
-(add-hook 'js2-mode-hook 'jquery-doc-setup)
-(add-hook 'js2-mode-hook 'ac-js2-mode)
-(add-hook 'sql-mode-hook 'sqlformat-on-save-mode)
-(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
 
 ;; Shortcuts
 (global-set-key (kbd "%") 'match-paren) ;; Ir al cierre-apertura de ([{
