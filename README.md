@@ -6,7 +6,7 @@
     <td><img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/magit.png" alt="Magit!"></td>
     <td><img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/flycheck.png" alt="Flycheck"></td>
   </tr>
-</table> 
+</table>
 
 
 Inspired by the great Juan Pedro Fisanotti and his wonderful [fisa-vim-config](https://github.com/fisadev/fisa-vim-config), I share my [Emacs](https://www.gnu.org/software/emacs/) config.
