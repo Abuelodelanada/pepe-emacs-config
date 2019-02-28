@@ -128,5 +128,12 @@ ARG."
     )
   )
 
+; https://stackoverflow.com/questions/6837511/automatically-disable-a-global-minor-mode-for-a-specific-major-mode
+(defun my-inhibit-global-linum-mode ()
+  "Counter-act `global-linum-mode'."
+  (add-hook 'after-change-major-mode-hook
+            (lambda () (linum-mode 0))
+            :append :local))
+
 (provide 'functions)
 ;;; functions.el ends here
