@@ -21,9 +21,9 @@
                     :foreground "DarkOrange" :box nil
                     :inherit 'tabbar-unselected)
 (set-face-attribute 'tabbar-selected nil
-                    :background "DarkSlateGray4" :foreground "white" :box nil)
+                    :background "DeepSkyBlue4" :foreground "spring green" :box nil)
 (set-face-attribute 'tabbar-selected-modified nil
-                    :inherit 'tabbar-selected :foreground "turquoise1" :box nil)
+                    :inherit 'tabbar-selected :foreground "DarkOrange" :box nil)
 (set-face-attribute 'tabbar-button nil
                     :box nil)
 

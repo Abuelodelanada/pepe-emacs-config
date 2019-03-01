@@ -47,21 +47,23 @@
  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode t)
  '(custom-safe-themes
-   (quote
-    ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
+        (quote
+         ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
+ '(diff-hl-margin-mode t)
  '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
  '(flycheck-highlighting-mode (quote lines))
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
+ '(global-linum-mode t)
  '(global-whitespace-mode t)
- '(linum-format " %d ")
+ '(linum-format "%4d ")
  '(linum-highlight-current-line t)
  '(linum-use-right-margin nil)
  '(monokai-background "#000000")
  '(neo-autorefresh t)
  '(neo-smart-open t)
  '(package-selected-packages
-   (quote
-    (yasnippet-snippets yaml-mode smarty-mode doom-modeline linum linum-hl markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter geben flymd flycheck-color-mode-line flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
+        (quote
+         (yasnippet-snippets yaml-mode smarty-mode doom-modeline linum linum-hl markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter geben flymd flycheck-color-mode-line flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
  '(phpcbf-standard "PSR2")
  '(size-indication-mode t)
  '(tabbar-background-color "black")
@@ -70,8 +72,8 @@
  '(whitespace-display-mappings (quote ((tab-mark 9 [187]))))
  '(whitespace-line-column nil)
  '(whitespace-style
-   (quote
-    (face trailing tabs spaces newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark))))
+        (quote
+         (face trailing tabs spaces newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -80,6 +82,8 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:background "#000000" :foreground "#F8F8F2" :weight bold :height 110 :family "Ubuntu Mono"))))
  '(cursor ((t (:background "spring green" :foreground "white smoke" :inverse-video t))))
+ '(diff-hl-delete ((t (:background "#F20055" :foreground "black"))))
+ '(diff-hl-insert ((t (:background "lime green" :foreground "#CCF47C"))))
  '(doom-modeline-bar ((t (:background "orange"))))
  '(doom-modeline-buffer-major-mode ((t (:inherit (mode-line-emphasis bold) :foreground "spring green"))))
  '(doom-modeline-buffer-minor-mode ((t (:inherit (mode-line-buffer-id bold) :foreground "cyan"))))
@@ -95,9 +99,12 @@
  '(ido-incomplete-regexp ((t (:foreground "DeepPink1" :weight bold))))
  '(ido-only-match ((t (:background "cyan" :foreground "black" :weight bold))))
  '(iedit-occurrence ((t (:foreground "green yellow"))))
+ '(linum ((t (:inherit default :background "gray9" :foreground "#8F908A" :underline nil))))
  '(linum-current-line ((t (:foreground "turquoise2" :weight bold))))
- '(linum-highlight-face ((t (:inherit default :foreground "spring green"))))
+ '(linum-highlight-face ((t (:background "gray9" :foreground "spring green"))))
  '(magit-branch-local ((t (:foreground "turquoise1"))))
+ '(magit-diff-removed ((t (:background "#000000" :foreground "orange red"))))
+ '(magit-diff-removed-highlight ((t (:background "#3C3D37" :foreground "orange red"))))
  '(magit-filename ((t (:foreground "DarkOrange1" :weight normal))))
  '(magit-hash ((t (:foreground "orange"))))
  '(magit-log-author ((t (:foreground "aquamarine1"))))
