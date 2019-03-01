@@ -5,23 +5,23 @@
 ;; Taken from: https://amitp.blogspot.com/2018/10/emacs-prettier-tabbar.html
 ;; Tab Bar
 (require 'tabbar)
-(customize-set-variable 'tabbar-background-color "black")
+(customize-set-variable 'tabbar-background-color "gray9")
 (customize-set-variable 'tabbar-separator '(0.5))
 (customize-set-variable 'tabbar-use-images t)
 (tabbar-mode 1)
 
 ;; Colors
 (set-face-attribute 'tabbar-default nil
-                    :background "black" :foreground
-                    "black" :distant-foreground "black"
+                    :background "gray9" :foreground
+                    "gray9" :distant-foreground "gray9"
                     :family "Helvetica Neue" :box nil)
 (set-face-attribute 'tabbar-unselected nil
-                    :background "gray80" :foreground "black" :box nil)
+                    :background "gray80" :foreground "gray9" :box nil)
 (set-face-attribute 'tabbar-modified nil
                     :foreground "DarkOrange" :box nil
                     :inherit 'tabbar-unselected)
 (set-face-attribute 'tabbar-selected nil
-                    :background "turquoise4" :foreground "white" :box nil)
+                    :background "DarkSlateGray4" :foreground "white" :box nil)
 (set-face-attribute 'tabbar-selected-modified nil
                     :inherit 'tabbar-selected :foreground "turquoise1" :box nil)
 (set-face-attribute 'tabbar-button nil
