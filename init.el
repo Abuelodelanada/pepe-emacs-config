@@ -19,9 +19,9 @@
 (menu-bar-mode -1) ;; Hide menubar
 (column-number-mode 1) ;; Show column number
 (global-linum-mode 1) ;; Show line-number
+(hlinum-activate)
 (global-auto-complete-mode t) ;; Enable auto-complete
 (global-highlight-parentheses-mode t)
-(global-git-gutter-mode +1)
 (powerline-default-theme)
 (put 'upcase-region 'disabled nil)
 (yas-global-mode 1)
@@ -49,7 +49,7 @@
  '(flycheck-highlighting-mode (quote lines))
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
  '(global-whitespace-mode t)
- '(linum-format "%4d ")
+ '(linum-format (quote dynamic))
  '(linum-highlight-current-line t)
  '(linum-use-right-margin nil)
  '(monokai-background "#000000")
@@ -57,7 +57,7 @@
  '(neo-smart-open t)
  '(package-selected-packages
    (quote
-    (yasnippet-snippets yaml-mode smarty-mode powerline linum linum-hl monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter geben flymd flycheck-color-mode-line flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
+    (yasnippet-snippets yaml-mode smarty-mode powerline linum linum-hl monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter git-gutter-fringe geben flymd flycheck-color-mode-line flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
  '(phpcbf-standard "PSR2")
  '(powerline-default-separator (quote arrow-fade))
  '(powerline-gui-use-vcs-glyph t)
@@ -80,14 +80,13 @@
  '(flycheck-color-mode-line-success-face ((t (:box (:line-width 1 :color "turquoise1")))))
  '(flycheck-color-mode-line-warning-face ((t (:box (:line-width 1 :color "orange")))))
  '(flycheck-error ((t (:underline "#F92672"))))
- '(git-gutter:added ((t (:inherit bold :background "lime green" :foreground "#000000"))))
- '(git-gutter:deleted ((t (:inherit bold :background "orange red" :foreground "#000000"))))
  '(highlight ((t (:background "black" :foreground "white"))))
  '(ido-first-match ((t (:foreground "cyan" :weight normal))))
  '(ido-incomplete-regexp ((t (:foreground "DeepPink1" :weight bold))))
  '(ido-only-match ((t (:background "cyan" :foreground "black" :weight bold))))
  '(iedit-occurrence ((t (:foreground "green yellow"))))
  '(linum-current-line ((t (:foreground "turquoise2" :weight bold))))
+ '(linum-highlight-face ((t (:foreground "spring green" :weight bold))))
  '(magit-branch-local ((t (:foreground "turquoise1"))))
  '(magit-filename ((t (:foreground "DarkOrange1" :weight normal))))
  '(magit-hash ((t (:foreground "orange"))))
