@@ -49,7 +49,7 @@
  '(flycheck-highlighting-mode (quote lines))
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
  '(global-whitespace-mode t)
- '(linum-format " %d ")
+ '(linum-format "%4d ")
  '(linum-highlight-current-line t)
  '(linum-use-right-margin nil)
  '(monokai-background "#000000")
