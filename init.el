@@ -21,6 +21,7 @@
 (global-linum-mode 1) ;; Show line-number
 (global-auto-complete-mode t) ;; Enable auto-complete
 (global-highlight-parentheses-mode t)
+(global-git-gutter-mode +1)
 (powerline-default-theme)
 (put 'upcase-region 'disabled nil)
 (yas-global-mode 1)
@@ -38,7 +39,6 @@
 (autoload 'geben "geben" "DBGp protocol frontend, a script debugger" t) ; Geben
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
-
 
 (custom-set-variables
  '(blink-cursor-mode t)
@@ -63,6 +63,9 @@
  '(powerline-gui-use-vcs-glyph t)
  '(powerline-height 18)
  '(size-indication-mode nil)
+ '(tabbar-background-color "black")
+ '(tabbar-separator (quote (0.5)))
+ '(tabbar-use-images t)
  '(whitespace-display-mappings (quote ((tab-mark 9 [187]))))
  '(whitespace-line-column nil)
  '(whitespace-style
@@ -77,6 +80,8 @@
  '(flycheck-color-mode-line-success-face ((t (:box (:line-width 1 :color "turquoise1")))))
  '(flycheck-color-mode-line-warning-face ((t (:box (:line-width 1 :color "orange")))))
  '(flycheck-error ((t (:underline "#F92672"))))
+ '(git-gutter:added ((t (:inherit bold :background "lime green" :foreground "#000000"))))
+ '(git-gutter:deleted ((t (:inherit bold :background "orange red" :foreground "#000000"))))
  '(highlight ((t (:background "black" :foreground "white"))))
  '(ido-first-match ((t (:foreground "cyan" :weight normal))))
  '(ido-incomplete-regexp ((t (:foreground "DeepPink1" :weight bold))))
