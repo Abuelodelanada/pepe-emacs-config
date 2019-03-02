@@ -61,7 +61,7 @@
  '(phpcbf-standard "PSR2")
  '(powerline-default-separator (quote arrow-fade))
  '(powerline-gui-use-vcs-glyph t)
- '(powerline-height 18)
+ '(powerline-height 22)
  '(size-indication-mode nil)
  '(tabbar-background-color "black")
  '(tabbar-separator (quote (0.5)))
