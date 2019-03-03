@@ -60,7 +60,7 @@
    (quote
     (yasnippet-snippets yaml-mode smarty-mode powerline linum linum-hl monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter-fringe geben flymd flycheck-color-mode-line flycheck ecb dumb-jump company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
  '(phpcbf-standard "PSR2")
- '(powerline-default-separator (quote arrow-fade))
+ '(powerline-default-separator (quote arrow))
  '(powerline-gui-use-vcs-glyph t)
  '(powerline-height 22)
  '(size-indication-mode nil)
