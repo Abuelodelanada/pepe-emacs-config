@@ -22,7 +22,8 @@
 (hlinum-activate)
 (global-auto-complete-mode t) ;; Enable auto-complete
 (global-highlight-parentheses-mode t)
-(doom-modeline-mode 1)
+(global-git-gutter-mode t)
+(powerline-default-theme)
 (put 'upcase-region 'disabled nil)
 (yas-global-mode 1)
 (ido-mode 1)
@@ -35,7 +36,6 @@
   (add-hook 'flycheck-mode-hook #'flycheck-pycheckers-setup))
 (put 'downcase-region 'disabled nil)
 (set-default 'case-fold-search nil) ; Case sensitive TAGS search
-(global-diff-hl-mode)
 (autoload 'geben "geben" "DBGp protocol frontend, a script debugger" t) ; Geben
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
@@ -55,17 +55,20 @@
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
  '(global-linum-mode t)
  '(global-whitespace-mode t)
- '(linum-format "%4d ")
+ '(linum-format (quote dynamic))
  '(linum-highlight-current-line t)
  '(linum-use-right-margin nil)
  '(monokai-background "#000000")
  '(neo-autorefresh t)
  '(neo-smart-open t)
  '(package-selected-packages
-        (quote
-         (yasnippet-snippets yaml-mode smarty-mode doom-modeline linum linum-hl markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter geben flymd flycheck-color-mode-line flycheck ecb dumb-jump diff-hl company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
+   (quote
+    (yasnippet-snippets yaml-mode smarty-mode powerline linum linum-hl monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter-fringe geben flymd flycheck-color-mode-line flycheck ecb dumb-jump company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
  '(phpcbf-standard "PSR2")
- '(size-indication-mode t)
+ '(powerline-default-separator (quote arrow-fade))
+ '(powerline-gui-use-vcs-glyph t)
+ '(powerline-height 22)
+ '(size-indication-mode nil)
  '(tabbar-background-color "black")
  '(tabbar-separator (quote (0.5)))
  '(tabbar-use-images t)
@@ -76,10 +79,6 @@
          (face trailing tabs spaces newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark))))
 
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(default ((t (:background "#000000" :foreground "#F8F8F2" :weight bold :height 110 :family "Ubuntu Mono"))))
  '(cursor ((t (:background "spring green" :foreground "white smoke" :inverse-video t))))
  '(diff-hl-delete ((t (:background "#F20055" :foreground "black"))))
@@ -101,7 +100,7 @@
  '(iedit-occurrence ((t (:foreground "green yellow"))))
  '(linum ((t (:inherit default :background "gray9" :foreground "#8F908A" :underline nil))))
  '(linum-current-line ((t (:foreground "turquoise2" :weight bold))))
- '(linum-highlight-face ((t (:background "gray9" :foreground "spring green"))))
+ '(linum-highlight-face ((t (:foreground "spring green" :weight bold))))
  '(magit-branch-local ((t (:foreground "turquoise1"))))
  '(magit-diff-removed ((t (:background "#000000" :foreground "orange red"))))
  '(magit-diff-removed-highlight ((t (:background "#3C3D37" :foreground "orange red"))))
