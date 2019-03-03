@@ -26,11 +26,5 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 
-(setq doom-modeline-height 28)
-(setq doom-modeline-bar-width 3)
-(setq doom-modeline-minor-modes t)
-(setq doom-modeline-checker-simple-format nil)
-
-
 (provide 'variables)
 ;;; variables.el ends here

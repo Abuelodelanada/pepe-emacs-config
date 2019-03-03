@@ -41,15 +41,10 @@
   "Major mode for editing Markdown files" t)
 
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(blink-cursor-mode t)
  '(custom-safe-themes
-        (quote
-         ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
- '(diff-hl-margin-mode t)
+   (quote
+    ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
  '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
  '(flycheck-highlighting-mode (quote lines))
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
@@ -75,19 +70,12 @@
  '(whitespace-display-mappings (quote ((tab-mark 9 [187]))))
  '(whitespace-line-column nil)
  '(whitespace-style
-        (quote
-         (face trailing tabs spaces newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark))))
+   (quote
+    (face trailing tabs spaces newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark))))
 
 (custom-set-faces
  '(default ((t (:background "#000000" :foreground "#F8F8F2" :weight bold :height 110 :family "Ubuntu Mono"))))
  '(cursor ((t (:background "spring green" :foreground "white smoke" :inverse-video t))))
- '(diff-hl-delete ((t (:background "#F20055" :foreground "black"))))
- '(diff-hl-insert ((t (:background "lime green" :foreground "#CCF47C"))))
- '(doom-modeline-bar ((t (:background "orange"))))
- '(doom-modeline-buffer-major-mode ((t (:inherit (mode-line-emphasis bold) :foreground "spring green"))))
- '(doom-modeline-buffer-minor-mode ((t (:inherit (mode-line-buffer-id bold) :foreground "cyan"))))
- '(doom-modeline-buffer-modified ((t (:foreground "orange"))))
- '(doom-modeline-project-dir ((t (:inherit (font-lock-string-face bold) :foreground "cyan"))))
  '(flycheck-color-mode-line-error-face ((t (:weight bold))))
  '(flycheck-color-mode-line-info-face ((t nil)))
  '(flycheck-color-mode-line-success-face ((t nil)))
@@ -98,7 +86,7 @@
  '(ido-incomplete-regexp ((t (:foreground "DeepPink1" :weight bold))))
  '(ido-only-match ((t (:background "cyan" :foreground "black" :weight bold))))
  '(iedit-occurrence ((t (:foreground "green yellow"))))
- '(linum ((t (:inherit default :background "gray9" :foreground "#8F908A" :underline nil))))
+ '(linum ((t (:background "gray5" :foreground "#8F908A" :underline nil))))
  '(linum-current-line ((t (:foreground "turquoise2" :weight bold))))
  '(linum-highlight-face ((t (:foreground "spring green" :weight bold))))
  '(magit-branch-local ((t (:foreground "turquoise1"))))
@@ -113,8 +101,11 @@
  '(magit-section-highlight ((t (:background "gray9"))))
  '(magit-tag ((t (:foreground "orange" :weight bold))))
  '(mode-line ((t (:background "gray9" :foreground "#F8F8F0" :slant normal))))
- '(mode-line-buffer-id ((t (:foreground "spring green" :weight bold))))
+ '(mode-line-buffer-id ((t (:foreground "white smoke" :weight bold))))
  '(mode-line-inactive ((t ("#000000" nil "#75715E" :background :box nil))))
+ '(powerline-active0 ((t (:background "turquoise4"))))
+ '(powerline-active1 ((t (:background "turquoise3" :foreground "gray10" :weight bold))))
+ '(powerline-active2 ((t (:background "black" :foreground "turquoise1"))))
  '(trailing-whitespace ((t (:background "deep pink" :foreground "white"))))
  '(whitespace-line ((t nil)))
  '(whitespace-newline ((t nil)))
