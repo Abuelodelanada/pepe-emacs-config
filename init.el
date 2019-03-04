@@ -45,6 +45,9 @@
  '(custom-safe-themes
    (quote
     ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
+ '(dumb-jump-default-project "~")
+ '(dumb-jump-prefer-searcher (quote rg))
+ '(dumb-jump-quiet t)
  '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
  '(flycheck-highlighting-mode (quote lines))
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))

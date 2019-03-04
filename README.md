@@ -48,7 +48,7 @@ $ mv .emacs .emacs.bak
 
 1. Install the required dependencies:
 ```bash
-$ sudo apt-get install emacs exuberant-ctags git silversearcher-ag pylint pep8 php-pear python-pip
+$ sudo apt-get install emacs exuberant-ctags git ripgrep silversearcher-ag pylint pep8 php-pear python-pip
 
 $ sudo pear channel-update pear.php.net
 
