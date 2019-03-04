@@ -36,9 +36,7 @@ This Emacs config have some useful modules:
 
 ### Autocomplete, iedit, magit, etc.
 
-<video autoplay>
-    <source src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.webm" type="video/webm">
-</video>
+![emacs](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.png "emacs")
 
 ### Magit
 ![magit-status](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/magit-status.png "magit-status")
