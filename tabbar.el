@@ -21,9 +21,9 @@
                     :foreground "DarkOrange" :box nil
                     :inherit 'tabbar-unselected)
 (set-face-attribute 'tabbar-selected nil
-                    :background "DeepSkyBlue4" :foreground "spring green" :box nil)
+                    :background "#F34739" :foreground "white" :box nil)
 (set-face-attribute 'tabbar-selected-modified nil
-                    :inherit 'tabbar-selected :foreground "DarkOrange" :box nil)
+                    :inherit 'tabbar-selected :foreground "#FE8B05" :box nil)
 (set-face-attribute 'tabbar-button nil
                     :box nil)
 
@@ -31,8 +31,8 @@
 ;; (this needs to run *after* the colors are set)
 (require 'powerline)
 (defvar my/tabbar-height 20)
-(defvar my/tabbar-left (powerline-wave-right 'tabbar-default nil my/tabbar-height))
-(defvar my/tabbar-right (powerline-wave-left nil 'tabbar-default my/tabbar-height))
+(defvar my/tabbar-left (powerline-arrow-right 'tabbar-default nil my/tabbar-height))
+(defvar my/tabbar-right (powerline-arrow-left nil 'tabbar-default my/tabbar-height))
 (defun my/tabbar-tab-label-function (tab)
   (powerline-render (list my/tabbar-left
                           (format " %s  " (car tab))
