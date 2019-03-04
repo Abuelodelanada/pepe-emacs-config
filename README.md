@@ -32,13 +32,42 @@ This Emacs config have some useful modules:
 * yasnippet
 * ...
 
-![pepe-emacs-config](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.gif "pepe-emacs-config")
+## Some Features
+
+### Autocomplete, iedit, magit, etc.
+
+<video autoplay>
+    <source src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.webm" type="video/webm">
+</video>
+
+### Magit
+![magit-status](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/magit-status.png "magit-status")
+
+### Neotree
+![neotree](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/neotree.png "neotree")
+
+
+### Tabbar
+![tabbar](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/tabbar.png "tabbar")
+
+
+### Powerline with Flycheck
+
+[Flycheck](http://www.flycheck.org/) is activated and notifies in the powerline if there is a warning or an error
+
+![powerline-flycheck-ok](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/powerline-flycheck-ok.png "powerline-flycheck-ok")
+
+![powerline-flycheck-warning](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/powerline-flycheck-warning.png "powerline-flycheck-warning")
+
+![powerline-flycheck-error](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/powerline-flycheck-error.png "powerline-flycheck-error")
+
+
 
 ## Install | Upgrade
 
 0. This config is tested in Emacs 25.2.2, but may also work in previous versions.
-    Your ~/.emacs.d folder should be empty. If you have one, rename it or move to a different location (to keep a backup, just in case you want to go back).
-    Also rename or move your ~/.emacs file (to keep a backup, just in case you want to go back).
+    Your `~/.emacs.d` folder should be empty. If you have one, rename it or move to a different location (to keep a backup, just in case you want to go back).
+    Also rename or move your `~/.emacs` file (to keep a backup, just in case you want to go back).
 
 ```bash
 $ cd ~
@@ -95,14 +124,3 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 * "S-left": 'windmove left
 * "S-right": windmove right
 * "S-up": windmove up
-
-
-## Powerline screenshots
-
-[Flycheck](http://www.flycheck.org/) is activated and notifies in the powerline if there is a warning or an error
-
-![powerline-flycheck-ok](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/powerline-flycheck-ok.png "powerline-flycheck-ok")
-
-![powerline-flycheck-warning](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/powerline-flycheck-warning.png "powerline-flycheck-warning")
-
-![powerline-flycheck-error](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/powerline-flycheck-error.png "powerline-flycheck-error")
