@@ -48,7 +48,6 @@
  '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
  '(flycheck-highlighting-mode (quote lines))
  '(flycheck-pycheckers-checkers (quote (pylint pep8)))
- '(global-linum-mode t)
  '(global-whitespace-mode t)
  '(history-delete-duplicates t)
  '(history-length 1000)
@@ -61,7 +60,7 @@
  '(neo-autorefresh t)
  '(neo-mode-line-type (quote neotree))
  '(neo-smart-open t)
- '(neo-theme (quote icons))
+ '(neo-theme (quote icons) t)
  '(package-selected-packages
    (quote
     (yasnippet-snippets yaml-mode smarty-mode powerline linum linum-hl monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter-fringe geben flymd flycheck-color-mode-line flycheck ecb dumb-jump company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
@@ -115,6 +114,7 @@
  '(neo-banner-face ((t (:background "#000000" :foreground "#F34739" :weight bold))))
  '(neo-dir-link-face ((t (:foreground "#FF6E27"))))
  '(neo-root-dir-face ((t (:background "#000000" :foreground "gold"))))
+ '(package-name ((t (:foreground "#FF6E27"))))
  '(powerline-active0 ((t (:background "#F34739"))))
  '(powerline-active1 ((t (:background "#FF6E27" :foreground "smoke white" :weight bold))))
  '(powerline-active2 ((t (:background "gray9" :foreground "#FF6E27"))))
