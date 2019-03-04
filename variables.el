@@ -21,7 +21,7 @@
 (setq yas-prompt-functions '(yas-dropdown-prompt
                              yas-ido-prompt
                              yas-completing-prompt))
-(setq vc-handled-backends nil)
+
 (setq-default kill-read-only-ok t)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
