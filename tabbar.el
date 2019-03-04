@@ -31,8 +31,8 @@
 ;; (this needs to run *after* the colors are set)
 (require 'powerline)
 (defvar my/tabbar-height 20)
-(defvar my/tabbar-left (powerline-arrow-right 'tabbar-default nil my/tabbar-height))
-(defvar my/tabbar-right (powerline-arrow-left nil 'tabbar-default my/tabbar-height))
+(defvar my/tabbar-left (powerline-slant-right 'tabbar-default nil my/tabbar-height))
+(defvar my/tabbar-right (powerline-slant-right nil 'tabbar-default my/tabbar-height))
 (defun my/tabbar-tab-label-function (tab)
   (powerline-render (list my/tabbar-left
                           (format " %s  " (car tab))
