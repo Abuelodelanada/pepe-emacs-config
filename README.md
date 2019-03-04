@@ -36,7 +36,7 @@ This Emacs config have some useful modules:
 
 ### Autocomplete, iedit, magit, etc.
 
-![emacs](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.png "emacs")
+![emacs](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.gif "emacs")
 
 ### Magit
 ![magit-status](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/magit-status.png "magit-status")
