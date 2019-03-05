@@ -1,3 +1,13 @@
+# The Pepe Emacs config
+
+ <table style="width:100%; border:0px; align:center">
+  <tr>
+    <td><img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.png" alt="Emacs"></td>
+    <td><img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/magit.png" alt="Magit!"></td>
+    <td><img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/flycheck.png" alt="Flycheck"></td>
+  </tr>
+</table>
+
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
@@ -15,16 +25,6 @@
     - [Shortcuts](#shortcuts)
 
 <!-- markdown-toc end -->
-# The Pepe Emacs config
-
- <table style="width:100%; border:0px; align:center">
-  <tr>
-    <td><img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/emacs.png" alt="Emacs"></td>
-    <td><img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/magit.png" alt="Magit!"></td>
-    <td><img src="https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/flycheck.png" alt="Flycheck"></td>
-  </tr>
-</table>
-
 
 Inspired by the great Juan Pedro Fisanotti and his wonderful [fisa-vim-config](https://github.com/fisadev/fisa-vim-config), I share my [Emacs](https://www.gnu.org/software/emacs/) config.
 This is my personal Emacs configuration, built according to my personal preferences, without any justification to think it's the best possible emacs configuration. If you like it, great! :) It's mainly oriented to PHP software development, but many of its features are useful for other languages and editing tasks.
