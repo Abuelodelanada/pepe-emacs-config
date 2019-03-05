@@ -1,3 +1,20 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [The Pepe Emacs config](#the-pepe-emacs-config)
+    - [Some Features](#some-features)
+        - [Autocomplete, iedit, magit, etc.](#autocomplete-iedit-magit-etc)
+        - [Magit](#magit)
+        - [Neotree](#neotree)
+        - [Tabbar](#tabbar)
+        - [Powerline with Flycheck](#powerline-with-flycheck)
+            - [Flycheck with no errors.](#flycheck-with-no-errors)
+            - [Flycheck with warnings.](#flycheck-with-warnings)
+            - [Flycheck with errors.](#flycheck-with-errors)
+    - [Install | Upgrade](#install--upgrade)
+    - [Shortcuts](#shortcuts)
+
+<!-- markdown-toc end -->
 # The Pepe Emacs config
 
  <table style="width:100%; border:0px; align:center">
@@ -24,6 +41,7 @@ This Emacs config have some useful modules:
 * magit
 * magit-gitflow
 * markdown-mode
+* markdown-toc
 * neo-tree
 * php-mode
 * powerline
