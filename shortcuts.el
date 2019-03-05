@@ -5,6 +5,7 @@
 ;; Shortcuts
 (global-set-key (kbd "%") 'match-paren) ;; Ir al cierre-apertura de ([{
 (global-set-key (kbd "<f12>") 'menu-bar-mode)
+(global-set-key (kbd "<f7>") 'ecb-minor-mode)
 (global-set-key (kbd "<f8>") 'neotree-toggle)
 (global-set-key (kbd "C-;") 'iedit-dwim)
 (global-set-key (kbd "C-c <down>") 'flycheck-next-error)

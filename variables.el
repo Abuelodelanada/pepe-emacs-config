@@ -22,6 +22,7 @@
                              yas-ido-prompt
                              yas-completing-prompt))
 
+(setq ecb-tip-of-the-day nil)
 (setq-default kill-read-only-ok t)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
