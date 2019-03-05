@@ -16,6 +16,7 @@
         - [Autocomplete, iedit, magit, etc.](#autocomplete-iedit-magit-etc)
         - [Magit](#magit)
         - [Neotree](#neotree)
+        - [ECB (Emacs Code Browser)](#ecb-emacs-code-browser)
         - [Tabbar](#tabbar)
         - [Powerline with Flycheck](#powerline-with-flycheck)
             - [Flycheck with no errors.](#flycheck-with-no-errors)
@@ -62,6 +63,9 @@ This Emacs config have some useful modules:
 ### Neotree
 ![neotree](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/neotree.png "neotree")
 
+
+### ECB (Emacs Code Browser)
+![ecb](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/ecb.png "ecb")
 
 ### Tabbar
 ![tabbar](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/tabbar.png "tabbar")
