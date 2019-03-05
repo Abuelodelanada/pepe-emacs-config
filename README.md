@@ -53,10 +53,13 @@ This Emacs config have some useful modules:
 
 [Flycheck](http://www.flycheck.org/) is activated and notifies in the powerline if there is a warning or an error
 
+#### Flycheck with no errors.
 ![powerline-flycheck-ok](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/powerline-flycheck-ok.png "powerline-flycheck-ok")
 
+#### Flycheck with warnings.
 ![powerline-flycheck-warning](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/powerline-flycheck-warning.png "powerline-flycheck-warning")
 
+#### Flycheck with errors.
 ![powerline-flycheck-error](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/powerline-flycheck-error.png "powerline-flycheck-error")
 
 
