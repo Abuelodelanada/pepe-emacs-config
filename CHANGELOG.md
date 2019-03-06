@@ -1,4 +1,25 @@
-# 0.4.3
+# [0.4.8](https://github.com/Abuelodelanada/pepe-emacs-config/releases/tag/0.4.8)
+## "La llave de la victoria"
+
+Compañeras y compañeros,
+
+   Muchas personas me paran por la calle y me preguntan:
+
+> *"General, ¿Cúal es la llave del triunfo en Octubre próximo?".*
+
+A lo que yo siempre respondo:
+
+> *"Vea, no hay una única llave que nos abra la puerta de la victoria en Octubre. Son muchas y muy variadas y ningún compañero tendrá la capacidad de recordarlas todas."*
+
+Toda compañera o compañero tiene que tener su bastón de mando en la mochila listo para utilizarlo cuando haga falta. En estos momentos de noche conservadora, tenemos que estar más preparados que nunca para recobrar todos los controles del Estado en favor de las mayorías populares.
+
+Y las contraseñas que nos permitan realizar esas tareas titánicas que nos esperan, debemos gestionarlas con [pass](https://www.passwordstore.org/). Las almacenaremos cifradas con [GPG](https://gnupg.org/), para que la oligarquía nunca más nos las arrebate!
+Es por esto, compañeros, que hemos integrado el paquete `pass` para emacs. De esta forma, con un simple `M-x pass` podremos acceder a la contraseña precisa.
+
+Hasta la victoria siempre!
+
+
+# [0.4.3](https://github.com/Abuelodelanada/pepe-emacs-config/releases/tag/0.4.3)
 ## "La unidad hasta que duela"
 
 Compañeros y compañeras,
@@ -27,7 +48,7 @@ simple: `M-left` y `M-right`.
 Los abrazo sobre mi corazón
 
 
-# 0.4.0
+# [0.4.0](https://github.com/Abuelodelanada/pepe-emacs-config/releases/tag/0.4.0)
 ## "Emacs y la unidad del campo popular"
 
 Compañeros y compañeras!
@@ -55,7 +76,7 @@ De esta forma, por cada 1 commit que ellos puedan pushear, nosotros
 pushearemos 5!
 
 
-# 0.3.4
+# [0.3.4](https://github.com/Abuelodelanada/pepe-emacs-config/releases/tag/0.3.4)
 ## "Dando formato a nuestra Patria"
 
 Descamisados/as del código!:
