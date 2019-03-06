@@ -123,6 +123,7 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 ## Shortcuts
 
 * "%":  go to match paren
+* "F7": toggle ecb (emacs code browser)
 * "F8": toggle neotree
 * "F12": toggle menu bar mode
 * "C-;": activate iedit-dwim
