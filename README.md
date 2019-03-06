@@ -35,6 +35,7 @@ This Emacs config have some useful modules:
 * adoc-mode
 * auto-complete
 * dumb-jump
+* emacs code browser (ecb)
 * flycheck
 * geben
 * iedit
@@ -44,6 +45,7 @@ This Emacs config have some useful modules:
 * markdown-mode
 * markdown-toc
 * neo-tree
+* password-store
 * php-mode
 * powerline
 * smarty-mode
