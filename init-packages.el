@@ -14,11 +14,7 @@
 ; list the packages you want
 (defvar package-list)
 (setq package-list
-      '(ac-js2 ac-php ac-php-core adoc-mode ag auto-complete auto-indent-mode company company-php dumb-jump ecb epl f flycheck flycheck-color-mode-line flycheck-mypy flycheck-pycheckers flymd geben git-gutter-fringe highlight highlight-parentheses hlinum iedit jquery-doc js2-mode json-mode markdown-mode markdown-mode+ markup-faces monokai-theme neotree linum magit magit-gitflow markdown-toc pass php-mode phpcbf pkg-info popup powerline s seq smarty-mode sqlformat tabbar web-mode yaml-mode yasnippet yasnippet-snippets all-the-icons))
-
-; activate all the packages
-(package-initialize)
-
+      '(ac-js2 ac-php ac-php-core adoc-mode ag auto-compile auto-complete auto-indent-mode company company-php dumb-jump ecb epl f flycheck flycheck-color-mode-line flycheck-mypy flycheck-pycheckers flymd geben git-gutter-fringe highlight highlight-parentheses hlinum iedit jquery-doc js2-mode json-mode markdown-mode markdown-mode+ markup-faces monokai-theme neotree linum magit magit-gitflow markdown-toc pass php-mode phpcbf pkg-info popup powerline s seq smarty-mode sqlformat tabbar web-mode yaml-mode yasnippet yasnippet-snippets all-the-icons))
 
 ; fetch the list of packages available
 (unless package-archive-contents
@@ -30,6 +26,10 @@
     (package-install package)
     (when (package-installed-p 'all-the-icons)
       (all-the-icons-install-fonts))))
+
+
+; activate all the packages
+(package-initialize)
 
 (provide 'init-packages)
 ;;; init-packages.el ends here

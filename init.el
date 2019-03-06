@@ -2,8 +2,13 @@
 ;;; Commentary:
 ;;; Code:
 
+(load "~/.emacs.d/messages")
+(setq load-prefer-newer t)
 (package-initialize)
 (load "~/.emacs.d/init-packages")
+(require 'auto-compile)
+(auto-compile-on-load-mode)
+(auto-compile-on-save-mode)
 (load "~/.emacs.d/require")
 (load "~/.emacs.d/variables")
 (load "~/.emacs.d/functions")
@@ -46,12 +51,13 @@
    (quote
     ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
  '(dumb-jump-default-project "~")
+ '(dumb-jump-force-searcher nil)
  '(dumb-jump-prefer-searcher (quote rg))
- '(dumb-jump-quiet t)
+ '(dumb-jump-quiet nil)
  '(ecb-layout-name "left6")
  '(ecb-minor-mode-text "")
  '(ecb-options-version "2.50")
- '(ecb-tip-of-the-day nil t)
+ '(ecb-tip-of-the-day nil)
  '(ecb-windows-width 0.25)
  '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
  '(flycheck-highlighting-mode (quote lines))
