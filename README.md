@@ -122,30 +122,31 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 
 ## Shortcuts
 
-* "%":  go to match paren
-* "F8": toggle neotree
-* "F12": toggle menu bar mode
-* "C-;": activate iedit-dwim
-* "C-c C-k": copy line
-* "C-c C-w": copy word
-* "C-c C-z":  term stop subjob
-* "C-c TAB": format sql
-* "C-c c":  comment region
-* "C-c down": flycheck-next-error
-* "C-c u": uncomment region
-* "C-c up": flycheck-previous-error
-* "C-d":  duplicate current line
-* "C-l": go to line
-* "C-t": create ctags
-* "C-x g": magit-status
-* "C-x p": run phpcbf --standard=PSR2 to the current buffer
-* "M-left" tabbar-backward
-* "M-right" tabbar-forward
-* "S-M-down" : enlarge window
-* "S-M-left": enlarge window horizontally
-* "S-M-right": shrink window horizontally
-* "S-M-up": shrink window
-* "S-down": windmove down
-* "S-left": 'windmove left
-* "S-right": windmove right
-* "S-up": windmove up
+* `%`:  go to match paren
+* `F7`: toggle ecb (emacs code browser)
+* `F8`: toggle neotree
+* `F12`: toggle menu bar mode
+* `C-;`: activate iedit-dwim
+* `C-c C-k`: copy line
+* `C-c C-w`: copy word
+* `C-c C-z`:  term stop subjob
+* `C-c TAB`: format sql
+* `C-c c`:  comment region
+* `C-c down`: flycheck-next-error
+* `C-c u`: uncomment region
+* `C-c up`: flycheck-previous-error
+* `C-d`:  duplicate current line
+* `C-l`: go to line
+* `C-t`: create ctags
+* `C-x g`: magit-status
+* `C-x p`: run phpcbf --standard=PSR2 to the current buffer
+* `M-left` tabbar-backward
+* `M-right` tabbar-forward
+* `S-M-down` : enlarge window
+* `S-M-left`: enlarge window horizontally
+* `S-M-right`: shrink window horizontally
+* `S-M-up`: shrink window
+* `S-down`: windmove down
+* `S-left`: 'windmove left
+* `S-right`: windmove right
+* `S-up`: windmove up
