@@ -23,8 +23,7 @@
 (scroll-bar-mode -1) ;; Hide scrollbar
 (menu-bar-mode -1) ;; Hide menubar
 (column-number-mode 1) ;; Show column number
-(global-linum-mode 1) ;; Show line-number
-(hlinum-activate)
+(global-nlinum-mode t) ;; Show line-number
 (global-auto-complete-mode t) ;; Enable auto-complete
 (global-highlight-parentheses-mode t)
 (global-git-gutter-mode t)
@@ -57,7 +56,7 @@
  '(ecb-layout-name "left6")
  '(ecb-minor-mode-text "")
  '(ecb-options-version "2.50")
- '(ecb-tip-of-the-day nil)
+ '(ecb-tip-of-the-day nil t)
  '(ecb-windows-width 0.25)
  '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
  '(flycheck-highlighting-mode (quote lines))
@@ -67,17 +66,15 @@
  '(history-length 1000)
  '(ido-enable-regexp t)
  '(ido-ignore-files (quote ("\\`CVS/" "\\`#" "\\`.#" "\\`\\.\\./")))
- '(linum-format (quote dynamic))
- '(linum-highlight-current-line t)
- '(linum-use-right-margin nil)
  '(monokai-background "#000000")
  '(neo-autorefresh t)
  '(neo-mode-line-type (quote neotree))
  '(neo-smart-open t)
  '(neo-theme (quote icons) t)
+ '(nlinum-highlight-current-line t)
  '(package-selected-packages
    (quote
-    (yasnippet-snippets yaml-mode smarty-mode powerline linum linum-hl monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter-fringe geben flymd flycheck-color-mode-line flycheck ecb dumb-jump company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
+    (yasnippet-snippets yaml-mode smarty-mode powerline nlinum nlinum-hl monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter-fringe geben flymd flycheck-color-mode-line flycheck ecb dumb-jump company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
  '(phpcbf-standard "PSR2")
  '(powerline-default-separator (quote arrow))
  '(powerline-gui-use-vcs-glyph t)
@@ -113,9 +110,6 @@
  '(ido-subdir ((t (:foreground "#F34739"))))
  '(ido-virtual ((t (:foreground "#FF6E27"))))
  '(iedit-occurrence ((t (:foreground "green yellow"))))
- '(linum ((t (:background "gray5" :foreground "#8F908A" :underline nil))))
- '(linum-current-line ((t (:foreground "turquoise2" :weight normal))))
- '(linum-highlight-face ((t (:foreground "#FF6E27" :weight bold :slant normal))))
  '(magit-branch-local ((t (:foreground "orange"))))
  '(magit-branch-remote ((t (:foreground "#D90F5A"))))
  '(magit-diff-removed ((t (:background "#000000" :foreground "orange red"))))
@@ -135,6 +129,9 @@
  '(neo-banner-face ((t (:background "#000000" :foreground "#F34739" :weight bold))))
  '(neo-dir-link-face ((t (:foreground "#FF6E27"))))
  '(neo-root-dir-face ((t (:background "#000000" :foreground "gold"))))
+ '(nlinum ((t (:background "gray5" :foreground "#8F908A" :underline nil))))
+ '(nlinum-current-line ((t (:foreground "#FF6E27" :slant normal :weight bold))))
+ '(nlinum-highlight-face ((t (:foreground "#FF6E27" :weight bold :slant normal))))
  '(package-name ((t (:foreground "#FF6E27"))))
  '(pass-mode-directory-face ((t (:foreground "#FF6E27" :weight bold))))
  '(pass-mode-entry-face ((t nil)))

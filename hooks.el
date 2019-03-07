@@ -9,7 +9,8 @@
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 (add-hook 'sql-mode-hook 'sqlformat-on-save-mode)
 (add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
-(add-hook 'magit-mode-hook 'my-inhibit-global-linum-mode)
+(add-hook 'magit-mode-hook 'my-inhibit-global-nlinum-mode)
+(add-hook 'nlinum-mode-hook 'my-nlinum-mode-hook)
 (remove-hook 'server-switch-hook 'magit-commit-diff)
 
 (provide 'hooks)
