@@ -24,6 +24,11 @@
 
 (setq ecb-tip-of-the-day nil)
 (setq redisplay-dont-pause t) ; https://masteringemacs.org/article/improving-performance-emacs-display-engine
+
+; https://emacs.stackexchange.com/questions/31402/how-to-avoid-scrolling-with-large-files-hanging-for-short-periods-of-time-hold
+(setq fast-but-imprecise-scrolling t)
+(setq jit-lock-defer-time 0)
+
 (setq-default kill-read-only-ok t)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
