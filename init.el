@@ -44,6 +44,12 @@
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
 
+(diminish 'abbrev-mode "Abv")
+(diminish 'projectile-mode "Proj")
+(diminish 'git-gutter-mode)
+(diminish 'global-whitespace-mode)
+(diminish 'highlight-parentheses-mode)
+
 (custom-set-variables
  '(blink-cursor-mode t)
  '(custom-safe-themes
