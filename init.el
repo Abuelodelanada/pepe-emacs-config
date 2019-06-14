@@ -64,7 +64,7 @@
     ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
  '(dumb-jump-default-project "~")
  '(dumb-jump-force-searcher nil)
- '(dumb-jump-prefer-searcher (quote rg))
+ '(dumb-jump-prefer-searcher (quote ag))
  '(dumb-jump-quiet nil)
  '(ecb-layout-name "left6")
  '(ecb-minor-mode-text "")
