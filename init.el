@@ -33,6 +33,13 @@
 (ido-mode 1)
 (dumb-jump-mode 1) ;dumb-jump
 (savehist-mode 1)
+
+(require 'projectile)
+(define-key projectile-mode-map (kbd "M-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(projectile-mode +1)
+(setq projectile-project-search-path '("~/trabajos/" "~/desarrollo/"))
+
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (eval-after-load "flycheck"
   '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
