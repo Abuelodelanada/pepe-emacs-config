@@ -32,6 +32,7 @@
 (setq-default kill-read-only-ok t)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
+(setq projectile-project-search-path '("~/projects/" "~/work/"))
 
 (provide 'variables)
 ;;; variables.el ends here
