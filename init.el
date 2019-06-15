@@ -11,6 +11,7 @@
 (auto-compile-on-save-mode)
 (load "~/.emacs.d/require")
 (load "~/.emacs.d/variables")
+(load "~/.emacs.d/customvariables")
 (load "~/.emacs.d/functions")
 (load "~/.emacs.d/alias")
 (load "~/.emacs.d/automode")
@@ -38,7 +39,7 @@
 (define-key projectile-mode-map (kbd "M-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (projectile-mode +1)
-(setq projectile-project-search-path '("~/trabajos/" "~/desarrollo/"))
+(setq projectile-project-search-path '("~/projects/" "~/work/"))
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (eval-after-load "flycheck"
