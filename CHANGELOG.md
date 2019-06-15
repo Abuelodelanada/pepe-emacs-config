@@ -1,3 +1,17 @@
+# [0.5.0](https://github.com/Abuelodelanada/pepe-emacs-config/releases/tag/0.5.0)
+## "El candidato es el Proyecto"
+
+Compañeras y compañeros,
+
+    Enfrentamos una realidad compleja que nos exige estar a la altura de la historia.
+Hemos logrado la unidad, condición necesaria más no sufucuente para lograr el triunfo en Octubre próximo. Sin embargo quedan muchos desafíos que enfrentar. Tenemos que explicitar en cada oportunidad que se nos presente el Proyecto de País que vislumbramos, que es en definifica el único candidato. Un proyecto de una patria libre, justa y soberana. Pero para poder contarle a todo el pueblo trabajador nuestro pryecto, tenemos que poder dominar todos los aspectos del mismo: Políticos, económicos, sociales y culturales entre otros.
+
+Es por tal motivo que hemos munido al editor del Pueblo programador, Emacs, de [Projectile](https://docs.projectile.mx/en/latest/). Con él estamos a un simple `M-p` de distancia de conocer todas las aristas de nuestro proyecto. Por ejemplo, si quisiésemos leer "La razón de mi vida" a una audiencia sedienta de verdades, pero no supiéramos en que directorio del Proyecto se encuentra, tendríamos invocar a `M-p f la_razon_de_mi_vida.rst RET`.
+Además, podríamos buscar (grep) palabras dentro del proyecto con un simple `M-p s g` entre otras tantas funcionalidades
+
+
+Hasta la victoria siempre!
+
 # [0.4.8](https://github.com/Abuelodelanada/pepe-emacs-config/releases/tag/0.4.8)
 ## "La llave de la victoria"
 
