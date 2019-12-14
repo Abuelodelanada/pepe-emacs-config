@@ -32,7 +32,7 @@
 (setq-default kill-read-only-ok t)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
-(setq projectile-project-search-path '("~/projects/" "~/work/"))
+; (setq projectile-project-search-path '("~/projects/" "~/work/")) ;; Set your project's direcotries copying this line in customvariables.el
 
 (provide 'variables)
 ;;; variables.el ends here
