@@ -7,6 +7,10 @@
 (defvar yas-prompt-functions)
 (defvar path-to-ctags)
 
+(setq-default ecb-options-version "2.50")
+(setq-default tabbar-background-color "gray9")
+(setq-default tabbar-separator 0.5)
+(setq-default tabbar-use-images t)
 (setq-default auto-save-default nil) ;; Stop creating auto #autosave# files
 (setq-default auto-window-vscroll nil)
 (setq-default blink-cursor-mode t)
