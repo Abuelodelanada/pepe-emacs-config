@@ -57,50 +57,6 @@
 (diminish 'global-whitespace-mode)
 (diminish 'highlight-parentheses-mode)
 
-(custom-set-variables
- '(blink-cursor-mode t)
- '(custom-safe-themes
-   (quote
-    ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
- '(dumb-jump-default-project "~")
- '(dumb-jump-force-searcher nil)
- '(dumb-jump-prefer-searcher (quote ag))
- '(dumb-jump-quiet nil)
- '(ecb-layout-name "left6")
- '(ecb-minor-mode-text "")
- '(ecb-options-version "2.50")
- '(ecb-tip-of-the-day nil t)
- '(ecb-windows-width 0.25)
- '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
- '(flycheck-highlighting-mode (quote lines))
- '(flycheck-pycheckers-checkers (quote (pylint pep8)))
- '(global-whitespace-mode t)
- '(history-delete-duplicates t)
- '(history-length 1000)
- '(ido-enable-regexp t)
- '(ido-ignore-files (quote ("\\`CVS/" "\\`#" "\\`.#" "\\`\\.\\./")))
- '(monokai-background "#000000")
- '(neo-autorefresh t)
- '(neo-mode-line-type (quote neotree))
- '(neo-smart-open t)
- '(neo-theme (quote icons) t)
- '(nlinum-highlight-current-line t)
- '(package-selected-packages
-   (quote
-    (yasnippet-snippets yaml-mode smarty-mode powerline nlinum nlinum-hl monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter-fringe geben flymd flycheck-color-mode-line flycheck ecb dumb-jump company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag)))
- '(phpcbf-standard "PSR2")
- '(powerline-default-separator (quote arrow))
- '(powerline-gui-use-vcs-glyph t)
- '(powerline-height 22)
- '(size-indication-mode nil)
- '(tabbar-background-color "gray9")
- '(tabbar-separator (quote (0.5)))
- '(tabbar-use-images t)
- '(whitespace-display-mappings (quote ((tab-mark 9 [187]))))
- '(whitespace-line-column nil)
- '(whitespace-style
-   (quote
-    (face trailing tabs spaces newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark))))
 
 (custom-set-faces
  '(default ((t (:background "#000000" :foreground "#F8F8F2" :weight bold :height 110 :family "Ubuntu Mono"))))
