@@ -13,7 +13,7 @@
 (setq-default custom-safe-themes '("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default))
 (setq-default dumb-jump-default-project "~")
 (setq-default dumb-jump-force-searcher nil)
-(setq-default dumb-jump-prefer-searcher 'rg)
+(setq-default dumb-jump-prefer-searcher 'ag)
 (setq-default dumb-jump-quiet nil)
 (setq-default ecb-layout-name "left6")
 (setq-default ecb-minor-mode-text "")
