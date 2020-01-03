@@ -43,7 +43,7 @@
 (set-face-attribute 'mode-line t :background "gray9" :foreground "#F8F8F0" :slant 'normal)
 (set-face-attribute 'mode-line-buffer-id t :foreground "white smoke" :weight 'bold)
 (set-face-attribute 'mode-line-inactive t :background "#000000" :box nil :foreground "#75715E")
-(set-face-attribute 'nlinum-current-line t :foreground "#FF6E27" :slant 'normal :weight 'bold)
+(set-face-attribute 'linum-highlight-face t :inherit 'default :background "#000000" :foreground "#FF6E27" :slant 'normal :weight 'bold)
 (set-face-attribute 'package-name t :foreground "#FF6E27")
 (set-face-attribute 'powerline-active0 t :background "#F34739")
 (set-face-attribute 'powerline-active1 t :background "#FF6E27" :foreground "white smoke" :weight 'bold)

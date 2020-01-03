@@ -25,7 +25,8 @@
 (global-auto-complete-mode t) ;; Enable auto-complete
 (global-git-gutter-mode t)
 (global-highlight-parentheses-mode t)
-(global-nlinum-mode t) ;; Show line-number
+(global-linum-mode t) ;; Show line-number
+(hlinum-activate)
 (global-whitespace-mode t)
 (ido-mode t)
 (menu-bar-mode -1) ;; Hide menubar

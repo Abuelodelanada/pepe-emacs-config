@@ -14,7 +14,7 @@
 ; list the packages you want
 (defvar package-list)
 (setq package-list
-      '(ac-js2 ac-php ac-php-core adoc-mode ag auto-compile auto-complete auto-indent-mode company company-php diminish dumb-jump ecb epl f flycheck flycheck-color-mode-line flycheck-mypy flycheck-pycheckers flymd geben git-gutter-fringe highlight highlight-parentheses iedit jquery-doc js2-mode json-mode markdown-mode markdown-mode+ markup-faces monokai-theme neotree nlinum nlinum-hl magit magit-gitflow markdown-toc pass php-mode phpcbf pkg-info popup powerline projectile s seq smarty-mode sqlformat tabbar web-mode yaml-mode yasnippet yasnippet-snippets all-the-icons))
+      '(ac-js2 ac-php ac-php-core adoc-mode ag auto-compile auto-complete auto-indent-mode company company-php diminish dumb-jump ecb epl f flycheck flycheck-color-mode-line flycheck-mypy flycheck-pycheckers flymd geben git-gutter-fringe highlight highlight-parentheses iedit jquery-doc js2-mode json-mode markdown-mode markdown-mode+ markup-faces monokai-theme neotree linum hlinum magit magit-gitflow markdown-toc pass php-mode phpcbf pkg-info popup powerline projectile s seq smarty-mode sqlformat tabbar web-mode yaml-mode yasnippet yasnippet-snippets all-the-icons))
 
 ; fetch the list of packages available
 (unless package-archive-contents
