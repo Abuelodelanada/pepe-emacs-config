@@ -51,7 +51,7 @@
 (setq-default nlinum-highlight-current-line t)
 (setq-default package-selected-packages '(yasnippet-snippets yaml-mode smarty-mode powerline nlinum nlinum-hl monokai-theme markdown-mode+ jquery-doc iedit highlight-parentheses highlight git-gutter-fringe geben flymd flycheck-color-mode-line flycheck ecb dumb-jump company-php auto-indent-mode all-the-icons adoc-mode ac-php ac-js2 dash-functional ag))
 (setq-default path-to-ctags "/usr/bin/ctags") ;; <- your ctags path here
-(setq-default phpcbf-standard "PSR2")
+(setq-default phpcbf-standard "PSR12")
 (setq-default powerline-default-separator "arrow")
 (setq-default powerline-gui-use-vcs-glyph t)
 (setq-default powerline-height 22)
