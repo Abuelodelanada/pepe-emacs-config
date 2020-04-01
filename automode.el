@@ -16,6 +16,7 @@
 (add-to-list 'auto-mode-alist '("\\.adoc" . adoc-mode))
 (add-to-list 'auto-mode-alist '("\\.xml" . xml-mode))
 (add-to-list 'auto-mode-alist '("\\.xul" . xml-mode))
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 
 (provide 'automode)
 ;;; automode ends here

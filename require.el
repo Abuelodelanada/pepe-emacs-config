@@ -2,6 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
+(require 'dockerfile-mode)
 (require 'flycheck-color-mode-line)
 (require 'git-gutter-fringe)
 (require 'iedit)
