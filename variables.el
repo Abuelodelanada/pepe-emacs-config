@@ -67,7 +67,7 @@
 (setq-default whitespace-style '(face trailing tabs spaces newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark))
 (setq-default yas-prompt-functions '(yas-dropdown-prompt yas-ido-prompt yas-completing-prompt))
 ;(setq projectile-project-search-path '("~/projects/" "~/work/")) ;; Set your project's direcotries copying this line in customvariables.el
-
+(setq jedi:complete-on-dot t)
 
 (provide 'variables)
 ;;; variables.el ends here

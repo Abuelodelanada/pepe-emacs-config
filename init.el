@@ -63,4 +63,8 @@
 (load "~/.emacs.d/faces")
 (load "~/.emacs.d/customfaces")
 
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
 (provide 'init)
+;;;
