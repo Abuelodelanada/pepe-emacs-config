@@ -48,6 +48,7 @@
 (set-face-attribute 'powerline-active0 t :background "#F34739")
 (set-face-attribute 'powerline-active1 t :background "#FF6E27" :foreground "white smoke" :weight 'bold)
 (set-face-attribute 'powerline-active2 t :background "gray9" :foreground "#FF6E27")
+(set-face-attribute 'tabbar-separator t :inherit 'tabbar-default :width 'normal)
 (set-face-attribute 'whitespace-line t)
 (set-face-attribute 'whitespace-newline t)
 (set-face-attribute 'whitespace-space t)
