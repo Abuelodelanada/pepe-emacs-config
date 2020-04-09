@@ -45,7 +45,22 @@
 (use-package js2-mode)
 (use-package json-mode)
 (use-package linum)
-(use-package magit)
+(use-package magit
+  :custom-face
+  (magit-branch-local ((t (:foreground "orange"))))
+  (magit-branch-remote ((t (:foreground "#D90F5A"))))
+  (magit-diff-removed ((t (:background "#000000" :foreground "orange red"))))
+  (magit-diff-removed-highlight ((t (:background "#3C3D37" :foreground "orange red"))))
+  (magit-filename ((t (:foreground "#F34739" :weight normal))))
+  (magit-hash ((t (:foreground "#FF6E27"))))
+  (magit-log-author ((t (:foreground "orange"))))
+  (magit-log-date ((t (:foreground "#FF6E27"))))
+  (magit-log-graph ((t (:foreground "#75715E"))))
+  (magit-section-heading ((t (:foreground "#FF6E27" :weight bold))))
+  (magit-section-highlight ((t (:background "gray9"))))
+  (magit-tag ((t (:foreground "orange" :weight bold)))))
+
+
 (use-package magit-gitflow)
 (use-package markdown-mode)
 (use-package markdown-mode+)
