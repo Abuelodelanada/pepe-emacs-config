@@ -95,7 +95,11 @@
   (neo-banner-face ((t (:background "#000000" :foreground "#F34739" :weight bold))))
   (neo-dir-link-face ((t (:foreground "#FF6E27"))))
   (neo-root-dir-face ((t (:background "#000000" :foreground "gold")))))
-(use-package pass)
+(use-package pass
+
+  :custom-face
+  (pass-mode-directory-face ((t (:foreground "#FF6E27" :weight bold))))
+  (pass-mode-entry-face ((t))))
 (use-package php-mode)
 (use-package phpcbf)
 (use-package pkg-info)

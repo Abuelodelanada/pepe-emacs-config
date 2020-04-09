@@ -4,8 +4,6 @@
 
 
 
-(eval-after-load 'pass '(set-face-attribute 'pass-mode-directory-face t :foreground "#FF6E27" :weight 'bold))
-(eval-after-load 'pass '(set-face-attribute 'pass-mode-entry-face t))
 (set-face-attribute 'cursor t :background "#FE8B05" :foreground "white smoke" :inverse-video t)
 (set-face-attribute 'default t :background "#000000" :foreground "#F8F8F2" :weight 'bold :height 110 :family "Ubuntu Mono")
 
