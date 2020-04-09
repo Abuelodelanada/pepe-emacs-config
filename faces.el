@@ -14,7 +14,6 @@
 (set-face-attribute 'ido-only-match t :background "#FF6E27" :foreground "white smoke" :weight 'bold)
 (set-face-attribute 'ido-subdir t :foreground "#F34739")
 (set-face-attribute 'ido-virtual t :foreground "#FF6E27")
-(set-face-attribute 'iedit-occurrence t :foreground "green yellow")
 (set-face-attribute 'minibuffer-prompt t :foreground "#FF6E27")
 (set-face-attribute 'mode-line t :background "gray9" :foreground "#F8F8F0" :slant 'normal)
 (set-face-attribute 'mode-line-buffer-id t :foreground "white smoke" :weight 'bold)

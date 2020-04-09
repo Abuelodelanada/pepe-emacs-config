@@ -57,7 +57,9 @@
 (use-package highlight)
 (use-package highlight-parentheses)
 (use-package hlinum)
-(use-package iedit)
+(use-package iedit
+  :custom-face
+  (iedit-occurrence ((t (:foreground "green yellow")))))
 (use-package jquery-doc)
 (use-package js2-mode)
 (use-package json-mode)
