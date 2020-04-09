@@ -20,6 +20,7 @@
 (use-package dockerfile-mode)
 (use-package dumb-jump)
 (use-package ecb
+  :bind (("<f7>" . ecb-minor-mode))
   :custom
   (ecb-layout-name "left6")
   (ecb-minor-mode-text "")
