@@ -70,7 +70,9 @@
   :custom-face
   (iedit-occurrence ((t (:foreground "green yellow")))))
 (use-package jquery-doc)
-(use-package js2-mode)
+(use-package js2-mode
+    :config
+    (dumb-jump-mode t))
 (use-package json-mode)
 (use-package linum
   :init
@@ -113,11 +115,12 @@
   (neo-dir-link-face ((t (:foreground "#FF6E27"))))
   (neo-root-dir-face ((t (:background "#000000" :foreground "gold")))))
 (use-package pass
-
   :custom-face
   (pass-mode-directory-face ((t (:foreground "#FF6E27" :weight bold))))
   (pass-mode-entry-face ((t))))
-(use-package php-mode)
+(use-package php-mode
+  :config
+  (dumb-jump-mode t))
 (use-package phpcbf
   :custom
   (phpcbf-standard "PSR12"))

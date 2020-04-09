@@ -25,7 +25,6 @@
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; Maximize window at startup
 (column-number-mode t) ;; Show column number
-(dumb-jump-mode t) ;dumb-jump
 (global-auto-complete-mode t) ;; Enable auto-complete
 (global-git-gutter-mode t)
 (global-highlight-parentheses-mode t)
