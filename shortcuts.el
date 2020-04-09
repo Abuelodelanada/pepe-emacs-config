@@ -18,7 +18,6 @@
 (global-set-key (kbd "C-l") 'goto-line)
 (global-set-key (kbd "C-t") 'crear-tags) ;; Create tags shortcut
 (global-set-key (kbd "C-x p") 'phpcbf)
-(global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "M-<left>") 'tabbar-backward)
 (global-set-key (kbd "M-<up>") 'beginning-of-buffer)
 (global-set-key (kbd "M-<down>") 'end-of-buffer)

@@ -61,6 +61,7 @@
 (use-package json-mode)
 (use-package linum)
 (use-package magit
+  :bind (("C-x g" . magit-status))
   :custom-face
   (magit-branch-local ((t (:foreground "orange"))))
   (magit-branch-remote ((t (:foreground "#D90F5A"))))
