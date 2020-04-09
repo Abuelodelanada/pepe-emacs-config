@@ -68,7 +68,9 @@
 (use-package jquery-doc)
 (use-package js2-mode)
 (use-package json-mode)
-(use-package linum)
+(use-package linum
+  :init
+  (add-hook 'linum-mode-hook 'my-linum-mode-hook))
 (use-package magit
   :bind (("C-x g" . magit-status))
   :custom-face
