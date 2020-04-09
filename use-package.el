@@ -61,7 +61,9 @@
 (use-package git-gutter-fringe)
 (use-package highlight)
 (use-package highlight-parentheses)
-(use-package hlinum)
+(use-package hlinum
+  :custom-face
+  (linum-highlight-face ((t (:inherit default :background "#000000" :foreground "#FF6E27" :slant normal :weight bold)))))
 (use-package iedit
   :custom-face
   (iedit-occurrence ((t (:foreground "green yellow")))))
