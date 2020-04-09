@@ -6,6 +6,10 @@
 (setq load-prefer-newer t)
 (package-initialize)
 (load "~/.emacs.d/init-packages")
+
+(eval-when-compile
+  (require 'use-package))
+(load "~/.emacs.d/use-package")
 (require 'auto-compile)
 (auto-compile-on-load-mode)
 (auto-compile-on-save-mode)
@@ -64,3 +68,5 @@
 (load "~/.emacs.d/customfaces")
 
 (provide 'init)
+
+;;;
