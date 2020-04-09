@@ -129,6 +129,9 @@
   (powerline-gui-use-vcs-glyph t)
   (powerline-height 22)
   :custom-face
+  (mode-line ((t (:background "gray9" :foreground "#F8F8F0" :slant normal))))
+  (mode-line-buffer-id ((t (:foreground "white smoke" :weight bold))))
+  (mode-line-inactive ((t :background "#000000" :box nil :foreground "#75715E")))
   (powerline-active0 ((t (:background "#F34739"))))
   (powerline-active1 ((t (:background "#FF6E27" :foreground "white smoke" :weight bold))))
   (powerline-active2 ((t (:background "gray9" :foreground "#FF6E27")))))
