@@ -11,10 +11,7 @@
 (setq-default auto-window-vscroll nil)
 (setq-default blink-cursor-mode t)
 (setq-default custom-safe-themes '("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default))
-(setq-default dumb-jump-default-project "~")
-(setq-default dumb-jump-force-searcher nil)
-(setq-default dumb-jump-prefer-searcher 'ag)
-(setq-default dumb-jump-quiet nil)
+
 (setq-default fast-but-imprecise-scrolling t) ; https://emacs.stackexchange.com/questions/31402/how-to-avoid-scrolling-with-large-files-hanging-for-short-periods-of-time-hold
 (setq-default frame-resize-pixelwise t)
 (setq-default global-whitespace-mode t)

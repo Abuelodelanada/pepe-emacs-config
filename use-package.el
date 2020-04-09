@@ -18,7 +18,12 @@
 (use-package company-php)
 (use-package diminish)
 (use-package dockerfile-mode)
-(use-package dumb-jump)
+(use-package dumb-jump
+  :custom
+  (dumb-jump-default-project "~")
+  (dumb-jump-force-searcher nil)
+  (dumb-jump-prefer-searcher 'ag)
+  (dumb-jump-quiet nil))
 (use-package ecb
   :bind (("<f7>" . ecb-minor-mode))
   :custom
