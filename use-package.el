@@ -65,9 +65,19 @@
 (use-package seq)
 (use-package smarty-mode)
 (use-package sqlformat)
-(use-package tabbar)
+(use-package tabbar
+  :custom
+  (tabbar-background-color "gray9")
+  (tabbar-separator 0.5)
+  (tabbar-use-images t)
+  :custom-face
+  (tabbar-separator ((t (:inherit tabbar-default :width normal)))))
 (use-package web-mode)
 (use-package yaml-mode)
 (use-package yasnippet)
 (use-package yasnippet-snippets)
 ;;;
+
+
+
+

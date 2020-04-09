@@ -8,9 +8,6 @@
 (defvar path-to-ctags)
 
 (setq-default ecb-options-version "2.50")
-(setq-default tabbar-background-color "gray9")
-(setq-default tabbar-separator 0.5)
-(setq-default tabbar-use-images t)
 (setq-default auto-save-default nil) ;; Stop creating auto #autosave# files
 (setq-default auto-window-vscroll nil)
 (setq-default blink-cursor-mode t)
@@ -55,9 +52,6 @@
 (setq-default scroll-step 1) ;; keyboard scroll one line at a time
 (setq-default size-indication-mode nil)
 (setq-default tab-width 4)
-(setq-default tabbar-background-color "gray9")
-(setq-default tabbar-separator '(0.5))
-(setq-default tabbar-use-images t)
 (setq-default whitespace-display-mappings '((tab-mark 9 [187])))
 (setq-default whitespace-line-column nil)
 (setq-default whitespace-style '(face trailing tabs spaces newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark))

@@ -45,7 +45,6 @@
 (set-face-attribute 'mode-line-inactive t :background "#000000" :box nil :foreground "#75715E")
 (set-face-attribute 'linum-highlight-face t :inherit 'default :background "#000000" :foreground "#FF6E27" :slant 'normal :weight 'bold)
 (set-face-attribute 'package-name t :foreground "#FF6E27")
-(set-face-attribute 'tabbar-separator t :inherit 'tabbar-default :width 'normal)
 (set-face-attribute 'whitespace-line t)
 (set-face-attribute 'whitespace-newline t)
 (set-face-attribute 'whitespace-space t)
