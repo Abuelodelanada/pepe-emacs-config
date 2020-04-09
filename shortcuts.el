@@ -6,8 +6,6 @@
 (global-set-key (kbd "%") 'match-paren) ;; Ir al cierre-apertura de ([{
 (global-set-key (kbd "<f12>") 'menu-bar-mode)
 (global-set-key (kbd "C-;") 'iedit-dwim)
-(global-set-key (kbd "C-c <down>") 'flycheck-next-error)
-(global-set-key (kbd "C-c <up>") 'flycheck-previous-error)
 (global-set-key (kbd "C-c <tab>") 'sqlformat)
 (global-set-key (kbd "C-c C-k") 'copy-line)
 (global-set-key (kbd "C-c C-w") 'copy-word)

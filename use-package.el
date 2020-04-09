@@ -38,6 +38,8 @@
 (use-package epl)
 (use-package f)
 (use-package flycheck
+  :bind (("C-c <down>" . flycheck-next-error)
+         ("C-c <up>" . flycheck-previous-error))
   :custom
   (flycheck-check-syntax-automatically '(save mode-enabled))
   (flycheck-highlighting-mode '(lines))
