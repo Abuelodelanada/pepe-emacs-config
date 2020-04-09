@@ -74,14 +74,23 @@
   (magit-section-highlight ((t (:background "gray9"))))
   (magit-tag ((t (:foreground "orange" :weight bold)))))
 
-
 (use-package magit-gitflow)
 (use-package markdown-mode)
 (use-package markdown-mode+)
 (use-package markdown-toc)
 (use-package markup-faces)
 (use-package monokai-theme)
-(use-package neotree)
+(use-package neotree
+  :bind (("<f8>" . neotree-toggle))
+  :custom
+  (neo-autorefresh t)
+  (neo-mode-line-type '(neotree))
+  (neo-smart-open t)
+  (neo-theme (if (display-graphic-p) 'icons 'arrow))
+  :custom-face
+  (neo-banner-face ((t (:background "#000000" :foreground "#F34739" :weight bold))))
+  (neo-dir-link-face ((t (:foreground "#FF6E27"))))
+  (neo-root-dir-face ((t (:background "#000000" :foreground "gold")))))
 (use-package pass)
 (use-package php-mode)
 (use-package phpcbf)
@@ -114,7 +123,3 @@
 (use-package yasnippet)
 (use-package yasnippet-snippets)
 ;;;
-
-
-
-

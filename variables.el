@@ -30,11 +30,6 @@
 (setq-default kill-read-only-ok t)
 (setq-default make-backup-files nil) ;; No backup files ~
 (setq-default monokai-background "#000000")
-(setq-default neo-autorefresh t)
-(setq-default neo-mode-line-type 'neotree)
-(setq-default neo-smart-open t)
-(setq-default neo-theme 'icons)
-(setq-default neo-theme (if (display-graphic-p) 'icons 'arrow))
 (setq-default nlinum-highlight-current-line t)
 (setq-default path-to-ctags "/usr/bin/ctags") ;; <- your ctags path here
 (setq-default phpcbf-standard "PSR12")
