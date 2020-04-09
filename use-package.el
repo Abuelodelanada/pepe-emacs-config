@@ -59,7 +59,9 @@
 (use-package flymd)
 (use-package geben)
 (use-package git-gutter-fringe)
-(use-package highlight)
+(use-package highlight
+  :custom-face
+  (highlight ((t (:background "black" :foreground "white")))))
 (use-package highlight-parentheses)
 (use-package hlinum
   :custom-face
