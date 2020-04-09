@@ -18,10 +18,10 @@
 (global-set-key (kbd "C-l") 'goto-line)
 (global-set-key (kbd "C-t") 'crear-tags) ;; Create tags shortcut
 (global-set-key (kbd "C-x p") 'phpcbf)
-(global-set-key (kbd "M-<left>") 'tabbar-backward)
+
 (global-set-key (kbd "M-<up>") 'beginning-of-buffer)
 (global-set-key (kbd "M-<down>") 'end-of-buffer)
-(global-set-key (kbd "M-<right>") 'tabbar-forward)
+
 (global-set-key (kbd "S-M-<down>") 'enlarge-window)
 (global-set-key (kbd "S-M-<left>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-M-<right>") 'shrink-window-horizontally)
