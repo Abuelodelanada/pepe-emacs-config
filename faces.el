@@ -3,14 +3,6 @@
 ;;; Code:
 
 
-(eval-after-load 'ecb '(set-face-attribute 'ecb-analyse-bucket-element-face t :inherit 'ecb-analyse-general-face :foreground "gold"))
-(eval-after-load 'ecb '(set-face-attribute 'ecb-bucket-node-face t :inherit 'ecb-default-general-face :foreground "#FF6E27" :weight 'normal))
-(eval-after-load 'ecb '(set-face-attribute 'ecb-default-highlight-face t :background "#FF6E27" :foreground "white smoke"))
-(eval-after-load 'ecb '(set-face-attribute 'ecb-methods-general-face t :foreground "#FF6E27" :height 1.0))
-(eval-after-load 'ecb '(set-face-attribute 'ecb-mode-line-data-face t :foreground "#FF6E27"))
-(eval-after-load 'ecb '(set-face-attribute 'ecb-mode-line-prefix-face t :foreground "#FF6E27"))
-(eval-after-load 'ecb '(set-face-attribute 'ecb-tag-header-face t :background "#FF6E27"))
-
 (eval-after-load 'neotree '(set-face-attribute 'neo-banner-face t :background "#000000" :foreground "#F34739" :weight 'bold))
 (eval-after-load 'neotree '(set-face-attribute 'neo-dir-link-face t :foreground "#FF6E27"))
 (eval-after-load 'neotree '(set-face-attribute 'neo-root-dir-face t :background "#000000" :foreground "gold"))

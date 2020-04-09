@@ -19,7 +19,21 @@
 (use-package diminish)
 (use-package dockerfile-mode)
 (use-package dumb-jump)
-(use-package ecb)
+(use-package ecb
+  :custom
+  (ecb-layout-name "left6")
+  (ecb-minor-mode-text "")
+  (ecb-options-version "2.50")
+  (ecb-tip-of-the-day nil)
+  (ecb-windows-width 0.25)
+  :custom-face
+  (ecb-analyse-bucket-element-face ((t (:inherit ecb-analyse-general-face :foreground "gold"))))
+  (ecb-bucket-node-face ((t (:inherit ecb-default-general-face :foreground "#FF6E27" :weight normal))))
+  (ecb-default-highlight-face ((t (:background "#FF6E27" :foreground "white smoke"))))
+  (ecb-methods-general-face ((t (:foreground "#FF6E27" :height 1.0))))
+  (ecb-mode-line-data-face ((t (:foreground "#FF6E27"))))
+  (ecb-mode-line-prefix-face ((t (:foreground "#FF6E27"))))
+  (ecb-tag-header-face ((t (:background "#FF6E27")))))
 (use-package epl)
 (use-package f)
 (use-package flycheck

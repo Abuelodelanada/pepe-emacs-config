@@ -7,7 +7,6 @@
 (defvar yas-prompt-functions)
 (defvar path-to-ctags)
 
-(setq-default ecb-options-version "2.50")
 (setq-default auto-save-default nil) ;; Stop creating auto #autosave# files
 (setq-default auto-window-vscroll nil)
 (setq-default blink-cursor-mode t)
@@ -16,12 +15,6 @@
 (setq-default dumb-jump-force-searcher nil)
 (setq-default dumb-jump-prefer-searcher 'ag)
 (setq-default dumb-jump-quiet nil)
-(setq-default ecb-layout-name "left6")
-(setq-default ecb-minor-mode-text "")
-(setq-default ecb-options-version "2.50")
-(setq-default ecb-tip-of-the-day nil)
-(setq-default ecb-tip-of-the-day nil)
-(setq-default ecb-windows-width 0.25)
 (setq-default fast-but-imprecise-scrolling t) ; https://emacs.stackexchange.com/questions/31402/how-to-avoid-scrolling-with-large-files-hanging-for-short-periods-of-time-hold
 (setq-default frame-resize-pixelwise t)
 (setq-default global-whitespace-mode t)
