@@ -2,8 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(add-hook 'flycheck-color-mode-line-hook '(set-face-attribute 'flycheck-color-mode-line-error-face t :inherit 'flycheck-fringe-error :box t :line-width 2 :color "red" :style 'released-button))
-(add-hook 'flycheck-color-mode-line-hook '(set-face-attribute 'flycheck-color-mode-line-warning-face t :inherit 'flycheck-fringe-warning :box t :line-width 2 :color "orange" :style 'released-button))
+
 (eval-after-load 'ecb '(set-face-attribute 'ecb-analyse-bucket-element-face t :inherit 'ecb-analyse-general-face :foreground "gold"))
 (eval-after-load 'ecb '(set-face-attribute 'ecb-bucket-node-face t :inherit 'ecb-default-general-face :foreground "#FF6E27" :weight 'normal))
 (eval-after-load 'ecb '(set-face-attribute 'ecb-default-highlight-face t :background "#FF6E27" :foreground "white smoke"))
@@ -30,7 +29,7 @@
 (eval-after-load 'pass '(set-face-attribute 'pass-mode-entry-face t))
 (set-face-attribute 'cursor t :background "#FE8B05" :foreground "white smoke" :inverse-video t)
 (set-face-attribute 'default t :background "#000000" :foreground "#F8F8F2" :weight 'bold :height 110 :family "Ubuntu Mono")
-(set-face-attribute 'flycheck-error t :underline "#F92672")
+
 (set-face-attribute 'highlight t :background "black" :foreground "white")
 (set-face-attribute 'ido-first-match t :foreground "#FF6E27" :weight 'bold)
 (set-face-attribute 'ido-incomplete-regexp t :foreground "DeepPink1" :weight 'bold)

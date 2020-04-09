@@ -22,7 +22,15 @@
 (use-package ecb)
 (use-package epl)
 (use-package f)
-(use-package flycheck)
+(use-package flycheck
+  :custom
+  (flycheck-check-syntax-automatically '(save mode-enabled))
+  (flycheck-highlighting-mode '(lines))
+  (flycheck-pycheckers-checkers '(pylint pep8))
+  :custom-face
+  (flycheck-error ((t (:underline "#F92672"))))
+  (flycheck-color-mode-line-error-face ((t (:inherit 'flycheck-fringe-error :box t :line-width 2 :color "red" :style 'released-button))))
+  (flycheck-color-mode-line-warning-face ((t (:inherit 'flycheck-fringe-warning :box t :line-width 2 :color "orange" :style 'released-button)))))
 (use-package flycheck-color-mode-line)
 (use-package flycheck-mypy)
 (use-package flycheck-pycheckers)

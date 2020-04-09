@@ -23,9 +23,6 @@
 (setq-default ecb-tip-of-the-day nil)
 (setq-default ecb-windows-width 0.25)
 (setq-default fast-but-imprecise-scrolling t) ; https://emacs.stackexchange.com/questions/31402/how-to-avoid-scrolling-with-large-files-hanging-for-short-periods-of-time-hold
-(setq-default flycheck-check-syntax-automatically '(save mode-enabled))
-(setq-default flycheck-highlighting-mode 'lines)
-(setq-default flycheck-pycheckers-checkers '(pylint pep8))
 (setq-default frame-resize-pixelwise t)
 (setq-default global-whitespace-mode t)
 (setq-default history-delete-duplicates t)
