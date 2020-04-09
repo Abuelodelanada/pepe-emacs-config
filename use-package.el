@@ -108,7 +108,9 @@
   (pass-mode-directory-face ((t (:foreground "#FF6E27" :weight bold))))
   (pass-mode-entry-face ((t))))
 (use-package php-mode)
-(use-package phpcbf)
+(use-package phpcbf
+  :custom
+  (phpcbf-standard "PSR12"))
 (use-package pkg-info)
 (use-package popup)
 (use-package powerline

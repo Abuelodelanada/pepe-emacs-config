@@ -27,9 +27,7 @@
 (setq-default kill-read-only-ok t)
 (setq-default make-backup-files nil) ;; No backup files ~
 (setq-default monokai-background "#000000")
-(setq-default nlinum-highlight-current-line t)
 (setq-default path-to-ctags "/usr/bin/ctags") ;; <- your ctags path here
-(setq-default phpcbf-standard "PSR12")
 (setq-default redisplay-dont-pause t) ; https://masteringemacs.org/article/improving-performance-emacs-display-engine
 (setq-default scroll-step 1) ;; keyboard scroll one line at a time
 (setq-default size-indication-mode nil)
