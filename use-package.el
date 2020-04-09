@@ -86,7 +86,8 @@
   (magit-tag ((t (:foreground "orange" :weight bold))))
   :init
   (add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
-  (add-hook 'magit-mode-hook 'my-inhibit-global-linum-mode))
+  (add-hook 'magit-mode-hook 'my-inhibit-global-linum-mode)
+  (remove-hook 'server-switch-hook 'magit-commit-diff))
 
 (use-package magit-gitflow)
 (use-package markdown-mode)

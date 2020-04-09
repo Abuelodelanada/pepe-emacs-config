@@ -8,7 +8,6 @@
 (add-hook 'js2-mode-hook 'jquery-doc-setup)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 (add-hook 'linum-mode-hook 'my-linum-mode-hook)
-(remove-hook 'server-switch-hook 'magit-commit-diff)
 
 (provide 'hooks)
 ;;; hooks ends here
