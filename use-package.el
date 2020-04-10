@@ -8,7 +8,8 @@
 (use-package ac-js2)
 (use-package ac-php)
 (use-package ac-php-core)
-(use-package adoc-mode)
+(use-package adoc-mode
+  :mode "\\.adoc")
 (use-package ag)
 (use-package all-the-icons)
 (use-package auto-compile)
@@ -17,7 +18,8 @@
 (use-package company)
 (use-package company-php)
 (use-package diminish)
-(use-package dockerfile-mode)
+(use-package dockerfile-mode
+  :mode "Dockerfile\\'")
 (use-package dumb-jump
   :custom
   (dumb-jump-default-project "~")
@@ -72,8 +74,10 @@
 (use-package jquery-doc)
 (use-package js2-mode
     :config
-    (dumb-jump-mode t))
-(use-package json-mode)
+    (dumb-jump-mode t)
+    :mode "\\.js\\'")
+(use-package json-mode
+  :mode "\\.json\\'")
 (use-package linum
   :init
   (add-hook 'linum-mode-hook 'my-linum-mode-hook))
@@ -98,7 +102,11 @@
   (remove-hook 'server-switch-hook 'magit-commit-diff))
 
 (use-package magit-gitflow)
-(use-package markdown-mode)
+(use-package markdown-mode
+  :mode (("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode)
+         ("\\.text\\'" . markdown-mode)))
+
 (use-package markdown-mode+)
 (use-package markdown-toc)
 (use-package markup-faces)
