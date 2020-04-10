@@ -120,7 +120,13 @@
   (pass-mode-entry-face ((t))))
 (use-package php-mode
   :config
-  (dumb-jump-mode t))
+  (dumb-jump-mode t)
+  :mode "\\.php"
+  :mode "\\.module$"
+  :mode "\\.inc$"
+  :mode "\\.install$"
+  :mode "\\.engine$"
+  :mode "\\.tpl.php$")
 (use-package phpcbf
   :custom
   (phpcbf-standard "PSR12"))
