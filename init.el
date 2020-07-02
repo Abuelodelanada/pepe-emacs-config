@@ -44,12 +44,6 @@
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (projectile-mode +1)
 
-(add-hook 'after-init-hook 'global-flycheck-mode)
-(eval-after-load "flycheck"
-  '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
-
-(with-eval-after-load 'flycheck
-  (add-hook 'flycheck-mode-hook #'flycheck-pycheckers-setup))
 (put 'downcase-region 'disabled nil)
 (set-default 'case-fold-search nil) ; Case sensitive TAGS search
 (autoload 'geben "geben" "DBGp protocol frontend, a script debugger" t) ; Geben

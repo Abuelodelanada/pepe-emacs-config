@@ -72,6 +72,9 @@
 (use-package flycheck
   :bind (("C-c <down>" . flycheck-next-error)
          ("C-c <up>" . flycheck-previous-error))
+  :init
+  (add-hook 'python-mode-hook 'flycheck-mode)
+  (add-hook 'php-mode-hook 'flycheck-mode)
   :custom
   (flycheck-check-syntax-automatically '(save mode-enabled))
   (flycheck-highlighting-mode '(lines))
