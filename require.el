@@ -7,5 +7,6 @@
 (require 'magit)
 (require 'linum)
 (require 'hlinum)
+(require 'projectile)
 (provide 'require)
 ;;; require.el ends here

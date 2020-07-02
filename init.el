@@ -39,7 +39,6 @@
 (tool-bar-mode -1) ;; Hide toolbar
 (yas-global-mode 1)
 
-(require 'projectile)
 (define-key projectile-mode-map (kbd "M-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (projectile-mode +1)
