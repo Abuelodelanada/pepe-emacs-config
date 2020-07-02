@@ -10,7 +10,17 @@
 (use-package ag)
 (use-package all-the-icons)
 (use-package auto-compile)
-(use-package company)
+(use-package company
+  :custom-face
+ (company-preview ((t (:background "gray10" :foreground "#F8F8F0"))))
+ (company-scrollbar-bg ((t (:background "gray10"))))
+ (company-tooltip ((t (:background "gray10" :foreground "#F8F8F0"))))
+ (company-tooltip-annotation ((t (:background "gray10" :foreground "green yellow"))))
+ (company-tooltip-annotation-selection ((t nil)))
+ (company-tooltip-common ((t (:background "gray10" :foreground "orange red" :underline t))))
+ (company-tooltip-common-selection ((t (:background "orange red" :foreground "#000000" :underline t))))
+ (company-tooltip-mouse ((t (:background "orange red" :foreground "#000000"))))
+ (company-tooltip-selection ((t (:background "orange red" :foreground "#000000")))))
 (use-package company-anaconda
   :init
   (eval-after-load "company"
@@ -26,7 +36,7 @@
             (add-to-list 'company-backends 'company-ac-php-backend ))))
 (use-package company-quickhelp
   :custom
-   (company-quickhelp-color-background "gray10")
+   (company-quickhelp-color-background "gray15")
    (company-quickhelp-color-foreground "white smoke")
    (company-quickhelp-use-propertized-text t)
   :init
