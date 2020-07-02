@@ -19,6 +19,7 @@
         - [ECB (Emacs Code Browser)](#ecb-emacs-code-browser)
         - [Tabbar](#tabbar)
         - [Company](#company)
+        - [Highlight Indent Guides](#highlight-indent-guides)
         - [Powerline with Flycheck](#powerline-with-flycheck)
             - [Flycheck with no errors.](#flycheck-with-no-errors)
             - [Flycheck with warnings.](#flycheck-with-warnings)
@@ -76,6 +77,11 @@ This Emacs config have some useful modules:
 
 ### Company
 ![company](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/company.png "company")
+
+
+### Highlight Indent Guides
+![highlight-indent-guides](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/highlight-indent-guides.png "highlight-indent-guides")
+
 
 
 ### Powerline with Flycheck
