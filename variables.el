@@ -19,7 +19,7 @@
 (setq-default history-length 1000)
 (setq-default ido-enable-flex-matching t)
 (setq-default ido-enable-regexp t)
-(setq-default ido-ignore-files '("\\`CVS/" "\\`#" "\\`.#" "\\`\\.\\./"))
+;(setq-default ido-ignore-files '("\\`CVS/" "\\`#" "\\`.#" "\\`\\.\\./"))
 (setq-default indent-line-function 'insert-tab)
 (setq-default indent-tabs-mode nil)
 (setq-default inhibit-startup-message t) ;; Disable startup messages
