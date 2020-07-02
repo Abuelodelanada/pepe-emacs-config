@@ -129,17 +129,17 @@ ARG."
   )
 
 ; https://stackoverflow.com/questions/6837511/automatically-disable-a-global-minor-mode-for-a-specific-major-mode
-(defun my-inhibit-global-nlinum-mode ()
-  "Counter-act `global-nlinum-mode'."
+(defun my-inhibit-global-linum-mode ()
+  "Counter-act `global-linum-mode'."
   (add-hook 'after-change-major-mode-hook
-            (lambda () (nlinum-mode 0))
+            (lambda () (linum-mode 0))
             :append :local))
 
-;; Preset `nlinum-format' for minimum width.
+;; Preset `linum-format' for minimum width.
 ;; https://www.emacswiki.org/emacs/LineNumbers
-(defun my-nlinum-mode-hook ()
-  (when nlinum-mode
-    (setq-local nlinum-format
+(defun my-linum-mode-hook ()
+  (when linum-mode
+    (setq-local linum-format
                 (concat " %" (number-to-string
                              ;; Guesstimate number of buffer lines.
                              (ceiling (log (max 1 (/ (buffer-size) 80)) 10)))

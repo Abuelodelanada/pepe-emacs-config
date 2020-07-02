@@ -2,9 +2,11 @@
 ;;; Commentary:
 ;;; Code:
 
-(require 'iedit)
 (require 'git-gutter-fringe)
-(require 'nlinum)
-(require 'nlinum-hl) ; load this after nlinum
+(require 'iedit)
+(require 'magit)
+(require 'linum)
+(require 'hlinum)
+(require 'projectile)
 (provide 'require)
 ;;; require.el ends here
