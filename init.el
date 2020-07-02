@@ -47,8 +47,6 @@
 (put 'downcase-region 'disabled nil)
 (set-default 'case-fold-search nil) ; Case sensitive TAGS search
 (autoload 'geben "geben" "DBGp protocol frontend, a script debugger" t) ; Geben
-(autoload 'markdown-mode "markdown-mode"
-  "Major mode for editing Markdown files" t)
 
 (diminish 'abbrev-mode "Abv")
 (diminish 'git-gutter-mode)
