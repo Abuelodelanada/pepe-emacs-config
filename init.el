@@ -57,14 +57,11 @@
   "Major mode for editing Markdown files" t)
 
 (diminish 'abbrev-mode "Abv")
-(diminish 'projectile-mode "Proj")
 (diminish 'git-gutter-mode)
 (diminish 'global-whitespace-mode t)
-(diminish 'highlight-parentheses-mode)
 (load-theme 'monokai t)
 (load "~/.emacs.d/faces")
 (load "~/.emacs.d/customfaces")
 
 (provide 'init)
-
 ;;;

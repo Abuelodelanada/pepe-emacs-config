@@ -11,6 +11,7 @@
 (use-package all-the-icons)
 (use-package auto-compile)
 (use-package company
+  :diminish "Comp"
   :custom-face
  (company-preview ((t (:background "gray10" :foreground "#F8F8F0"))))
  (company-scrollbar-bg ((t (:background "gray10"))))
@@ -88,7 +89,8 @@
 (use-package highlight
   :custom-face
   (highlight ((t (:background "black" :foreground "white")))))
-(use-package highlight-parentheses)
+(use-package highlight-parentheses
+  :diminish)
 (use-package hlinum
   :custom-face
   (linum-highlight-face ((t (:inherit default :background "#000000" :foreground "#FF6E27" :slant normal :weight bold)))))
@@ -177,7 +179,8 @@
   (powerline-active1 ((t (:background "#FF6E27" :foreground "white smoke" :weight bold))))
   (powerline-active2 ((t (:background "gray9" :foreground "#FF6E27")))))
 
-(use-package projectile)
+(use-package projectile
+  :diminish "Proj")
 (use-package s)
 (use-package seq)
 (use-package smarty-mode)
