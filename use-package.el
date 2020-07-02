@@ -5,18 +5,28 @@
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
-(use-package ac-js2)
-(use-package ac-php)
-(use-package ac-php-core)
 (use-package adoc-mode
   :mode "\\.adoc")
 (use-package ag)
 (use-package all-the-icons)
 (use-package auto-compile)
-(use-package auto-complete)
-(use-package auto-indent-mode)
 (use-package company)
-(use-package company-php)
+(use-package company-anaconda
+  :init
+  (eval-after-load "company"
+    '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
+  (add-hook 'python-mode-hook 'company-mode)
+  (add-hook 'python-mode-hook 'anaconda-mode))
+(use-package company-php
+  :init
+  (add-hook 'php-mode-hook
+          '(lambda ()
+            (require 'company-php)
+            (company-mode t)
+            (add-to-list 'company-backends 'company-ac-php-backend ))))
+(use-package company-quickhelp
+  :init
+  (add-hook 'company-mode-hook 'company-quickhelp-mode))
 (use-package diminish)
 (use-package dockerfile-mode
   :mode "Dockerfile\\'")
