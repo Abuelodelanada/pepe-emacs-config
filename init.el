@@ -38,9 +38,6 @@
 (scroll-bar-mode -1) ;; Hide scrollbar
 (tool-bar-mode -1) ;; Hide toolbar
 (yas-global-mode 1)
-
-(define-key projectile-mode-map (kbd "M-p") 'projectile-command-map)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (projectile-mode +1)
 
 (put 'downcase-region 'disabled nil)
