@@ -181,8 +181,6 @@
 
 (use-package projectile
   :diminish "Proj")
-(use-package s)
-(use-package seq)
 (use-package smarty-mode)
 (use-package sqlformat)
 (use-package tabbar
