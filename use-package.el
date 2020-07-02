@@ -67,8 +67,6 @@
   (ecb-mode-line-data-face ((t (:foreground "#FF6E27"))))
   (ecb-mode-line-prefix-face ((t (:foreground "#FF6E27"))))
   (ecb-tag-header-face ((t (:background "#FF6E27")))))
-(use-package epl)
-(use-package f)
 (use-package flycheck
   :bind (("C-c <down>" . flycheck-next-error)
          ("C-c <up>" . flycheck-previous-error))
