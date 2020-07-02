@@ -169,8 +169,8 @@
 (use-package smarty-mode)
 (use-package sqlformat)
 (use-package tabbar
-  :bind (("C-M-<left>" . tabbar-backward)
-         ("C-M-<right>" . tabbar-forward))
+  :bind (("M-<left>" . tabbar-backward)
+         ("M-<right>" . tabbar-forward))
   :custom
   (tabbar-background-color "gray9")
   (tabbar-separator 0.5)
