@@ -18,6 +18,8 @@
         - [Neotree](#neotree)
         - [ECB (Emacs Code Browser)](#ecb-emacs-code-browser)
         - [Tabbar](#tabbar)
+        - [Company](#company)
+        - [Highlight Indent Guides](#highlight-indent-guides)
         - [Powerline with Flycheck](#powerline-with-flycheck)
             - [Flycheck with no errors.](#flycheck-with-no-errors)
             - [Flycheck with warnings.](#flycheck-with-warnings)
@@ -71,6 +73,15 @@ This Emacs config have some useful modules:
 
 ### Tabbar
 ![tabbar](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/tabbar.png "tabbar")
+
+
+### Company
+![company](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/company.png "company")
+
+
+### Highlight Indent Guides
+![highlight-indent-guides](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/highlight-indent-guides.png "highlight-indent-guides")
+
 
 
 ### Powerline with Flycheck
@@ -140,10 +151,10 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 * `C-t`: create ctags
 * `C-x g`: magit-status
 * `C-x p`: run phpcbf --standard=PSR2 to the current buffer
-* `M-left`: tabbar-backward
+* `C-M-left`: tabbar-backward
 * `M-up` : beginning-of-buffer
 * `M-down`: end-of-buffer
-* `M-right`: tabbar-forward
+* `C-M-right`: tabbar-forward
 * `S-M-down` : enlarge window
 * `S-M-left`: enlarge window horizontally
 * `S-M-right`: shrink window horizontally

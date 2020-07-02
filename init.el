@@ -6,6 +6,10 @@
 (setq load-prefer-newer t)
 (package-initialize)
 (load "~/.emacs.d/init-packages")
+
+(eval-when-compile
+  (require 'use-package))
+(load "~/.emacs.d/use-package")
 (require 'auto-compile)
 (auto-compile-on-load-mode)
 (auto-compile-on-save-mode)
@@ -21,8 +25,6 @@
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; Maximize window at startup
 (column-number-mode t) ;; Show column number
-(dumb-jump-mode t) ;dumb-jump
-(global-auto-complete-mode t) ;; Enable auto-complete
 (global-git-gutter-mode t)
 (global-highlight-parentheses-mode t)
 (global-linum-mode t) ;; Show line-number
@@ -36,31 +38,19 @@
 (scroll-bar-mode -1) ;; Hide scrollbar
 (tool-bar-mode -1) ;; Hide toolbar
 (yas-global-mode 1)
-
-(require 'projectile)
-(define-key projectile-mode-map (kbd "M-p") 'projectile-command-map)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (projectile-mode +1)
 
-(add-hook 'after-init-hook 'global-flycheck-mode)
-(eval-after-load "flycheck"
-  '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
-
-(with-eval-after-load 'flycheck
-  (add-hook 'flycheck-mode-hook #'flycheck-pycheckers-setup))
 (put 'downcase-region 'disabled nil)
 (set-default 'case-fold-search nil) ; Case sensitive TAGS search
 (autoload 'geben "geben" "DBGp protocol frontend, a script debugger" t) ; Geben
-(autoload 'markdown-mode "markdown-mode"
-  "Major mode for editing Markdown files" t)
 
 (diminish 'abbrev-mode "Abv")
-(diminish 'projectile-mode "Proj")
 (diminish 'git-gutter-mode)
 (diminish 'global-whitespace-mode t)
-(diminish 'highlight-parentheses-mode)
+(diminish 'yas-minor-mode t)
 (load-theme 'monokai t)
 (load "~/.emacs.d/faces")
 (load "~/.emacs.d/customfaces")
 
 (provide 'init)
+;;;
