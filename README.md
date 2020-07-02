@@ -18,6 +18,7 @@
         - [Neotree](#neotree)
         - [ECB (Emacs Code Browser)](#ecb-emacs-code-browser)
         - [Tabbar](#tabbar)
+        - [Company](#company)
         - [Powerline with Flycheck](#powerline-with-flycheck)
             - [Flycheck with no errors.](#flycheck-with-no-errors)
             - [Flycheck with warnings.](#flycheck-with-warnings)
@@ -71,6 +72,10 @@ This Emacs config have some useful modules:
 
 ### Tabbar
 ![tabbar](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/tabbar.png "tabbar")
+
+
+### Company
+![company](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/company.png "company")
 
 
 ### Powerline with Flycheck
