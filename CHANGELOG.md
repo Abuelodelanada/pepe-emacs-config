@@ -1,3 +1,38 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [[1.0.0](https://github.com/Abuelodelanada/pepe-emacs-config/releases/tag/1.0.0)](#100httpsgithubcomabuelodelanadapepe-emacs-configreleasestag100)
+    - ["La organización vence al tiempo"](#la-organización-vence-al-tiempo)
+- [[0.5.0](https://github.com/Abuelodelanada/pepe-emacs-config/releases/tag/0.5.0)](#050httpsgithubcomabuelodelanadapepe-emacs-configreleasestag050)
+    - ["El candidato es el Proyecto"](#el-candidato-es-el-proyecto)
+- [[0.4.8](https://github.com/Abuelodelanada/pepe-emacs-config/releases/tag/0.4.8)](#048httpsgithubcomabuelodelanadapepe-emacs-configreleasestag048)
+    - ["La llave de la victoria"](#la-llave-de-la-victoria)
+- [[0.4.3](https://github.com/Abuelodelanada/pepe-emacs-config/releases/tag/0.4.3)](#043httpsgithubcomabuelodelanadapepe-emacs-configreleasestag043)
+    - ["La unidad hasta que duela"](#la-unidad-hasta-que-duela)
+- [[0.4.0](https://github.com/Abuelodelanada/pepe-emacs-config/releases/tag/0.4.0)](#040httpsgithubcomabuelodelanadapepe-emacs-configreleasestag040)
+    - ["Emacs y la unidad del campo popular"](#emacs-y-la-unidad-del-campo-popular)
+- [[0.3.4](https://github.com/Abuelodelanada/pepe-emacs-config/releases/tag/0.3.4)](#034httpsgithubcomabuelodelanadapepe-emacs-configreleasestag034)
+    - ["Dando formato a nuestra Patria"](#dando-formato-a-nuestra-patria)
+
+<!-- markdown-toc end -->
+
+
+# [1.0.0](https://github.com/Abuelodelanada/pepe-emacs-config/releases/tag/1.0.0)
+## "La organización vence al tiempo"
+
+Compañeras y compañeros,
+
+Como pocas veces en la historia, la humanidad enfrenta momentos dramáticos, donde es fundamental estar organizados. Hemos ganado una primera batalla contra el tiempo actuando tempranamente. De esta forma hemos preparado nuestro sistema para que resista mejor el vendaval que se avecina.
+En pocas semanas hemos hecho el trabajo que no se hizo en los últimos cuatro años de abandono. Pero eso solo no alcanza. Cuidamos al compañero, cuidándonos a nosotros mismos.
+
+Es por tal motivo que después de mucho tiempo de desarrollo el editor del Pueblo Programador ha llegado a la versión `1.0.0`.
+En ella hemos dado un paso fundamente en la organización que las circunstancias requieren, así las cosas ahora usamos `use-package` para tener organizados de una manera más eficiente los paquetes que usamos. Adicionalmente hemos reemplazodo al avandonado `auto-complete` por el siempre eficiente `company`, quien nos sugiere de mejor manera el código a escribir. Con él hemos dado mejor soporte al autocompletado tanto en `PHP` como en `Python`. Y para saber donde estamos parados, integramos el paquete `highlight-indent-guides`.
+
+Esperamos que esta nueva versión nos ayude a enfrentar de mejor forma, los tiempos venideros.
+
+Los abrazo sobre mi corazón
+
+
 # [0.5.0](https://github.com/Abuelodelanada/pepe-emacs-config/releases/tag/0.5.0)
 ## "El candidato es el Proyecto"
 
@@ -55,7 +90,7 @@ esos dos editores está la Embajada y la NSA.
 
 Es por eso que continuamos haciendo todos los esfuerzos posibles para
 interpretar a todos los sectores. Es por eso que en la versión 0.4.3 de la
-pepe-emacs-config hemos integrado el paquete tabbar, el cual nos mostrará
+pepe-emacs-config hemos integrado el paquete `tabbar`, el cual nos mostrará
 una cómoda barra de tabs con la cual podremos cambiar de buffer con un
 simple: `M-left` y `M-right`.
 
