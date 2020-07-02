@@ -28,6 +28,7 @@
   :custom
    (company-quickhelp-color-background "gray10")
    (company-quickhelp-color-foreground "white smoke")
+   (company-quickhelp-use-propertized-text t)
   :init
   (add-hook 'company-mode-hook 'company-quickhelp-mode))
 (use-package diminish)
