@@ -25,6 +25,9 @@
             (company-mode t)
             (add-to-list 'company-backends 'company-ac-php-backend ))))
 (use-package company-quickhelp
+  :custom
+   (company-quickhelp-color-background "gray10")
+   (company-quickhelp-color-foreground "white smoke")
   :init
   (add-hook 'company-mode-hook 'company-quickhelp-mode))
 (use-package diminish)
