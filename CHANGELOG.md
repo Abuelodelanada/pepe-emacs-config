@@ -26,7 +26,7 @@ Como pocas veces en la historia, la humanidad enfrenta momentos dramáticos, don
 En pocas semanas hemos hecho el trabajo que no se hizo en los últimos cuatro años de abandono. Pero eso solo no alcanza. Cuidamos al compañero, cuidándonos a nosotros mismos.
 
 Es por tal motivo que después de mucho tiempo de desarrollo el editor del Pueblo Programador ha llegado a la versión `1.0.0`.
-En ella hemos dado un paso fundamente en la organización que las circunstancias requieren, así las cosas ahora usamos `use-package` para tener organizados de una manera más eficiente los paquetes que usamos. Adicionalmente hemos reemplazodo al avandonado `auto-complete` por el siempre eficiente `company`, quien nos sugiere de mejor manera el código a escribir. Con él hemos dado mejor soporte al autocompletado tanto en `PHP` como en `Python`. Y para saber donde estamos parados, integramos el paquete `highlight-indent-guides`.
+En ella hemos dado un paso fundamente en la organización que las circunstancias requieren, así las cosas ahora usamos `use-package` para tener organizados de una manera más eficiente los paquetes que usamos. Adicionalmente hemos reemplazado al abandonado `auto-complete` por el siempre eficiente `company`, quien nos sugiere de mejor manera el código a escribir. Con él hemos dado mejor soporte al autocompletado tanto en `PHP` como en `Python`. Y para saber dónde estamos parados, integramos el paquete `highlight-indent-guides`.
 
 Esperamos que esta nueva versión nos ayude a enfrentar de mejor forma, los tiempos venideros.
 
