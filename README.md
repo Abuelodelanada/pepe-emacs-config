@@ -12,6 +12,7 @@
 **Table of Contents**
 
 - [The Pepe Emacs config](#the-pepe-emacs-config)
+    - [Install | Upgrade](#install--upgrade)
     - [Some Features](#some-features)
         - [Autocomplete, iedit, magit, etc.](#autocomplete-iedit-magit-etc)
         - [Magit](#magit)
@@ -24,7 +25,6 @@
             - [Flycheck with no errors.](#flycheck-with-no-errors)
             - [Flycheck with warnings.](#flycheck-with-warnings)
             - [Flycheck with errors.](#flycheck-with-errors)
-    - [Install | Upgrade](#install--upgrade)
     - [Shortcuts](#shortcuts)
 
 <!-- markdown-toc end -->
@@ -35,7 +35,7 @@ This is my personal Emacs configuration, built according to my personal preferen
 This Emacs config have some useful modules:
 
 * adoc-mode
-* auto-complete
+* company
 * dumb-jump
 * emacs code browser (ecb)
 * flycheck
@@ -50,10 +50,44 @@ This Emacs config have some useful modules:
 * password-store
 * php-mode
 * powerline
+* projectile
 * smarty-mode
 * sqlformat
 * yasnippet
-* ...
+* and much more...
+
+
+## Install | Upgrade
+
+0. This config is tested in Emacs 25.2.2, but may also work in previous versions.
+    Your `~/.emacs.d` folder should be empty. If you have one, rename it or move to a different location (to keep a backup, just in case you want to go back).
+    Also rename or move your `~/.emacs` file (to keep a backup, just in case you want to go back).
+
+```bash
+$ cd ~
+$ mv .emacs.d .emacs.d.bak
+$ mv .emacs .emacs.bak
+```
+
+1. Install the required dependencies:
+```bash
+$ sudo apt-get install emacs exuberant-ctags git ripgrep silversearcher-ag pylint pep8 php-pear python-pip
+
+$ sudo pear channel-update pear.php.net
+
+$ sudo pear install PHP_CodeSniffer
+
+$ sudo pip install sqlparse
+```
+
+2. Clone the repository:
+
+```bash
+$ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
+```
+
+3. Open emacs and it will continue the installation by itself installing packages from melpa and elpa. Wait for it to finish... and done! You now have your new shiny powerful emacs :)
+
 
 ## Some Features
 
@@ -98,37 +132,6 @@ This Emacs config have some useful modules:
 ![powerline-flycheck-error](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/powerline-flycheck-error.png "powerline-flycheck-error")
 
 
-
-## Install | Upgrade
-
-0. This config is tested in Emacs 25.2.2, but may also work in previous versions.
-    Your `~/.emacs.d` folder should be empty. If you have one, rename it or move to a different location (to keep a backup, just in case you want to go back).
-    Also rename or move your `~/.emacs` file (to keep a backup, just in case you want to go back).
-
-```bash
-$ cd ~
-$ mv .emacs.d .emacs.d.bak
-$ mv .emacs .emacs.bak
-```
-
-1. Install the required dependencies:
-```bash
-$ sudo apt-get install emacs exuberant-ctags git ripgrep silversearcher-ag pylint pep8 php-pear python-pip
-
-$ sudo pear channel-update pear.php.net
-
-$ sudo pear install PHP_CodeSniffer
-
-$ sudo pip install sqlparse
-```
-
-2. Clone the repository:
-
-```bash
-$ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
-```
-
-3. Open emacs and it will continue the installation by itself installing packages from melpa and elpa. Wait for it to finish... and done! You now have your new shiny powerful emacs :)
 
 
 ## Shortcuts
