@@ -6,6 +6,7 @@
 (defvar dumb-jump-prefer-searcher)
 (defvar yas-prompt-functions)
 (defvar path-to-ctags)
+(defvar pepe-debug-p)
 
 (setq-default auto-save-default nil) ;; Stop creating auto #autosave# files
 (setq-default auto-window-vscroll nil)
@@ -37,8 +38,15 @@
 (setq-default whitespace-style '(face trailing tabs spaces newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark))
 (setq-default yas-prompt-functions '(yas-dropdown-prompt yas-ido-prompt yas-completing-prompt))
 (setq-default load-prefer-newer t)
+(setq-default pepe-debug-p t)
 ;(setq projectile-project-search-path '("~/projects/" "~/work/")) ;; Set your project's direcotries copying this line in customvariables.el
 
+;; Taker from doom-emacs
+;; Adopt a sneaky garbage collection strategy of waiting until idle time to
+;; collect; staving off the collector while the user is working.
+(setq gcmh-idle-delay 5
+      gcmh-high-cons-threshold (* 16 1024 1024)  ; 16mb
+      gcmh-verbose pepe-debug-p)
 
 (provide 'variables)
 ;;; variables.el ends here

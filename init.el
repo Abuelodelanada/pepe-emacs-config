@@ -2,8 +2,11 @@
 ;;; Commentary:
 ;;; Code:
 
-(setq gc-cons-threshold 16777216 ; 16mb
-      gc-cons-percentage 0.1)
+;; Taken from foom-emacs!
+;; A big contributor to startup times is garbage collection. We up the gc
+;; threshold to temporarily prevent it from running, then reset it later by
+;; enabling `gcmh-mode'. Not resetting it will cause stuttering/freezes.
+(setq gc-cons-threshold most-positive-fixnum)
 
 (load "~/.emacs.d/messages")
 (setq load-prefer-newer t)

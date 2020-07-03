@@ -101,6 +101,7 @@
   :defer 2)
 (use-package flymd
   :defer 2)
+(use-package gcmh)
 (use-package geben
   :defer 2)
 (use-package git-gutter-fringe
