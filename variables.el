@@ -7,6 +7,7 @@
 (defvar yas-prompt-functions)
 (defvar path-to-ctags)
 (defvar pepe-debug-p)
+(defvar pepe--file-name-handler-alist file-name-handler-alist)
 
 (setq-default auto-save-default nil) ;; Stop creating auto #autosave# files
 (setq-default auto-window-vscroll nil)
