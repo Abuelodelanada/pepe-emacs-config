@@ -145,18 +145,5 @@ ARG."
                              (ceiling (log (max 1 (/ (buffer-size) 80)) 10)))
                         "d "))))
 
-
-
-;; These functions were taken from:
-;; https://github.com/hlissner/doom-emacs/blob/develop/docs/faq.org#how-does-doom-start-up-so-quickly
-(defun doom-defer-garbage-collection-h ()
-  (setq gc-cons-threshold most-positive-fixnum))
-
-(defun doom-restore-garbage-collection-h ()
-  ;; Defer it so that commands launched immediately after will enjoy the
-  ;; benefits.
-  (run-at-time
-   1 nil (lambda () (setq gc-cons-threshold doom-gc-cons-threshold))))
-
 (provide 'functions)
 ;;; functions.el ends here
