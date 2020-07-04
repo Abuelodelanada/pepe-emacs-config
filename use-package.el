@@ -7,16 +7,20 @@
 (setq use-package-always-ensure t)
 
 (use-package adoc-mode
-  :defer 2
   :mode "\\.adoc")
 (use-package ag
-  :defer 2)
+  :defer t)
 (use-package all-the-icons
-  :defer 2)
+  :defer t)
 (use-package auto-compile
-  :defer 2)
+  :defer t)
+;(use-package benchmark-init
+;  :ensure t
+;  :config
+;  ;; To disable collection of benchmark data after init is done.
+;  (add-hook 'after-init-hook 'benchmark-init/deactivate))
 (use-package company
-  :defer 2
+  :defer t
   :diminish "Comp"
   :custom-face
  (company-preview ((t (:background "gray10" :foreground "#F8F8F0"))))
@@ -29,14 +33,14 @@
  (company-tooltip-mouse ((t (:background "orange red" :foreground "#000000"))))
  (company-tooltip-selection ((t (:background "orange red" :foreground "#000000")))))
 (use-package company-anaconda
-  :defer 2
+  :defer t
   :init
   (eval-after-load "company"
     '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
   (add-hook 'python-mode-hook 'company-mode)
   (add-hook 'python-mode-hook 'anaconda-mode))
 (use-package company-php
-  :defer 2
+  :defer t
   :init
   (add-hook 'php-mode-hook
           '(lambda ()
@@ -44,26 +48,24 @@
             (company-mode t)
             (add-to-list 'company-backends 'company-ac-php-backend ))))
 (use-package company-quickhelp
-  :defer 2
+  :defer t
   :custom
    (company-quickhelp-color-background "gray15")
    (company-quickhelp-color-foreground "white smoke")
    (company-quickhelp-use-propertized-text t)
   :init
   (add-hook 'company-mode-hook 'company-quickhelp-mode))
-(use-package diminish
-  :defer 2)
+(use-package diminish)
 (use-package dockerfile-mode
   :mode "Dockerfile\\'")
 (use-package dumb-jump
-  :defer 2
+  :defer t
   :custom
   (dumb-jump-default-project "~")
   (dumb-jump-force-searcher nil)
   (dumb-jump-prefer-searcher 'ag)
   (dumb-jump-quiet nil))
 (use-package ecb
-  :defer 2
   :bind (("<f7>" . ecb-minor-mode))
   :custom
   (ecb-layout-name "left6")
@@ -80,7 +82,6 @@
   (ecb-mode-line-prefix-face ((t (:foreground "#FF6E27"))))
   (ecb-tag-header-face ((t (:background "#FF6E27")))))
 (use-package flycheck
-  :defer 2
   :bind (("C-c <down>" . flycheck-next-error)
          ("C-c <up>" . flycheck-previous-error))
   :init
@@ -95,57 +96,51 @@
   (flycheck-color-mode-line-error-face ((t (:inherit 'flycheck-fringe-error :box t :line-width 2 :color "red" :style 'released-button))))
   (flycheck-color-mode-line-warning-face ((t (:inherit 'flycheck-fringe-warning :box t :line-width 2 :color "orange" :style 'released-button)))))
 (use-package flycheck-color-mode-line
-  :defer 2)
+  :after (flycheck))
 (use-package flycheck-mypy
-  :defer 2)
+  :after (flycheck))
 (use-package flycheck-pycheckers
-  :defer 2)
+  :after (flycheck))
 (use-package flymd
-  :defer 2)
+  :after (flycheck))
 (use-package gcmh)
 (use-package geben
-  :defer 2)
-(use-package git-gutter-fringe
-  :defer 2)
+  :defer t)
+(use-package git-gutter-fringe)
 (use-package highlight
-  :defer 2
+  :defer t
   :custom-face
   (highlight ((t (:background "black" :foreground "white")))))
 (use-package highlight-parentheses
-  :defer 2
+  :defer t
   :diminish)
 (use-package highlight-indent-guides
-  :defer 2
+  :defer t
   :init
   (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
   :custom
-  (highlight-indent-guides-method 'bitmap)
+  (highlight-indent-guides-method 'character)
   :diminish)
 (use-package hlinum
-  :defer 2
   :custom-face
   (linum-highlight-face ((t (:inherit default :background "#000000" :foreground "#FF6E27" :slant normal :weight bold)))))
 (use-package iedit
-  :defer 2
+  :defer t
   :custom-face
   (iedit-occurrence ((t (:foreground "green yellow")))))
 (use-package jquery-doc
-  :defer 2)
+  :defer t)
 (use-package js2-mode
-  :defer 2
   :config
   (dumb-jump-mode t)
   :mode "\\.js\\'")
 (use-package json-mode
-  :defer 2
   :mode "\\.json\\'")
 (use-package linum
-  :defer 1
   :init
   (add-hook 'linum-mode-hook 'my-linum-mode-hook))
 (use-package magit
-  :defer 2
-  :bind (("C-x g" . magit-status))
+   :bind (("C-x g" . magit-status))
   :custom-face
   (magit-branch-local ((t (:foreground "orange"))))
   (magit-branch-remote ((t (:foreground "#D90F5A"))))
@@ -165,23 +160,21 @@
   (remove-hook 'server-switch-hook 'magit-commit-diff))
 
 (use-package magit-gitflow
-  :defer 2)
+  :after (magit))
 (use-package markdown-mode
-  :defer 2
-  :mode (("\\.md\\'" . markdown-mode)
+   :mode (("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)
          ("\\.text\\'" . markdown-mode)))
 
 (use-package markdown-mode+
-  :defer 2)
+  :after (markdown-mode))
 (use-package markdown-toc
-  :defer 2)
+  :after (markdown-mode))
 (use-package markup-faces
-  :defer 2)
+  :defer t)
 (use-package monokai-theme
-  :defer 2)
+  :defer t)
 (use-package neotree
-  :defer 2
   :bind (("<f8>" . neotree-toggle))
   :custom
   (neo-autorefresh t)
@@ -193,12 +186,11 @@
   (neo-dir-link-face ((t (:foreground "#FF6E27"))))
   (neo-root-dir-face ((t (:background "#000000" :foreground "gold")))))
 (use-package pass
-  :defer 2
+  :defer t
   :custom-face
   (pass-mode-directory-face ((t (:foreground "#FF6E27" :weight bold))))
   (pass-mode-entry-face ((t))))
 (use-package php-mode
-  :defer 2
   :config
   (dumb-jump-mode t)
   :mode "\\.php"
@@ -208,13 +200,13 @@
   :mode "\\.engine$"
   :mode "\\.tpl.php$")
 (use-package phpcbf
-  :defer 2
+  :bind (("C-x p" . phpcbf))
   :custom
-  (phpcbf-standard "PSR12"))
+  (phpcbf-standard "PSR12")
+  :after (php-mode))
 (use-package pkg-info
-  :defer 2)
-(use-package popup
-  :defer 2)
+  :defer t)
+(use-package popup)
 (use-package powerline
   :custom
   (powerline-default-separator "arrow-fade")
@@ -229,14 +221,17 @@
   (powerline-active2 ((t (:background "gray9" :foreground "#FF6E27")))))
 
 (use-package projectile
-  :defer 2
-  :diminish "Proj")
+  :defer 0.1
+  :diminish "Proj"
+  :bind-keymap
+  ("M-p" . projectile-command-map)
+  ("C-c p" . projectile-command-map))
 (use-package smarty-mode
-  :defer 2)
+  :mode "\\.tpl$")
 (use-package sqlformat
-  :defer 2)
+    :bind (("C-c <tab>" . sqlformat))
+  :defer t)
 (use-package tabbar
-  :defer 1
   :bind (("M-<left>" . tabbar-backward)
          ("M-<right>" . tabbar-forward))
   :custom
@@ -246,11 +241,12 @@
   :custom-face
   (tabbar-separator ((t (:inherit tabbar-default :width normal)))))
 (use-package web-mode
-  :defer 2)
+  :defer t)
 (use-package yaml-mode
-  :defer 2)
+  :mode "\\.yml$"
+  :mode "\\.yaml$")
 (use-package yasnippet
-  :defer 2)
+  :defer t)
 (use-package yasnippet-snippets
-  :defer 2)
+  :defer t)
 ;;;
