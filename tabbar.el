@@ -1,10 +1,11 @@
+;;; -*- lexical-binding: t; -*-
 ;;; package --- Summary
 ;;; Commentary:
 ;;; Code:
 
 ;; Taken from: https://amitp.blogspot.com/2018/10/emacs-prettier-tabbar.html
 ;; Tab Bar
-(require 'tabbar)
+;(require 'tabbar)
 (customize-set-variable 'tabbar-background-color "gray9")
 (customize-set-variable 'tabbar-separator '(0.5))
 (customize-set-variable 'tabbar-use-images t)
