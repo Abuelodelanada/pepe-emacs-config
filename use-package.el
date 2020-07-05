@@ -119,7 +119,7 @@
   :init
   (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
   :custom
-  (highlight-indent-guides-method 'character)
+  (highlight-indent-guides-method 'bitmap)
   :diminish)
 (use-package hlinum
   :custom-face
