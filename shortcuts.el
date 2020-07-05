@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;;; package --- Summary
 ;;; Commentary:
 ;;; Code:
@@ -5,8 +6,6 @@
 ;; Shortcuts
 (global-set-key (kbd "%") 'match-paren) ;; Ir al cierre-apertura de ([{
 (global-set-key (kbd "<f12>") 'menu-bar-mode)
-(global-set-key (kbd "C-;") 'iedit-dwim)
-(global-set-key (kbd "C-c <tab>") 'sqlformat)
 (global-set-key (kbd "C-c C-k") 'copy-line)
 (global-set-key (kbd "C-c C-w") 'copy-word)
 (global-set-key (kbd "C-c C-z") 'term-stop-subjob)
@@ -15,7 +14,6 @@
 (global-set-key (kbd "C-d") 'duplicate-current-line)
 (global-set-key (kbd "C-l") 'goto-line)
 (global-set-key (kbd "C-t") 'crear-tags) ;; Create tags shortcut
-(global-set-key (kbd "C-x p") 'phpcbf)
 (global-set-key (kbd "M-<up>") 'beginning-of-buffer)
 (global-set-key (kbd "M-<down>") 'end-of-buffer)
 (global-set-key (kbd "S-M-<down>") 'enlarge-window)
@@ -27,8 +25,6 @@
 (global-set-key (kbd "S-<right>") 'windmove-right)
 (global-set-key (kbd "S-<up>") 'windmove-up)
 
-(define-key projectile-mode-map (kbd "M-p") 'projectile-command-map)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 (provide 'shortcuts)
 ;;; shortcuts.el ends here

@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;;; package --- Summary
 ;;; Commentary:
 ;;; Code:
@@ -7,10 +8,19 @@
 
 (use-package adoc-mode
   :mode "\\.adoc")
-(use-package ag)
-(use-package all-the-icons)
-(use-package auto-compile)
+(use-package ag
+  :defer t)
+(use-package all-the-icons
+  :defer t)
+(use-package auto-compile
+  :defer t)
+;(use-package benchmark-init
+;  :ensure t
+;  :config
+;  ;; To disable collection of benchmark data after init is done.
+;  (add-hook 'after-init-hook 'benchmark-init/deactivate))
 (use-package company
+  :defer t
   :diminish "Comp"
   :custom-face
  (company-preview ((t (:background "gray10" :foreground "#F8F8F0"))))
@@ -23,12 +33,14 @@
  (company-tooltip-mouse ((t (:background "orange red" :foreground "#000000"))))
  (company-tooltip-selection ((t (:background "orange red" :foreground "#000000")))))
 (use-package company-anaconda
+  :defer t
   :init
   (eval-after-load "company"
     '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
   (add-hook 'python-mode-hook 'company-mode)
   (add-hook 'python-mode-hook 'anaconda-mode))
 (use-package company-php
+  :defer t
   :init
   (add-hook 'php-mode-hook
           '(lambda ()
@@ -36,6 +48,7 @@
             (company-mode t)
             (add-to-list 'company-backends 'company-ac-php-backend ))))
 (use-package company-quickhelp
+  :defer t
   :custom
    (company-quickhelp-color-background "gray15")
    (company-quickhelp-color-foreground "white smoke")
@@ -46,6 +59,7 @@
 (use-package dockerfile-mode
   :mode "Dockerfile\\'")
 (use-package dumb-jump
+  :defer t
   :custom
   (dumb-jump-default-project "~")
   (dumb-jump-force-searcher nil)
@@ -81,18 +95,27 @@
   (flycheck-error ((t (:underline "#F92672"))))
   (flycheck-color-mode-line-error-face ((t (:inherit 'flycheck-fringe-error :box t :line-width 2 :color "red" :style 'released-button))))
   (flycheck-color-mode-line-warning-face ((t (:inherit 'flycheck-fringe-warning :box t :line-width 2 :color "orange" :style 'released-button)))))
-(use-package flycheck-color-mode-line)
-(use-package flycheck-mypy)
-(use-package flycheck-pycheckers)
-(use-package flymd)
-(use-package geben)
+(use-package flycheck-color-mode-line
+  :after (flycheck))
+(use-package flycheck-mypy
+  :after (flycheck))
+(use-package flycheck-pycheckers
+  :after (flycheck))
+(use-package flymd
+  :after (flycheck))
+(use-package gcmh)
+(use-package geben
+  :defer t)
 (use-package git-gutter-fringe)
 (use-package highlight
+  :defer t
   :custom-face
   (highlight ((t (:background "black" :foreground "white")))))
 (use-package highlight-parentheses
+  :defer t
   :diminish)
 (use-package highlight-indent-guides
+  :defer t
   :init
   (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
   :custom
@@ -102,20 +125,22 @@
   :custom-face
   (linum-highlight-face ((t (:inherit default :background "#000000" :foreground "#FF6E27" :slant normal :weight bold)))))
 (use-package iedit
+  :defer t
   :custom-face
   (iedit-occurrence ((t (:foreground "green yellow")))))
-(use-package jquery-doc)
+(use-package jquery-doc
+  :defer t)
 (use-package js2-mode
-    :config
-    (dumb-jump-mode t)
-    :mode "\\.js\\'")
+  :config
+  (dumb-jump-mode t)
+  :mode "\\.js\\'")
 (use-package json-mode
   :mode "\\.json\\'")
 (use-package linum
   :init
   (add-hook 'linum-mode-hook 'my-linum-mode-hook))
 (use-package magit
-  :bind (("C-x g" . magit-status))
+   :bind (("C-x g" . magit-status))
   :custom-face
   (magit-branch-local ((t (:foreground "orange"))))
   (magit-branch-remote ((t (:foreground "#D90F5A"))))
@@ -134,16 +159,21 @@
   (add-hook 'magit-mode-hook 'my-inhibit-global-linum-mode)
   (remove-hook 'server-switch-hook 'magit-commit-diff))
 
-(use-package magit-gitflow)
+(use-package magit-gitflow
+  :after (magit))
 (use-package markdown-mode
-  :mode (("\\.md\\'" . markdown-mode)
+   :mode (("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)
          ("\\.text\\'" . markdown-mode)))
 
-(use-package markdown-mode+)
-(use-package markdown-toc)
-(use-package markup-faces)
-(use-package monokai-theme)
+(use-package markdown-mode+
+  :after (markdown-mode))
+(use-package markdown-toc
+  :after (markdown-mode))
+(use-package markup-faces
+  :defer t)
+(use-package monokai-theme
+  :defer t)
 (use-package neotree
   :bind (("<f8>" . neotree-toggle))
   :custom
@@ -156,6 +186,7 @@
   (neo-dir-link-face ((t (:foreground "#FF6E27"))))
   (neo-root-dir-face ((t (:background "#000000" :foreground "gold")))))
 (use-package pass
+  :defer t
   :custom-face
   (pass-mode-directory-face ((t (:foreground "#FF6E27" :weight bold))))
   (pass-mode-entry-face ((t))))
@@ -169,9 +200,12 @@
   :mode "\\.engine$"
   :mode "\\.tpl.php$")
 (use-package phpcbf
+  :bind (("C-x p" . phpcbf))
   :custom
-  (phpcbf-standard "PSR12"))
-(use-package pkg-info)
+  (phpcbf-standard "PSR12")
+  :after (php-mode))
+(use-package pkg-info
+  :defer t)
 (use-package popup)
 (use-package powerline
   :custom
@@ -187,9 +221,16 @@
   (powerline-active2 ((t (:background "gray9" :foreground "#FF6E27")))))
 
 (use-package projectile
-  :diminish "Proj")
-(use-package smarty-mode)
-(use-package sqlformat)
+  :defer 0.1
+  :diminish "Proj"
+  :bind-keymap
+  ("M-p" . projectile-command-map)
+  ("C-c p" . projectile-command-map))
+(use-package smarty-mode
+  :mode "\\.tpl$")
+(use-package sqlformat
+    :bind (("C-c <tab>" . sqlformat))
+  :defer t)
 (use-package tabbar
   :bind (("M-<left>" . tabbar-backward)
          ("M-<right>" . tabbar-forward))
@@ -199,8 +240,13 @@
   (tabbar-use-images t)
   :custom-face
   (tabbar-separator ((t (:inherit tabbar-default :width normal)))))
-(use-package web-mode)
-(use-package yaml-mode)
-(use-package yasnippet)
-(use-package yasnippet-snippets)
+(use-package web-mode
+  :defer t)
+(use-package yaml-mode
+  :mode "\\.yml$"
+  :mode "\\.yaml$")
+(use-package yasnippet
+  :defer t)
+(use-package yasnippet-snippets
+  :defer t)
 ;;;
