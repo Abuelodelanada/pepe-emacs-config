@@ -114,13 +114,6 @@
 (use-package highlight-parentheses
   :defer t
   :diminish)
-(use-package highlight-indent-guides
-  :defer t
-  :init
-  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-  :custom
-  (highlight-indent-guides-method 'bitmap)
-  :diminish)
 (use-package hlinum
   :custom-face
   (linum-highlight-face ((t (:inherit default :background "#000000" :foreground "#FF6E27" :slant normal :weight bold)))))
