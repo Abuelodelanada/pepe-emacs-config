@@ -17,10 +17,6 @@
 (eval-when-compile
   (require 'use-package))
 (load "~/.emacs.d/use-package")
-(require 'auto-compile)
-(auto-compile-on-load-mode)
-(auto-compile-on-save-mode)
-(load "~/.emacs.d/require")
 (load "~/.emacs.d/variables")
 (load "~/.emacs.d/customvariables")
 (load "~/.emacs.d/functions")
@@ -35,7 +31,6 @@
 (global-git-gutter-mode t)
 (global-highlight-parentheses-mode t)
 (global-linum-mode t) ;; Show line-number
-(hlinum-activate)
 (global-whitespace-mode t)
 (ido-mode t)
 (menu-bar-mode -1) ;; Hide menubar

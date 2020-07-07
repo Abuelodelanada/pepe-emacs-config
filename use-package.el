@@ -13,7 +13,10 @@
 (use-package all-the-icons
   :defer t)
 (use-package auto-compile
-  :defer t)
+  :defer t
+  :custom
+  (auto-compile-on-load-mode)
+  (auto-compile-on-save-mode))
 ;(use-package benchmark-init
 ;  :ensure t
 ;  :config
@@ -130,8 +133,10 @@
 (use-package json-mode
   :mode "\\.json\\'")
 (use-package linum
+  :defer 0.3
   :init
-  (add-hook 'linum-mode-hook 'my-linum-mode-hook))
+  (add-hook 'linum-mode-hook 'my-linum-mode-hook)
+  (hlinum-activate))
 (use-package magit
    :bind (("C-x g" . magit-status))
   :custom-face
@@ -214,7 +219,7 @@
   (powerline-active2 ((t (:background "gray9" :foreground "#FF6E27")))))
 
 (use-package projectile
-  :defer 0.1
+  :defer 0.4
   :diminish "Proj"
   :bind-keymap
   ("M-p" . projectile-command-map)
@@ -239,7 +244,7 @@
   :mode "\\.yml$"
   :mode "\\.yaml$")
 (use-package yasnippet
-  :defer t)
+  :defer 0.5)
 (use-package yasnippet-snippets
-  :defer t)
+  :defer 0.5)
 ;;;

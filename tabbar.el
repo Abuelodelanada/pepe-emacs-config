@@ -30,8 +30,8 @@
 
 ;; Use Powerline to make tabs look nicer
 ;; (this needs to run *after* the colors are set)
-(require 'powerline)
-(defvar my/tabbar-height 20)
+;(require 'powerline)
+(defvar my/tabbar-height 25)
 (defvar my/tabbar-left (powerline-slant-right 'tabbar-default nil my/tabbar-height))
 (defvar my/tabbar-right (powerline-slant-right nil 'tabbar-default my/tabbar-height))
 (defun my/tabbar-tab-label-function (tab)
