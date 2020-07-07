@@ -241,7 +241,9 @@
   :custom-face
   (tabbar-separator ((t (:inherit tabbar-default :width normal)))))
 (use-package web-mode
-  :defer t)
+  :mode "\\.html?\\'"
+  :mode "\\.phtml\\'"
+  :mode "\\.phtml\\'")
 (use-package yaml-mode
   :mode "\\.yml$"
   :mode "\\.yaml$")
