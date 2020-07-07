@@ -9,9 +9,9 @@
 (use-package adoc-mode
   :mode "\\.adoc")
 (use-package ag
-  :defer t)
+  :defer 2)
 (use-package all-the-icons
-  :defer t)
+  :defer 1)
 (use-package auto-compile
   :defer t
   :custom
@@ -62,13 +62,14 @@
 (use-package dockerfile-mode
   :mode "Dockerfile\\'")
 (use-package dumb-jump
-  :defer t
+  :defer 2
   :custom
   (dumb-jump-default-project "~")
   (dumb-jump-force-searcher nil)
   (dumb-jump-prefer-searcher 'ag)
   (dumb-jump-quiet nil))
 (use-package ecb
+;  :defer 2
   :bind (("<f7>" . ecb-minor-mode))
   :custom
   (ecb-layout-name "left6")
@@ -108,14 +109,14 @@
   :after (flycheck))
 (use-package gcmh)
 (use-package geben
-  :defer t)
+  :defer 2)
 (use-package git-gutter-fringe)
 (use-package highlight
-  :defer t
+  :defer 2
   :custom-face
   (highlight ((t (:background "black" :foreground "white")))))
 (use-package highlight-parentheses
-  :defer t
+  :defer 2
   :diminish)
 (use-package hlinum
   :custom-face
@@ -169,9 +170,9 @@
 (use-package markdown-toc
   :after (markdown-mode))
 (use-package markup-faces
-  :defer t)
+  :defer 2)
 (use-package monokai-theme
-  :defer t)
+  :defer 2)
 (use-package neotree
   :bind (("<f8>" . neotree-toggle))
   :custom
@@ -184,7 +185,7 @@
   (neo-dir-link-face ((t (:foreground "#FF6E27"))))
   (neo-root-dir-face ((t (:background "#000000" :foreground "gold")))))
 (use-package pass
-  :defer t
+  :defer 2
   :custom-face
   (pass-mode-directory-face ((t (:foreground "#FF6E27" :weight bold))))
   (pass-mode-entry-face ((t))))
@@ -203,8 +204,9 @@
   (phpcbf-standard "PSR12")
   :after (php-mode))
 (use-package pkg-info
-  :defer t)
-(use-package popup)
+  :defer 2)
+(use-package popup
+  :defer 2)
 (use-package powerline
   :custom
   (powerline-default-separator "arrow-fade")
@@ -227,8 +229,8 @@
 (use-package smarty-mode
   :mode "\\.tpl$")
 (use-package sqlformat
-    :bind (("C-c <tab>" . sqlformat))
-  :defer t)
+  :bind (("C-c <tab>" . sqlformat))
+  :defer 2)
 (use-package tabbar
   :bind (("M-<left>" . tabbar-backward)
          ("M-<right>" . tabbar-forward))
@@ -244,7 +246,7 @@
   :mode "\\.yml$"
   :mode "\\.yaml$")
 (use-package yasnippet
-  :defer 0.5)
+  :defer 2)
 (use-package yasnippet-snippets
-  :defer 0.5)
+  :defer 2)
 ;;;
