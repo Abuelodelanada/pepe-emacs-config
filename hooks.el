@@ -4,6 +4,14 @@
 ;;; Code:
 
 ;; Hooks
+;; Use a hook so the message doesn't get clobbered by other messages.
+(add-hook 'emacs-startup-hook
+          (lambda ()
+            (message "Emacs with 'The Pepe emacs config' is ready in %s with %d garbage collections."
+                     (format "%.3f seconds"
+                             (float-time
+                              (time-subtract after-init-time before-init-time)))
+                     gcs-done)))
 (add-hook 'window-setup-hook 'on-after-init)
 ;(add-hook 'php-mode-hook 'php-enable-psr2-coding-style)
 (add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode)
