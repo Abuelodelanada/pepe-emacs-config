@@ -48,8 +48,8 @@
 
 (diminish 'abbrev-mode "Abv")
 (diminish 'git-gutter-mode)
-(diminish 'global-whitespace-mode t)
-(diminish 'yas-minor-mode t)
+(diminish 'global-whitespace-mode "")
+(diminish 'yas-minor-mode "")
 (load-theme 'monokai t)
 (load "~/.emacs.d/faces")
 (load "~/.emacs.d/customfaces")
