@@ -12,6 +12,7 @@
 (load "~/.emacs.d/messages")
 (setq load-prefer-newer t)
 (package-initialize)
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 (load "~/.emacs.d/init-packages")
 
 (eval-when-compile
