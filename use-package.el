@@ -223,6 +223,8 @@
 (use-package projectile
   :defer 0.4
   :diminish "Proj"
+  :custom
+  (projectile-use-git-grep t)
   :bind-keymap
   ("M-p" . projectile-command-map)
   ("C-c p" . projectile-command-map))
