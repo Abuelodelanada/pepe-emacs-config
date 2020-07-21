@@ -139,7 +139,7 @@
   (add-hook 'linum-mode-hook 'my-linum-mode-hook)
   (hlinum-activate))
 (use-package magit
-   :bind (("C-x g" . magit-status))
+  :bind (("C-x g" . magit-status))
   :custom-face
   (magit-branch-local ((t (:foreground "orange"))))
   (magit-branch-remote ((t (:foreground "#D90F5A"))))
