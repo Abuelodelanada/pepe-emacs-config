@@ -9,11 +9,14 @@
 (use-package adoc-mode
   :mode "\\.adoc")
 (use-package ag
-  :defer t)
+  :defer 2)
 (use-package all-the-icons
-  :defer t)
+  :defer 1)
 (use-package auto-compile
-  :defer t)
+  :defer t
+  :custom
+  (auto-compile-on-load-mode)
+  (auto-compile-on-save-mode))
 ;(use-package benchmark-init
 ;  :ensure t
 ;  :config
@@ -59,13 +62,14 @@
 (use-package dockerfile-mode
   :mode "Dockerfile\\'")
 (use-package dumb-jump
-  :defer t
+  :defer 2
   :custom
   (dumb-jump-default-project "~")
   (dumb-jump-force-searcher nil)
   (dumb-jump-prefer-searcher 'ag)
   (dumb-jump-quiet nil))
 (use-package ecb
+;  :defer 2
   :bind (("<f7>" . ecb-minor-mode))
   :custom
   (ecb-layout-name "left6")
@@ -105,21 +109,14 @@
   :after (flycheck))
 (use-package gcmh)
 (use-package geben
-  :defer t)
+  :defer 2)
 (use-package git-gutter-fringe)
 (use-package highlight
-  :defer t
+  :defer 2
   :custom-face
   (highlight ((t (:background "black" :foreground "white")))))
 (use-package highlight-parentheses
-  :defer t
-  :diminish)
-(use-package highlight-indent-guides
-  :defer t
-  :init
-  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-  :custom
-  (highlight-indent-guides-method 'bitmap)
+  :defer 2
   :diminish)
 (use-package hlinum
   :custom-face
@@ -137,10 +134,12 @@
 (use-package json-mode
   :mode "\\.json\\'")
 (use-package linum
+  :defer 0.3
   :init
-  (add-hook 'linum-mode-hook 'my-linum-mode-hook))
+  (add-hook 'linum-mode-hook 'my-linum-mode-hook)
+  (hlinum-activate))
 (use-package magit
-   :bind (("C-x g" . magit-status))
+  :bind (("C-x g" . magit-status))
   :custom-face
   (magit-branch-local ((t (:foreground "orange"))))
   (magit-branch-remote ((t (:foreground "#D90F5A"))))
@@ -171,9 +170,9 @@
 (use-package markdown-toc
   :after (markdown-mode))
 (use-package markup-faces
-  :defer t)
+  :defer 2)
 (use-package monokai-theme
-  :defer t)
+  :defer 2)
 (use-package neotree
   :bind (("<f8>" . neotree-toggle))
   :custom
@@ -186,7 +185,7 @@
   (neo-dir-link-face ((t (:foreground "#FF6E27"))))
   (neo-root-dir-face ((t (:background "#000000" :foreground "gold")))))
 (use-package pass
-  :defer t
+  :defer 2
   :custom-face
   (pass-mode-directory-face ((t (:foreground "#FF6E27" :weight bold))))
   (pass-mode-entry-face ((t))))
@@ -205,8 +204,14 @@
   (phpcbf-standard "PSR12")
   :after (php-mode))
 (use-package pkg-info
-  :defer t)
-(use-package popup)
+  :defer 2)
+(use-package popup
+  :defer 2
+  :custom-face
+  (popup-face ((t (:background "gray10" :foreground "#F8F8F2"))))
+  (popup-menu-face ((t (:background "gray10" :foreground "#F8F8F2"))))
+  (popup-menu-mouse-face ((t (:background "orange" :foreground "#F8F8F2"))))
+  (popup-menu-selection-face ((t (:background "orange red" :foreground "#000000")))))
 (use-package powerline
   :custom
   (powerline-default-separator "arrow-fade")
@@ -221,16 +226,18 @@
   (powerline-active2 ((t (:background "gray9" :foreground "#FF6E27")))))
 
 (use-package projectile
-  :defer 0.1
+  :defer 0.4
   :diminish "Proj"
+  :custom
+  (projectile-use-git-grep t)
   :bind-keymap
   ("M-p" . projectile-command-map)
   ("C-c p" . projectile-command-map))
 (use-package smarty-mode
   :mode "\\.tpl$")
 (use-package sqlformat
-    :bind (("C-c <tab>" . sqlformat))
-  :defer t)
+  :bind (("C-c <tab>" . sqlformat))
+  :defer 2)
 (use-package tabbar
   :bind (("M-<left>" . tabbar-backward)
          ("M-<right>" . tabbar-forward))
@@ -241,12 +248,20 @@
   :custom-face
   (tabbar-separator ((t (:inherit tabbar-default :width normal)))))
 (use-package web-mode
-  :defer t)
+  :mode "\\.html?\\'"
+  :mode "\\.phtml\\'"
+  :mode "\\.phtml\\'")
+
+(use-package which-key
+  :defer 2
+  :custom-face
+  (which-key-key-face ((t (:foreground "#FF6E27" :weight bold))))
+  (which-key-group-description-face ((t (:foreground "#FE8B05" :weight bold)))))
 (use-package yaml-mode
   :mode "\\.yml$"
   :mode "\\.yaml$")
 (use-package yasnippet
-  :defer t)
+  :defer 2)
 (use-package yasnippet-snippets
-  :defer t)
+  :defer 2)
 ;;;

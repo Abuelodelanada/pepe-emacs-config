@@ -41,6 +41,8 @@
 (setq-default yas-prompt-functions '(yas-dropdown-prompt yas-ido-prompt yas-completing-prompt))
 (setq-default load-prefer-newer t)
 (setq-default pepe-debug-p t)
+(setq-default whitespace-style '(face trailing tabs newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark))
+(setq-default whitespace-global-modes '(adoc-mode dockerfile-mode js2-mode json-mode markdown-mode php-mode python-mode smarty-mode web-mode yaml-mode))
 ;(setq projectile-project-search-path '("~/projects/" "~/work/")) ;; Set your project's direcotries copying this line in customvariables.el
 
 ;; Taker from doom-emacs

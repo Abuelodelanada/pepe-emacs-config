@@ -12,15 +12,12 @@
 (load "~/.emacs.d/messages")
 (setq load-prefer-newer t)
 (package-initialize)
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 (load "~/.emacs.d/init-packages")
 
 (eval-when-compile
   (require 'use-package))
 (load "~/.emacs.d/use-package")
-(require 'auto-compile)
-(auto-compile-on-load-mode)
-(auto-compile-on-save-mode)
-(load "~/.emacs.d/require")
 (load "~/.emacs.d/variables")
 (load "~/.emacs.d/customvariables")
 (load "~/.emacs.d/functions")
@@ -35,7 +32,6 @@
 (global-git-gutter-mode t)
 (global-highlight-parentheses-mode t)
 (global-linum-mode t) ;; Show line-number
-(hlinum-activate)
 (global-whitespace-mode t)
 (ido-mode t)
 (menu-bar-mode -1) ;; Hide menubar
@@ -46,6 +42,7 @@
 (tool-bar-mode -1) ;; Hide toolbar
 (yas-global-mode 1)
 (projectile-mode +1)
+(which-key-mode)
 
 (put 'downcase-region 'disabled nil)
 (set-default 'case-fold-search nil) ; Case sensitive TAGS search
@@ -53,8 +50,8 @@
 
 (diminish 'abbrev-mode "Abv")
 (diminish 'git-gutter-mode)
-(diminish 'global-whitespace-mode t)
-(diminish 'yas-minor-mode t)
+(diminish 'global-whitespace-mode "")
+(diminish 'yas-minor-mode "")
 (load-theme 'monokai t)
 (load "~/.emacs.d/faces")
 (load "~/.emacs.d/customfaces")
