@@ -42,6 +42,7 @@
 (tool-bar-mode -1) ;; Hide toolbar
 (yas-global-mode 1)
 (projectile-mode +1)
+(which-key-mode)
 
 (put 'downcase-region 'disabled nil)
 (set-default 'case-fold-search nil) ; Case sensitive TAGS search

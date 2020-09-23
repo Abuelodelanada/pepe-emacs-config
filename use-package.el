@@ -246,6 +246,12 @@
   :mode "\\.html?\\'"
   :mode "\\.phtml\\'"
   :mode "\\.phtml\\'")
+
+(use-package which-key
+  :defer 2
+  :custom-face
+  (which-key-key-face ((t (:foreground "#FF6E27" :weight bold))))
+  (which-key-group-description-face ((t (:foreground "#FE8B05" :weight bold)))))
 (use-package yaml-mode
   :mode "\\.yml$"
   :mode "\\.yaml$")
