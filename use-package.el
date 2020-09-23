@@ -206,7 +206,12 @@
 (use-package pkg-info
   :defer 2)
 (use-package popup
-  :defer 2)
+  :defer 2
+  :custom-face
+  (popup-face ((t (:background "gray10" :foreground "#F8F8F2"))))
+  (popup-menu-face ((t (:background "gray10" :foreground "#F8F8F2"))))
+  (popup-menu-mouse-face ((t (:background "orange" :foreground "#F8F8F2"))))
+  (popup-menu-selection-face ((t (:background "orange red" :foreground "#000000")))))
 (use-package powerline
   :custom
   (powerline-default-separator "arrow-fade")
