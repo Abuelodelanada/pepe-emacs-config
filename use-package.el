@@ -123,8 +123,10 @@
   (linum-highlight-face ((t (:inherit default :background "#000000" :foreground "#FF6E27" :slant normal :weight bold)))))
 (use-package iedit
   :defer t
+  :bind (("C-;" . iedit-mode))
   :custom-face
-  (iedit-occurrence ((t (:foreground "green yellow")))))
+  (iedit-occurrence ((t (:foreground "green yellow"))))
+  :diminish)
 (use-package jquery-doc
   :defer t)
 (use-package js2-mode
@@ -256,7 +258,8 @@
   :defer 2
   :custom-face
   (which-key-key-face ((t (:foreground "#FF6E27" :weight bold))))
-  (which-key-group-description-face ((t (:foreground "#FE8B05" :weight bold)))))
+  (which-key-group-description-face ((t (:foreground "#FE8B05" :weight bold))))
+  :diminish)
 (use-package yaml-mode
   :mode "\\.yml$"
   :mode "\\.yaml$")
