@@ -4,7 +4,7 @@
 ;;; Code:
 
 (set-face-attribute 'cursor t :background "#FE8B05" :foreground "white smoke" :inverse-video t)
-(set-face-attribute 'default t :background "#000000" :foreground "#F8F8F2" :weight 'bold :height 110 :family "Ubuntu Mono")
+(set-face-attribute 'default t :background "#000000" :foreground "#F8F8F2" :weight 'bold :height 120 :family "Ubuntu Mono")
 (set-face-attribute 'ido-first-match t :foreground "#FF6E27" :weight 'bold)
 (set-face-attribute 'ido-incomplete-regexp t :foreground "DeepPink1" :weight 'bold)
 (set-face-attribute 'ido-indicator t :background "#FF6E27" :foreground "#000000" :width 'condensed)
