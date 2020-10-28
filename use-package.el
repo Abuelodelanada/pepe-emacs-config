@@ -123,6 +123,7 @@
   (linum-highlight-face ((t (:inherit default :background "#000000" :foreground "#FF6E27" :slant normal :weight bold)))))
 (use-package iedit
   :defer t
+  :bind (("C-;" . iedit-mode))
   :custom-face
   (iedit-occurrence ((t (:foreground "green yellow")))))
 (use-package jquery-doc
