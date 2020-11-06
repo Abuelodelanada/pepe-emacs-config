@@ -159,6 +159,8 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 * `C-M-left`: tabbar-backward
 * `M-up` : beginning-of-buffer
 * `M-down`: end-of-buffer
+* `C-M-g`: dumb-jump-go (Go to definition)
+* `C-M-p`: dumb-jump-back (Return from definition)
 * `C-M-right`: tabbar-forward
 * `S-M-down` : enlarge window
 * `S-M-left`: enlarge window horizontally

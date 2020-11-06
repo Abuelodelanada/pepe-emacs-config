@@ -63,6 +63,10 @@
   :mode "Dockerfile\\'")
 (use-package dumb-jump
   :defer 2
+  :init
+  (add-hook 'js2-mode-hook 'dumb-jump-mode)
+  (add-hook 'php-mode-hook 'dumb-jump-mode)
+  (add-hook 'python-mode-hook 'dumb-jump-mode)
   :custom
   (dumb-jump-default-project "~")
   (dumb-jump-force-searcher nil)
@@ -130,8 +134,6 @@
 (use-package jquery-doc
   :defer t)
 (use-package js2-mode
-  :config
-  (dumb-jump-mode t)
   :mode "\\.js\\'")
 (use-package json-mode
   :mode "\\.json\\'")
@@ -187,8 +189,6 @@
   (neo-dir-link-face ((t (:foreground "#FF6E27"))))
   (neo-root-dir-face ((t (:background "#000000" :foreground "gold")))))
 (use-package php-mode
-  :config
-  (dumb-jump-mode t)
   :mode "\\.php"
   :mode "\\.module$"
   :mode "\\.inc$"
