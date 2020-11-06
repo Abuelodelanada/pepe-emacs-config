@@ -14,8 +14,7 @@
 ;; Colors
 (set-face-attribute 'tabbar-default nil
                     :background "gray9" :foreground
-                    "gray9" :distant-foreground "gray9"
-                    :family "Helvetica Neue" :box nil)
+                    "gray9" :distant-foreground "gray9" :box nil)
 (set-face-attribute 'tabbar-unselected nil
                     :background "gray80" :foreground "gray9" :box nil)
 (set-face-attribute 'tabbar-modified nil
