@@ -33,7 +33,7 @@
 
 
 Inspired by the great Juan Pedro Fisanotti and his wonderful [fisa-vim-config](https://github.com/fisadev/fisa-vim-config), I share my [Emacs](https://www.gnu.org/software/emacs/) config.
-This is my personal Emacs configuration, built according to my personal preferences, without any justification to think it's the best possible emacs configuration. If you like it, great! :) It's mainly oriented to PHP software development, but many of its features are useful for other languages and editing tasks.
+This is my personal Emacs configuration, built according to my personal preferences, without any justification to think it's the best possible emacs configuration. If you like it, great! :) It's mainly oriented to PHP and Python software development, but many of its features are useful for other languages and editing tasks.
 
 This Emacs config have some useful modules:
 
@@ -50,7 +50,6 @@ This Emacs config have some useful modules:
 * markdown-mode
 * markdown-toc
 * neo-tree
-* password-store
 * php-mode
 * powerline
 * projectile
@@ -160,12 +159,14 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 * `C-M-left`: tabbar-backward
 * `M-up` : beginning-of-buffer
 * `M-down`: end-of-buffer
+* `C-M-g`: dumb-jump-go (Go to definition)
+* `C-M-p`: dumb-jump-back (Return from definition)
 * `C-M-right`: tabbar-forward
 * `S-M-down` : enlarge window
 * `S-M-left`: enlarge window horizontally
 * `S-M-right`: shrink window horizontally
 * `S-M-up`: shrink window
 * `S-down`: windmove down
-* `S-left`: 'windmove left
+* `S-left`: windmove left
 * `S-right`: windmove right
 * `S-up`: windmove up

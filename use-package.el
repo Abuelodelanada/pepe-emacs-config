@@ -63,6 +63,10 @@
   :mode "Dockerfile\\'")
 (use-package dumb-jump
   :defer 2
+  :init
+  (add-hook 'js2-mode-hook 'dumb-jump-mode)
+  (add-hook 'php-mode-hook 'dumb-jump-mode)
+  (add-hook 'python-mode-hook 'dumb-jump-mode)
   :custom
   (dumb-jump-default-project "~")
   (dumb-jump-force-searcher nil)
@@ -123,13 +127,13 @@
   (linum-highlight-face ((t (:inherit default :background "#000000" :foreground "#FF6E27" :slant normal :weight bold)))))
 (use-package iedit
   :defer t
+  :bind (("C-;" . iedit-mode))
   :custom-face
-  (iedit-occurrence ((t (:foreground "green yellow")))))
+  (iedit-occurrence ((t (:foreground "green yellow"))))
+  :diminish)
 (use-package jquery-doc
   :defer t)
 (use-package js2-mode
-  :config
-  (dumb-jump-mode t)
   :mode "\\.js\\'")
 (use-package json-mode
   :mode "\\.json\\'")
@@ -184,14 +188,7 @@
   (neo-banner-face ((t (:background "#000000" :foreground "#F34739" :weight bold))))
   (neo-dir-link-face ((t (:foreground "#FF6E27"))))
   (neo-root-dir-face ((t (:background "#000000" :foreground "gold")))))
-(use-package pass
-  :defer 2
-  :custom-face
-  (pass-mode-directory-face ((t (:foreground "#FF6E27" :weight bold))))
-  (pass-mode-entry-face ((t))))
 (use-package php-mode
-  :config
-  (dumb-jump-mode t)
   :mode "\\.php"
   :mode "\\.module$"
   :mode "\\.inc$"
@@ -256,7 +253,8 @@
   :defer 2
   :custom-face
   (which-key-key-face ((t (:foreground "#FF6E27" :weight bold))))
-  (which-key-group-description-face ((t (:foreground "#FE8B05" :weight bold)))))
+  (which-key-group-description-face ((t (:foreground "#FE8B05" :weight bold))))
+  :diminish)
 (use-package yaml-mode
   :mode "\\.yml$"
   :mode "\\.yaml$")
