@@ -244,6 +244,7 @@
   (tabbar-use-images t)
   :custom-face
   (tabbar-separator ((t (:inherit tabbar-default :width normal)))))
+(use-package virtualenvwrapper)
 (use-package web-mode
   :mode "\\.html?\\'"
   :mode "\\.phtml\\'"
