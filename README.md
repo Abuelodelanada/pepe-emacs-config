@@ -156,12 +156,12 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 * `C-t`: create ctags
 * `C-x g`: magit-status
 * `C-x p`: run phpcbf --standard=PSR2 to the current buffer
-* `C-M-left`: tabbar-backward
+* `S-C-left`: tabbar-backward
+* `S-C-right`: tabbar-forward
 * `M-up` : beginning-of-buffer
 * `M-down`: end-of-buffer
 * `C-M-g`: dumb-jump-go (Go to definition)
 * `C-M-p`: dumb-jump-back (Return from definition)
-* `C-M-right`: tabbar-forward
 * `S-M-down` : enlarge window
 * `S-M-left`: enlarge window horizontally
 * `S-M-right`: shrink window horizontally
