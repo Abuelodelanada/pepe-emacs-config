@@ -89,12 +89,24 @@
   (ecb-mode-line-data-face ((t (:foreground "#FF6E27"))))
   (ecb-mode-line-prefix-face ((t (:foreground "#FF6E27"))))
   (ecb-tag-header-face ((t (:background "#FF6E27")))))
+
+(use-package elpy
+  :defer t
+  :init
+  (advice-add 'python-mode :before 'elpy-enable)
+  (add-hook 'elpy-mode-hook (lambda () (highlight-indentation-mode -1)))
+  :custom
+  (elpy-modules '(elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-yasnippet elpy-module-sane-defaults))
+  (elpy-rpc-python-command "python3")
+  (elpy-rpc-virtualenv-path 'default))
+
 (use-package flycheck
   :bind (("C-c <down>" . flycheck-next-error)
          ("C-c <up>" . flycheck-previous-error))
   :init
   (add-hook 'python-mode-hook 'flycheck-mode)
   (add-hook 'php-mode-hook 'flycheck-mode)
+  (add-hook 'elpy-mode-hook 'flycheck-mode)
   :custom
   (flycheck-check-syntax-automatically '(save mode-enabled))
   (flycheck-highlighting-mode '(lines))
@@ -244,7 +256,7 @@
   (tabbar-use-images t)
   :custom-face
   (tabbar-separator ((t (:inherit tabbar-default :width normal)))))
-(use-package virtualenvwrapper)
+;(use-package virtualenvwrapper)
 (use-package web-mode
   :mode "\\.html?\\'"
   :mode "\\.phtml\\'"
