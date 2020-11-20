@@ -20,7 +20,7 @@
         - [Magit](#magit)
         - [Neotree](#neotree)
         - [ECB (Emacs Code Browser)](#ecb-emacs-code-browser)
-        - [Tabbar](#tabbar)
+        - [Centaur-tabs](#centaur-tabs)
         - [Company](#company)
         - [Highlight Indent Guides](#highlight-indent-guides)
         - [Powerline with Flycheck](#powerline-with-flycheck)
@@ -107,8 +107,8 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 ### ECB (Emacs Code Browser)
 ![ecb](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/ecb.png "ecb")
 
-### Tabbar
-![tabbar](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/tabbar.png "tabbar")
+### Centaur-tabs
+![centaur-tabs](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/centaur-tabs.png "centaur-tabs")
 
 
 ### Company
