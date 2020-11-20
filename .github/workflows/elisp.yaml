@@ -1,0 +1,13 @@
+name: Pepe-emacs-config code style check
+
+on:
+  push:
+    branches: [ develop, master ]
+  pull_request:
+    branches: [ develop, master ]
+
+jobs:
+  build:
+    steps:
+    - name: Emacs Lisp check
+      uses: leotaku/elisp-check@v1.0
