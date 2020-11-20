@@ -22,6 +22,42 @@
 ;  :config
 ;  ;; To disable collection of benchmark data after init is done.
 ;  (add-hook 'after-init-hook 'benchmark-init/deactivate))
+
+(use-package centaur-tabs
+  :demand
+  :bind
+  ("C-<prior>" . centaur-tabs-backward)
+  ("C-<next>" . centaur-tabs-forward)
+  :config
+  (centaur-tabs-enable-buffer-alphabetical-reordering)
+  (centaur-tabs-group-by-projectile-project)
+  (centaur-tabs-mode t)
+  (setq
+   centaur-tabs-adjust-buffer-order t
+   centaur-tabs-height 25
+   centaur-tabs-set-bar 'left
+   centaur-tabs-set-icons t
+   centaur-tabs-set-modified-marker t
+   centaur-tabs-show-navigation-buttons t
+   centaur-tabs-style "bar"
+   x-underline-at-descent-line t)
+  :custom-face
+  (centaur-tabs-active-bar-face ((t (:background "#FF6E27"))))
+  (centaur-tabs-active-bar-face ((t (:background "#FF6E27"))))
+  (centaur-tabs-active-bar-face ((t (:background "#FF6E27"))))
+  (centaur-tabs-selected ((t (:background "gray9" :foreground "white"))))
+  (centaur-tabs-selected ((t (:background "gray9" :foreground "white"))))
+  (centaur-tabs-selected-modified ((t (:background "gray9" :foreground "white"))))
+  (centaur-tabs-selected-modified ((t (:background "gray9" :foreground "white"))))
+  (centaur-tabs-unselected ((t (:background "gray18" :foreground "grey50"))))
+  :hook
+  (calendar-mode . centaur-tabs-local-mode)
+  (dashboard-mode . centaur-tabs-local-mode)
+  (dired-mode . centaur-tabs-local-mode)
+  (helpful-mode . centaur-tabs-local-mode)
+  (org-agenda-mode . centaur-tabs-local-mode)
+  (term-mode . centaur-tabs-local-mode)
+)
 (use-package company
   :defer t
   :diminish "Comp"
@@ -247,16 +283,6 @@
 (use-package sqlformat
   :bind (("C-c <tab>" . sqlformat))
   :defer 2)
-(use-package tabbar
-  :bind (("M-C-<left>" . tabbar-backward)
-         ("M-C-<right>" . tabbar-forward))
-  :custom
-  (tabbar-background-color "gray9")
-  (tabbar-separator 0.5)
-  (tabbar-use-images t)
-  :custom-face
-  (tabbar-separator ((t (:inherit tabbar-default :width normal)))))
-;(use-package virtualenvwrapper)
 (use-package web-mode
   :mode "\\.html?\\'"
   :mode "\\.phtml\\'"
