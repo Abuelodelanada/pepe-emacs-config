@@ -25,7 +25,6 @@
 (load "~/.emacs.d/automode")
 (load "~/.emacs.d/hooks")
 (load "~/.emacs.d/shortcuts")
-(load "~/.emacs.d/tabbar")
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; Maximize window at startup
 (column-number-mode t) ;; Show column number
