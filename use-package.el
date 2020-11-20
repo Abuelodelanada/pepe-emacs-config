@@ -43,11 +43,7 @@
    x-underline-at-descent-line t)
   :custom-face
   (centaur-tabs-active-bar-face ((t (:background "#FF6E27"))))
-  (centaur-tabs-active-bar-face ((t (:background "#FF6E27"))))
-  (centaur-tabs-active-bar-face ((t (:background "#FF6E27"))))
   (centaur-tabs-selected ((t (:background "gray9" :foreground "white"))))
-  (centaur-tabs-selected ((t (:background "gray9" :foreground "white"))))
-  (centaur-tabs-selected-modified ((t (:background "gray9" :foreground "white"))))
   (centaur-tabs-selected-modified ((t (:background "gray9" :foreground "white"))))
   (centaur-tabs-unselected ((t (:background "gray18" :foreground "grey50"))))
   :hook
@@ -86,6 +82,7 @@
             (require 'company-php)
             (company-mode t)
             (add-to-list 'company-backends 'company-ac-php-backend ))))
+
 (use-package company-quickhelp
   :defer t
   :custom
@@ -148,11 +145,9 @@
   (flycheck-highlighting-mode '(lines))
   (flycheck-pycheckers-checkers '(pylint pep8))
   :custom-face
-  (flycheck-error ((t (:underline "#F92672"))))
-  (flycheck-color-mode-line-error-face ((t (:inherit 'flycheck-fringe-error :box t :line-width 2 :color "red" :style 'released-button))))
-  (flycheck-color-mode-line-warning-face ((t (:inherit 'flycheck-fringe-warning :box t :line-width 2 :color "orange" :style 'released-button)))))
-(use-package flycheck-color-mode-line
-  :after (flycheck))
+  (flycheck-error ((t (:underline "red"))))
+  (flycheck-fringe-error ((t (:foreground "red" :weight bold))))
+)
 (use-package flycheck-mypy
   :after (flycheck))
 (use-package flycheck-pycheckers
@@ -266,7 +261,7 @@
   (mode-line ((t (:background "gray9" :foreground "#F8F8F0" :slant normal))))
   (mode-line-buffer-id ((t (:foreground "white smoke" :weight bold))))
   (mode-line-inactive ((t :background "#000000" :box nil :foreground "#75715E")))
-  (powerline-active0 ((t (:background "#F34739"))))
+  (powerline-active0 ((t (:background "#F34739" :foreground "white smoke"))))
   (powerline-active1 ((t (:background "#FF6E27" :foreground "white smoke" :weight bold))))
   (powerline-active2 ((t (:background "gray9" :foreground "#FF6E27")))))
 
