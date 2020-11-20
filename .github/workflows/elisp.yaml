@@ -6,8 +6,5 @@ on:
   pull_request:
     branches: [ develop, master ]
 
-jobs:
-  build:
-    steps:
-    - name: Emacs Lisp check
-      uses: leotaku/elisp-check@v1.0
+- name: Emacs Lisp check
+  uses: leotaku/elisp-check@v1.0
