@@ -248,8 +248,8 @@
   :bind (("C-c <tab>" . sqlformat))
   :defer 2)
 (use-package tabbar
-  :bind (("M-<left>" . tabbar-backward)
-         ("M-<right>" . tabbar-forward))
+  :bind (("M-C-<left>" . tabbar-backward)
+         ("M-C-<right>" . tabbar-forward))
   :custom
   (tabbar-background-color "gray9")
   (tabbar-separator 0.5)

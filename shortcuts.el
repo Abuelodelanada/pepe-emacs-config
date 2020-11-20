@@ -24,8 +24,6 @@
 (global-set-key (kbd "S-<left>") 'windmove-left)
 (global-set-key (kbd "S-<right>") 'windmove-right)
 (global-set-key (kbd "S-<up>") 'windmove-up)
-(global-set-key (kbd "S-C-<right>") 'tabbar-forward)
-(global-set-key (kbd "S-C-<left>") 'tabbar-backward)
 
 
 (provide 'shortcuts)
