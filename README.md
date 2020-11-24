@@ -158,8 +158,8 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 * `C-x p`: run phpcbf --standard=PSR2 to the current buffer
 * `C-<prior>`: centaur-tabs-backward
 * `C-<next>`: centaur-tabs-forward's
-* `M-up` : beginning-of-buffer
-* `M-down`: end-of-buffer
+* `C-up` : beginning-of-buffer
+* `C-down`: end-of-buffer
 * `C-M-g`: dumb-jump-go (Go to definition)
 * `C-M-p`: dumb-jump-back (Return from definition)
 * `S-M-down` : enlarge window
