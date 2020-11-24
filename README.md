@@ -156,8 +156,8 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 * `C-t`: create ctags
 * `C-x g`: magit-status
 * `C-x p`: run phpcbf --standard=PSR2 to the current buffer
-* `M-C-left`: tabbar-backward
-* `M-C-right`: tabbar-forward
+* `C-<prior>`: centaur-tabs-backward
+* `C-<next>`: centaur-tabs-forward's
 * `M-up` : beginning-of-buffer
 * `M-down`: end-of-buffer
 * `C-M-g`: dumb-jump-go (Go to definition)
