@@ -137,6 +137,7 @@
   :bind (("C-c <down>" . flycheck-next-error)
          ("C-c <up>" . flycheck-previous-error))
   :init
+  (add-hook 'flycheck-mode-hook #'flycheck-pycheckers-setup)
   (add-hook 'python-mode-hook 'flycheck-mode)
   (add-hook 'php-mode-hook 'flycheck-mode)
   (add-hook 'elpy-mode-hook 'flycheck-mode)
