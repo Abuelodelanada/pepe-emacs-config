@@ -162,9 +162,15 @@
   :defer 2
   :custom-face
   (highlight ((t (:background "black" :foreground "white")))))
-(use-package highlight-parentheses
-  :defer 2
-  :diminish)
+ (use-package highlight-parentheses
+   :defer t
+   :init
+   (add-hook 'js2-mode-hook 'highlight-parentheses-mode)
+   (add-hook 'php-mode-hook 'highlight-parentheses-mode)
+   (add-hook 'python-mode-hook 'highlight-parentheses-mode)
+   (add-hook 'sql-mode-hook 'highlight-parentheses-mode)
+   (add-hook 'markdown-mode-hook 'highlight-parentheses-mode)
+   :diminish)
 (use-package hlinum
   :custom-face
   (linum-highlight-face ((t (:inherit default :background "#000000" :foreground "#FF6E27" :slant normal :weight bold)))))

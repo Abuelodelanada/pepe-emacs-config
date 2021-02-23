@@ -29,7 +29,6 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; Maximize window at startup
 (column-number-mode t) ;; Show column number
 (global-git-gutter-mode t)
-(global-highlight-parentheses-mode t)
 (global-linum-mode t) ;; Show line-number
 (global-whitespace-mode t)
 (ido-mode t)
