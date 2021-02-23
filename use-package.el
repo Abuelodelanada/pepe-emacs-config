@@ -7,13 +7,14 @@
 (setq use-package-always-ensure t)
 
 (use-package adoc-mode
+  :after markup-faces
   :mode "\\.adoc")
 (use-package ag
-  :defer 2)
+  :after dumb-jump)
 (use-package all-the-icons
-  :defer 1)
+  :after centaur-tabs)
 (use-package auto-compile
-  :defer t
+  :after poweline
   :custom
   (auto-compile-on-load-mode)
   (auto-compile-on-save-mode))
@@ -24,6 +25,7 @@
 ;  (add-hook 'after-init-hook 'benchmark-init/deactivate))
 
 (use-package centaur-tabs
+  :after powerline
   :demand
   :bind
   ("C-<prior>" . centaur-tabs-backward)
@@ -55,27 +57,29 @@
   (term-mode . centaur-tabs-local-mode)
 )
 (use-package company
-  :defer t
+  :hook
+  (php-mode . company-mode)
+  (python-mode . company-mode)
   :diminish "Comp"
   :custom-face
- (company-preview ((t (:background "gray10" :foreground "#F8F8F0"))))
- (company-scrollbar-bg ((t (:background "gray10"))))
- (company-tooltip ((t (:background "gray10" :foreground "#F8F8F0"))))
- (company-tooltip-annotation ((t (:background "gray10" :foreground "green yellow"))))
- (company-tooltip-annotation-selection ((t nil)))
- (company-tooltip-common ((t (:background "gray10" :foreground "orange red" :underline t))))
- (company-tooltip-common-selection ((t (:background "orange red" :foreground "#000000" :underline t))))
- (company-tooltip-mouse ((t (:background "orange red" :foreground "#000000"))))
- (company-tooltip-selection ((t (:background "orange red" :foreground "#000000")))))
+  (company-preview ((t (:background "gray10" :foreground "#F8F8F0"))))
+  (company-scrollbar-bg ((t (:background "gray10"))))
+  (company-tooltip ((t (:background "gray10" :foreground "#F8F8F0"))))
+  (company-tooltip-annotation ((t (:background "gray10" :foreground "green yellow"))))
+  (company-tooltip-annotation-selection ((t nil)))
+  (company-tooltip-common ((t (:background "gray10" :foreground "orange red" :underline t))))
+  (company-tooltip-common-selection ((t (:background "orange red" :foreground "#000000" :underline t))))
+  (company-tooltip-mouse ((t (:background "orange red" :foreground "#000000"))))
+  (company-tooltip-selection ((t (:background "orange red" :foreground "#000000")))))
 (use-package company-anaconda
-  :defer t
+  :after company
   :init
   (eval-after-load "company"
     '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
   (add-hook 'python-mode-hook 'company-mode)
   (add-hook 'python-mode-hook 'anaconda-mode))
 (use-package company-php
-  :defer t
+  :defer company
   :init
   (add-hook 'php-mode-hook
           '(lambda ()
@@ -84,18 +88,21 @@
             (add-to-list 'company-backends 'company-ac-php-backend ))))
 
 (use-package company-quickhelp
-  :defer t
+  :after company
   :custom
    (company-quickhelp-color-background "gray15")
    (company-quickhelp-color-foreground "white smoke")
    (company-quickhelp-use-propertized-text t)
   :init
   (add-hook 'company-mode-hook 'company-quickhelp-mode))
-(use-package diminish)
+(use-package diminish
+  :after powerline)
 (use-package dockerfile-mode
   :mode "Dockerfile\\'")
 (use-package dumb-jump
-  :defer 2
+  :defer powerline
+  :bind (("C-M-g" . dumb-jump-go)
+         ("C-M-p" . dumb-jump-back))
   :init
   (add-hook 'js2-mode-hook 'dumb-jump-mode)
   (add-hook 'php-mode-hook 'dumb-jump-mode)
@@ -106,7 +113,7 @@
   (dumb-jump-prefer-searcher 'ag)
   (dumb-jump-quiet nil))
 (use-package ecb
-;  :defer 2
+  :commands ecb-minor-mode
   :bind (("<f7>" . ecb-minor-mode))
   :custom
   (ecb-layout-name "left6")
@@ -124,7 +131,7 @@
   (ecb-tag-header-face ((t (:background "#FF6E27")))))
 
 (use-package elpy
-  :defer t
+  :hook (python-mode)
   :init
   (advice-add 'python-mode :before 'elpy-enable)
   (add-hook 'elpy-mode-hook (lambda () (highlight-indentation-mode -1)))
@@ -141,10 +148,12 @@
   (add-hook 'python-mode-hook 'flycheck-mode)
   (add-hook 'php-mode-hook 'flycheck-mode)
   (add-hook 'elpy-mode-hook 'flycheck-mode)
+  ;(add-hook 'flycheck-before-syntax-check-hook
+  ;        #'set-flychecker-executables 'local)
   :custom
   (flycheck-check-syntax-automatically '(save mode-enabled))
   (flycheck-highlighting-mode '(lines))
-  (flycheck-pycheckers-checkers '(pylint pep8))
+  (flycheck-pycheckers-checkers '(flake8))
   :custom-face
   (flycheck-error ((t (:underline "red"))))
   (flycheck-fringe-error ((t (:foreground "red" :weight bold))))
@@ -157,22 +166,30 @@
   :after (flycheck))
 (use-package gcmh)
 (use-package geben
-  :defer 2)
-(use-package git-gutter-fringe)
+  :commands geben)
+(use-package git-gutter-fringe
+  :after powerline
+  :init
+  (global-git-gutter-mode t)
+  :custom
+  (git-gutter:hide-gutter t)
+  :diminish)
 (use-package highlight
-  :defer 2
+  :after powerline
   :custom-face
   (highlight ((t (:background "black" :foreground "white")))))
- (use-package highlight-parentheses
-   :defer t
-   :init
-   (add-hook 'js2-mode-hook 'highlight-parentheses-mode)
-   (add-hook 'php-mode-hook 'highlight-parentheses-mode)
-   (add-hook 'python-mode-hook 'highlight-parentheses-mode)
-   (add-hook 'sql-mode-hook 'highlight-parentheses-mode)
-   (add-hook 'markdown-mode-hook 'highlight-parentheses-mode)
-   :diminish)
+(use-package highlight-parentheses
+  :after powerline
+  :init
+  (add-hook 'js2-mode-hook 'highlight-parentheses-mode)
+  (add-hook 'php-mode-hook 'highlight-parentheses-mode)
+  (add-hook 'python-mode-hook 'highlight-parentheses-mode)
+  (add-hook 'sql-mode-hook 'highlight-parentheses-mode)
+  (add-hook 'markdown-mode-hook 'highlight-parentheses-mode)
+  (add-hook 'prog-mode-hook 'highlight-parentheses-mode)
+  :diminish)
 (use-package hlinum
+  :after linum
   :custom-face
   (linum-highlight-face ((t (:inherit default :background "#000000" :foreground "#FF6E27" :slant normal :weight bold)))))
 (use-package iedit
@@ -188,10 +205,13 @@
 (use-package json-mode
   :mode "\\.json\\'")
 (use-package linum
-  :defer 0.3
+  :after centaur-tabs
   :init
+  (add-hook 'prog-mode-hook 'linum-mode)
+  (add-hook 'emacs-startup-hook 'linum-mode)
   (add-hook 'linum-mode-hook 'my-linum-mode-hook)
-  (hlinum-activate))
+  (add-hook 'linum-mode-hook 'hlinum-activate))
+;  (hlinum-activate))
 (use-package magit
   :bind (("C-x g" . magit-status))
   :custom-face
@@ -213,20 +233,19 @@
   (remove-hook 'server-switch-hook 'magit-commit-diff))
 
 (use-package magit-gitflow
-  :after (magit))
+  :after magit)
 (use-package markdown-mode
    :mode (("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)
          ("\\.text\\'" . markdown-mode)))
 
 (use-package markdown-mode+
-  :after (markdown-mode))
+  :after markdown-mode)
 (use-package markdown-toc
-  :after (markdown-mode))
+  :after markdown-mode)
 (use-package markup-faces
-  :defer 2)
-(use-package monokai-theme
-  :defer 2)
+  :mode "\\.adoc")
+(use-package monokai-theme)
 (use-package neotree
   :bind (("<f8>" . neotree-toggle))
   :custom
@@ -245,21 +264,17 @@
   :mode "\\.install$"
   :mode "\\.engine$"
   :mode "\\.tpl.php$")
-(use-package phpcbf
-  :bind (("C-x p" . phpcbf))
-  :custom
-  (phpcbf-standard "PSR12")
-  :after (php-mode))
-(use-package pkg-info
-  :defer 2)
 (use-package popup
-  :defer 2
+  :after company
   :custom-face
   (popup-face ((t (:background "gray10" :foreground "#F8F8F2"))))
   (popup-menu-face ((t (:background "gray10" :foreground "#F8F8F2"))))
   (popup-menu-mouse-face ((t (:background "orange" :foreground "#F8F8F2"))))
   (popup-menu-selection-face ((t (:background "orange red" :foreground "#000000")))))
 (use-package powerline
+  :after monokai-theme
+  :init
+  (powerline-default-theme)
   :custom
   (powerline-default-separator "arrow-fade")
   (powerline-gui-use-vcs-glyph t)
@@ -273,34 +288,44 @@
   (powerline-active2 ((t (:background "gray9" :foreground "#FF6E27")))))
 
 (use-package projectile
-  :defer 0.4
+  :after centaur-tabs
   :diminish "Proj"
   :custom
   (projectile-use-git-grep t)
+  :init
+  (projectile-mode +1)
   :bind-keymap
   ("M-p" . projectile-command-map)
   ("C-c p" . projectile-command-map))
 (use-package smarty-mode
   :mode "\\.tpl$")
 (use-package sqlformat
-  :bind (("C-c <tab>" . sqlformat))
-  :defer 2)
+  :commands sqlformat
+  :bind (("C-c <tab>" . sqlformat)))
 (use-package web-mode
   :mode "\\.html?\\'"
   :mode "\\.phtml\\'"
   :mode "\\.phtml\\'")
 
 (use-package which-key
-  :defer 2
+  :after powerline
+  :config
+  (setq which-key-idle-delay 1)
+  (setq which-key-idle-secondary-delay 0.05)
   :custom-face
   (which-key-key-face ((t (:foreground "#FF6E27" :weight bold))))
   (which-key-group-description-face ((t (:foreground "#FE8B05" :weight bold))))
+  :init
+  (which-key-mode)
   :diminish)
 (use-package yaml-mode
   :mode "\\.yml$"
   :mode "\\.yaml$")
 (use-package yasnippet
-  :defer 2)
+  :hook
+  (php-mode . yas-minor-mode)
+  (python-mode . yas-minor-mode)
+  :diminish)
 (use-package yasnippet-snippets
-  :defer 2)
+  :after yasnippet)
 ;;;

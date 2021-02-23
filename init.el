@@ -28,31 +28,21 @@
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; Maximize window at startup
 (column-number-mode t) ;; Show column number
-(global-git-gutter-mode t)
-(global-linum-mode t) ;; Show line-number
 (global-whitespace-mode t)
 (ido-mode t)
 (menu-bar-mode -1) ;; Hide menubar
-(powerline-default-theme)
 (put 'upcase-region 'disabled nil)
 (savehist-mode 1)
 (scroll-bar-mode -1) ;; Hide scrollbar
 (tool-bar-mode -1) ;; Hide toolbar
-(yas-global-mode 1)
-(projectile-mode +1)
-(which-key-mode)
-
 (put 'downcase-region 'disabled nil)
 (set-default 'case-fold-search nil) ; Case sensitive TAGS search
-(autoload 'geben "geben" "DBGp protocol frontend, a script debugger" t) ; Geben
-
 (diminish 'abbrev-mode "Abv")
-(diminish 'git-gutter-mode)
 (diminish 'global-whitespace-mode "")
-(diminish 'yas-minor-mode "")
 (load-theme 'monokai t)
 (load "~/.emacs.d/faces")
 (load "~/.emacs.d/customfaces")
 
 (provide 'init)
 ;;;
+
