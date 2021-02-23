@@ -146,5 +146,16 @@ ARG."
                              (ceiling (log (max 1 (/ (buffer-size) 80)) 10)))
                         "d "))))
 
+
+;; https://stackoverflow.com/questions/31443527/how-can-i-make-flycheck-use-virtualenv/31456619#31456619
+(defun set-flychecker-executables ()
+  "Configure virtualenv for flake8 and lint."
+  (when (get-current-buffer-flake8)
+    (flycheck-set-checker-executable (quote python-flake8)
+                                     (get-current-buffer-flake8)))
+  (when (get-current-buffer-pylint)
+    (flycheck-set-checker-executable (quote python-pylint)
+                                     (get-current-buffer-pylint))))
+
 (provide 'functions)
 ;;; functions.el ends here
