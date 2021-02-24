@@ -334,6 +334,7 @@
   (setq which-key-idle-secondary-delay 0.05)
   :custom-face
   (which-key-key-face ((t (:foreground "#FF6E27" :weight bold))))
+  (which-key-command-description-face ((t (:foreground "white smoke"))))
   (which-key-group-description-face ((t (:foreground "#FE8B05" :weight bold))))
   :init
   (which-key-mode)
