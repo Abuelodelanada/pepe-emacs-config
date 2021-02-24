@@ -39,10 +39,8 @@
 (set-default 'case-fold-search nil) ; Case sensitive TAGS search
 (diminish 'abbrev-mode "Abv")
 (diminish 'global-whitespace-mode "")
-(load-theme 'monokai t)
 (load "~/.emacs.d/faces")
 (load "~/.emacs.d/customfaces")
 
 (provide 'init)
 ;;;
-

@@ -99,6 +99,26 @@
   :after powerline)
 (use-package dockerfile-mode
   :mode "Dockerfile\\'")
+
+(use-package doom-themes
+  :after gcmh
+  :config
+  ;; Global settings (defaults)
+  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+        doom-themes-enable-italic t) ; if nil, italics is universally disabled
+  (load-theme 'doom-monokai-classic t)
+
+  ;; Enable flashing mode-line on errors
+  (doom-themes-visual-bell-config)
+
+  ;; Enable custom neotree theme (all-the-icons must be installed!)
+  (doom-themes-neotree-config)
+  ;; or for treemacs users
+  (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
+  (doom-themes-treemacs-config)
+
+  ;; Corrects (and improves) org-mode's native fontification.
+  (doom-themes-org-config))
 (use-package dumb-jump
   :defer powerline
   :bind (("C-M-g" . dumb-jump-go)
@@ -245,7 +265,7 @@
   :after markdown-mode)
 (use-package markup-faces
   :mode "\\.adoc")
-(use-package monokai-theme)
+;(use-package monokai-theme)
 (use-package neotree
   :bind (("<f8>" . neotree-toggle))
   :custom
@@ -272,7 +292,7 @@
   (popup-menu-mouse-face ((t (:background "orange" :foreground "#F8F8F2"))))
   (popup-menu-selection-face ((t (:background "orange red" :foreground "#000000")))))
 (use-package powerline
-  :after monokai-theme
+  :after doom-themes
   :init
   (powerline-default-theme)
   :custom
