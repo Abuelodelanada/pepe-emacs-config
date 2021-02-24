@@ -60,7 +60,7 @@
   :hook
   (php-mode . company-mode)
   (python-mode . company-mode)
-  :diminish "Comp"
+  :diminish
   :custom-face
   (company-preview ((t (:background "gray10" :foreground "#F8F8F0"))))
   (company-scrollbar-bg ((t (:background "gray10"))))
@@ -96,7 +96,7 @@
   :init
   (add-hook 'company-mode-hook 'company-quickhelp-mode))
 (use-package diminish
-  :after powerline)
+  :defer t)
 (use-package dockerfile-mode
   :mode "Dockerfile\\'")
 
@@ -188,18 +188,14 @@
 (use-package geben
   :commands geben)
 (use-package git-gutter-fringe
-  :after powerline
+  :after linum
+  :diminish
   :init
   (global-git-gutter-mode t)
   :custom
-  (git-gutter:hide-gutter t)
-  :diminish)
-(use-package highlight
-  :after powerline
-  :custom-face
-  (highlight ((t (:background "black" :foreground "white")))))
+  (git-gutter:hide-gutter t))
 (use-package highlight-parentheses
-  :after powerline
+  :defer t
   :init
   (add-hook 'js2-mode-hook 'highlight-parentheses-mode)
   (add-hook 'php-mode-hook 'highlight-parentheses-mode)
@@ -209,7 +205,9 @@
   (add-hook 'prog-mode-hook 'highlight-parentheses-mode)
   :diminish)
 (use-package hlinum
-  :after linum
+  :defer t
+  :init
+  (add-hook 'linum-mode-hook 'hlinum-activate)
   :custom-face
   (linum-highlight-face ((t (:inherit default :background "#000000" :foreground "#FF6E27" :slant normal :weight bold)))))
 (use-package iedit
@@ -225,13 +223,12 @@
 (use-package json-mode
   :mode "\\.json\\'")
 (use-package linum
-  :after centaur-tabs
+  :defer t
+  ;:after centaur-tabs
   :init
   (add-hook 'prog-mode-hook 'linum-mode)
-  (add-hook 'emacs-startup-hook 'linum-mode)
-  (add-hook 'linum-mode-hook 'my-linum-mode-hook)
-  (add-hook 'linum-mode-hook 'hlinum-activate))
-;  (hlinum-activate))
+  (add-hook 'linum-mode-hook 'my-linum-mode-hook))
+  ;(add-hook 'linum-mode-hook 'hlinum-activate))
 (use-package magit
   :bind (("C-x g" . magit-status))
   :custom-face
@@ -328,7 +325,7 @@
   :mode "\\.phtml\\'")
 
 (use-package which-key
-  :after powerline
+  :defer t
   :config
   (setq which-key-idle-delay 1)
   (setq which-key-idle-secondary-delay 0.05)
