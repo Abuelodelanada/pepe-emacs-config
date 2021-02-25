@@ -11,6 +11,7 @@
 (set-face-attribute 'ido-only-match t :background "#FF6E27" :foreground "white smoke" :weight 'bold)
 (set-face-attribute 'ido-subdir t :foreground "#F34739")
 (set-face-attribute 'ido-virtual t :foreground "#FF6E27")
+(set-face-attribute 'isearch t :background "orange" :foreground "black" :box nil)
 (set-face-attribute 'minibuffer-prompt t :foreground "#FF6E27")
 (set-face-attribute 'package-name t :foreground "#FF6E27")
 (set-face-attribute 'whitespace-line t)
