@@ -5,14 +5,17 @@
 
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
-
+;(setq use-package-verbose t) ;; Uncomment to debug loading times
 (use-package adoc-mode
   :after markup-faces
   :mode "\\.adoc")
+
 (use-package ag
   :after dumb-jump)
+
 (use-package all-the-icons
   :after centaur-tabs)
+
 (use-package auto-compile
   :after poweline
   :custom
@@ -56,6 +59,7 @@
   (org-agenda-mode . centaur-tabs-local-mode)
   (term-mode . centaur-tabs-local-mode)
 )
+
 (use-package company
   :hook
   (php-mode . company-mode)
@@ -71,6 +75,7 @@
   (company-tooltip-common-selection ((t (:background "orange red" :foreground "#000000" :underline t))))
   (company-tooltip-mouse ((t (:background "orange red" :foreground "#000000"))))
   (company-tooltip-selection ((t (:background "orange red" :foreground "#000000")))))
+
 (use-package company-anaconda
   :after company
   :init
@@ -78,8 +83,9 @@
     '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
   (add-hook 'python-mode-hook 'company-mode)
   (add-hook 'python-mode-hook 'anaconda-mode))
+
 (use-package company-php
-  :defer company
+  :after company
   :init
   (add-hook 'php-mode-hook
           '(lambda ()
@@ -95,8 +101,10 @@
    (company-quickhelp-use-propertized-text t)
   :init
   (add-hook 'company-mode-hook 'company-quickhelp-mode))
+
 (use-package diminish
   :defer t)
+
 (use-package dockerfile-mode
   :mode "Dockerfile\\'")
 
@@ -106,21 +114,13 @@
   ;; Global settings (defaults)
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
-  (load-theme 'doom-monokai-classic t)
+  (load-theme 'doom-monokai-pro t)
+  (doom-themes-neotree-config) ;; Enable custom neotree theme (all-the-icons must be installed!)
+  ;(doom-themes-org-config) ;; Corrects (and improves) org-mode's native fontification.
+)
 
-  ;; Enable flashing mode-line on errors
-  (doom-themes-visual-bell-config)
-
-  ;; Enable custom neotree theme (all-the-icons must be installed!)
-  (doom-themes-neotree-config)
-  ;; or for treemacs users
-  (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
-  (doom-themes-treemacs-config)
-
-  ;; Corrects (and improves) org-mode's native fontification.
-  (doom-themes-org-config))
 (use-package dumb-jump
-  :defer powerline
+  :after powerline
   :bind (("C-M-g" . dumb-jump-go)
          ("C-M-p" . dumb-jump-back))
   :init
@@ -132,6 +132,7 @@
   (dumb-jump-force-searcher nil)
   (dumb-jump-prefer-searcher 'ag)
   (dumb-jump-quiet nil))
+
 (use-package ecb
   :commands ecb-minor-mode
   :bind (("<f7>" . ecb-minor-mode))
@@ -180,20 +181,24 @@
 )
 (use-package flycheck-mypy
   :after (flycheck))
+
 (use-package flycheck-pycheckers
   :after (flycheck))
+
 (use-package flymd
   :after (flycheck))
+
 (use-package gcmh)
+
 (use-package geben
   :commands geben)
+
 (use-package git-gutter-fringe
-  :after linum
+  :after (linum)
   :diminish
-  :init
-  (global-git-gutter-mode t)
   :custom
   (git-gutter:hide-gutter t))
+
 (use-package highlight-parentheses
   :defer t
   :init
@@ -204,45 +209,53 @@
   (add-hook 'markdown-mode-hook 'highlight-parentheses-mode)
   (add-hook 'prog-mode-hook 'highlight-parentheses-mode)
   :diminish)
+
 (use-package hlinum
   :defer t
   :init
   (add-hook 'linum-mode-hook 'hlinum-activate)
   :custom-face
-  (linum-highlight-face ((t (:inherit default :background "#000000" :foreground "#FF6E27" :slant normal :weight bold)))))
+  (linum-highlight-face ((t (:inherit default :foreground "#FF6E27" :slant normal :weight bold)))))
+
 (use-package iedit
   :defer t
   :bind (("C-;" . iedit-mode))
   :custom-face
   (iedit-occurrence ((t (:foreground "green yellow"))))
   :diminish)
+
 (use-package jquery-doc
   :defer t)
+
 (use-package js2-mode
   :mode "\\.js\\'")
+
 (use-package json-mode
   :mode "\\.json\\'")
+
 (use-package linum
   :defer t
   ;:after centaur-tabs
   :init
   (add-hook 'prog-mode-hook 'linum-mode)
-  (add-hook 'linum-mode-hook 'my-linum-mode-hook))
+  (add-hook 'linum-mode-hook 'my-linum-mode-hook)
+  (global-git-gutter-mode t))
   ;(add-hook 'linum-mode-hook 'hlinum-activate))
+
 (use-package magit
   :bind (("C-x g" . magit-status))
   :custom-face
   (magit-branch-local ((t (:foreground "orange"))))
   (magit-branch-remote ((t (:foreground "#D90F5A"))))
-  (magit-diff-removed ((t (:background "#000000" :foreground "orange red"))))
-  (magit-diff-removed-highlight ((t (:background "#3C3D37" :foreground "orange red"))))
+  (magit-diff-removed ((t (:foreground "orange red"))))
+  (magit-diff-removed-highlight ((t (:foreground "orange red"))))
   (magit-filename ((t (:foreground "#F34739" :weight normal))))
   (magit-hash ((t (:foreground "#FF6E27"))))
   (magit-log-author ((t (:foreground "orange"))))
   (magit-log-date ((t (:foreground "#FF6E27"))))
   (magit-log-graph ((t (:foreground "#75715E"))))
   (magit-section-heading ((t (:foreground "#FF6E27" :weight bold))))
-  (magit-section-highlight ((t (:background "gray9"))))
+  ;(magit-section-highlight ((t (:background "gray9"))))
   (magit-tag ((t (:foreground "orange" :weight bold))))
   :init
   (add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
@@ -251,6 +264,7 @@
 
 (use-package magit-gitflow
   :after magit)
+
 (use-package markdown-mode
    :mode (("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)
@@ -258,11 +272,13 @@
 
 (use-package markdown-mode+
   :after markdown-mode)
+
 (use-package markdown-toc
   :after markdown-mode)
+
 (use-package markup-faces
   :mode "\\.adoc")
-;(use-package monokai-theme)
+
 (use-package neotree
   :bind (("<f8>" . neotree-toggle))
   :custom
@@ -274,6 +290,7 @@
   (neo-banner-face ((t (:background "#000000" :foreground "#F34739" :weight bold))))
   (neo-dir-link-face ((t (:foreground "#FF6E27"))))
   (neo-root-dir-face ((t (:background "#000000" :foreground "gold")))))
+
 (use-package php-mode
   :mode "\\.php"
   :mode "\\.module$"
@@ -281,6 +298,7 @@
   :mode "\\.install$"
   :mode "\\.engine$"
   :mode "\\.tpl.php$")
+
 (use-package popup
   :after company
   :custom-face
@@ -288,8 +306,9 @@
   (popup-menu-face ((t (:background "gray10" :foreground "#F8F8F2"))))
   (popup-menu-mouse-face ((t (:background "orange" :foreground "#F8F8F2"))))
   (popup-menu-selection-face ((t (:background "orange red" :foreground "#000000")))))
+
 (use-package powerline
-  :after doom-themes
+  :defer t
   :init
   (powerline-default-theme)
   :custom
@@ -314,11 +333,14 @@
   :bind-keymap
   ("M-p" . projectile-command-map)
   ("C-c p" . projectile-command-map))
+
 (use-package smarty-mode
   :mode "\\.tpl$")
+
 (use-package sqlformat
   :commands sqlformat
   :bind (("C-c <tab>" . sqlformat)))
+
 (use-package web-mode
   :mode "\\.html?\\'"
   :mode "\\.phtml\\'"
@@ -336,14 +358,17 @@
   :init
   (which-key-mode)
   :diminish)
+
 (use-package yaml-mode
   :mode "\\.yml$"
   :mode "\\.yaml$")
+
 (use-package yasnippet
   :hook
   (php-mode . yas-minor-mode)
   (python-mode . yas-minor-mode)
   :diminish)
+
 (use-package yasnippet-snippets
   :after yasnippet)
 ;;;

@@ -9,9 +9,8 @@
 ;; enabling `gcmh-mode'. Not resetting it will cause stuttering/freezes.
 (setq gc-cons-threshold most-positive-fixnum)
 
-(load "~/.emacs.d/messages")
+;(load "~/.emacs.d/messages") ;; Uncomment to debug startup times
 (setq load-prefer-newer t)
-(package-initialize)
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 (load "~/.emacs.d/init-packages")
 
