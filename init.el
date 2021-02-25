@@ -18,7 +18,7 @@
   (require 'use-package))
 (load "~/.emacs.d/use-package")
 (load "~/.emacs.d/variables")
-(load "~/.emacs.d/customvariables")
+;(load "~/.emacs.d/customvariables") ;; Uncomment if you want to add custom variables here
 (load "~/.emacs.d/functions")
 (load "~/.emacs.d/alias")
 (load "~/.emacs.d/automode")
@@ -39,7 +39,7 @@
 (diminish 'abbrev-mode "Abv")
 (diminish 'global-whitespace-mode "")
 (load "~/.emacs.d/faces")
-(load "~/.emacs.d/customfaces")
+;(load "~/.emacs.d/customfaces") ;; Uncomment if you want to add custom faces here
 
 (provide 'init)
 ;;;
