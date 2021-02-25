@@ -120,14 +120,6 @@ ARG."
   (unless (display-graphic-p (selected-frame))
     (set-face-background 'default "unspecified-bg" (selected-frame))))
 
-; xml-format
-(defun xml-format ()
-  "Xml-format."
-  (interactive)
-  (save-excursion
-    (shell-command-on-region (mark) (point) "xmllint --format -" (buffer-name) t)
-    )
-  )
 
 ; https://stackoverflow.com/questions/6837511/automatically-disable-a-global-minor-mode-for-a-specific-major-mode
 (defun my-inhibit-global-linum-mode ()
