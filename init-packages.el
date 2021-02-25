@@ -18,7 +18,6 @@
 (setq package-list
       '(use-package))
 
-
 ; fetch the list of packages available
 (unless package-archive-contents
   (package-refresh-contents))
@@ -29,10 +28,6 @@
     (package-install package)
     (when (package-installed-p 'all-the-icons)
       (all-the-icons-install-fonts))))
-
-
-; activate all the packages
-(package-initialize)
 
 (provide 'init-packages)
 ;;; init-packages.el ends here

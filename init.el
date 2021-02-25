@@ -9,9 +9,8 @@
 ;; enabling `gcmh-mode'. Not resetting it will cause stuttering/freezes.
 (setq gc-cons-threshold most-positive-fixnum)
 
-(load "~/.emacs.d/messages")
+;(load "~/.emacs.d/messages") ;; Uncomment to debug startup times
 (setq load-prefer-newer t)
-(package-initialize)
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 (load "~/.emacs.d/init-packages")
 
@@ -19,42 +18,28 @@
   (require 'use-package))
 (load "~/.emacs.d/use-package")
 (load "~/.emacs.d/variables")
-(load "~/.emacs.d/customvariables")
+;(load "~/.emacs.d/customvariables") ;; Uncomment if you want to add custom variables here
 (load "~/.emacs.d/functions")
 (load "~/.emacs.d/alias")
 (load "~/.emacs.d/automode")
 (load "~/.emacs.d/hooks")
 (load "~/.emacs.d/shortcuts")
-(load "~/.emacs.d/tabbar")
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; Maximize window at startup
 (column-number-mode t) ;; Show column number
-(global-git-gutter-mode t)
-(global-highlight-parentheses-mode t)
-(global-linum-mode t) ;; Show line-number
 (global-whitespace-mode t)
 (ido-mode t)
 (menu-bar-mode -1) ;; Hide menubar
-(powerline-default-theme)
 (put 'upcase-region 'disabled nil)
 (savehist-mode 1)
 (scroll-bar-mode -1) ;; Hide scrollbar
 (tool-bar-mode -1) ;; Hide toolbar
-(yas-global-mode 1)
-(projectile-mode +1)
-(which-key-mode)
-
 (put 'downcase-region 'disabled nil)
 (set-default 'case-fold-search nil) ; Case sensitive TAGS search
-(autoload 'geben "geben" "DBGp protocol frontend, a script debugger" t) ; Geben
-
 (diminish 'abbrev-mode "Abv")
-(diminish 'git-gutter-mode)
 (diminish 'global-whitespace-mode "")
-(diminish 'yas-minor-mode "")
-(load-theme 'monokai t)
 (load "~/.emacs.d/faces")
-(load "~/.emacs.d/customfaces")
+;(load "~/.emacs.d/customfaces") ;; Uncomment if you want to add custom faces here
 
 (provide 'init)
 ;;;

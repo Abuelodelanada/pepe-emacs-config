@@ -20,7 +20,7 @@
         - [Magit](#magit)
         - [Neotree](#neotree)
         - [ECB (Emacs Code Browser)](#ecb-emacs-code-browser)
-        - [Tabbar](#tabbar)
+        - [Centaur-tabs](#centaur-tabs)
         - [Company](#company)
         - [Highlight Indent Guides](#highlight-indent-guides)
         - [Powerline with Flycheck](#powerline-with-flycheck)
@@ -73,7 +73,7 @@ $ mv .emacs .emacs.bak
 
 1. Install the required dependencies:
 ```bash
-$ sudo apt-get install emacs exuberant-ctags git ripgrep silversearcher-ag pylint pep8 php-pear python-pip
+$ sudo apt-get install emacs exuberant-ctags git ripgrep silversearcher-ag pylint pep8 php-pear python-pip virtualenv
 
 $ sudo pear channel-update pear.php.net
 
@@ -107,8 +107,8 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 ### ECB (Emacs Code Browser)
 ![ecb](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/ecb.png "ecb")
 
-### Tabbar
-![tabbar](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/tabbar.png "tabbar")
+### Centaur-tabs
+![centaur-tabs](https://github.com/Abuelodelanada/pepe-emacs-config/raw/master/images/centaur-tabs.png "centaur-tabs")
 
 
 ### Company
@@ -156,12 +156,12 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 * `C-t`: create ctags
 * `C-x g`: magit-status
 * `C-x p`: run phpcbf --standard=PSR2 to the current buffer
-* `C-M-left`: tabbar-backward
-* `M-up` : beginning-of-buffer
-* `M-down`: end-of-buffer
+* `C-<prior>`: centaur-tabs-backward
+* `C-<next>`: centaur-tabs-forward's
+* `C-up` : beginning-of-buffer
+* `C-down`: end-of-buffer
 * `C-M-g`: dumb-jump-go (Go to definition)
 * `C-M-p`: dumb-jump-back (Return from definition)
-* `C-M-right`: tabbar-forward
 * `S-M-down` : enlarge window
 * `S-M-left`: enlarge window horizontally
 * `S-M-right`: shrink window horizontally
