@@ -26,9 +26,9 @@
 ;  :config
 ;  ;; To disable collection of benchmark data after init is done.
 ;  (add-hook 'after-init-hook 'benchmark-init/deactivate))
-
 (use-package centaur-tabs
   :after powerline
+  :unless (not (eq window-system 'x))
   :demand
   :bind
   ("C-<prior>" . centaur-tabs-backward)
@@ -57,8 +57,7 @@
   (dired-mode . centaur-tabs-local-mode)
   (helpful-mode . centaur-tabs-local-mode)
   (org-agenda-mode . centaur-tabs-local-mode)
-  (term-mode . centaur-tabs-local-mode)
-)
+  (term-mode . centaur-tabs-local-mode))
 
 (use-package company
   :hook
