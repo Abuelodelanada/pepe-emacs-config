@@ -338,6 +338,20 @@
   :commands sqlformat
   :bind (("C-c <tab>" . sqlformat)))
 
+(use-package guess-language         ; Automatically detect language for Flyspell
+  :ensure t
+  :defer t
+  :init (add-hook 'text-mode-hook #'guess-language-mode)
+  :config
+  (setq guess-language-langcodes '((en . ("en_GB" "English"))
+                                   (it . ("es_AR" "Español AR")))
+        guess-language-languages '(en it)
+        guess-language-min-paragraph-length 45)
+  :diminish guess-language-mode)
+
+(use-package vlf)
+
+
 (use-package web-mode
   :mode "\\.html?\\'"
   :mode "\\.phtml\\'"
