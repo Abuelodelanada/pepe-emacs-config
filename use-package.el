@@ -270,9 +270,6 @@
          ("\\.markdown\\'" . markdown-mode)
          ("\\.text\\'" . markdown-mode)))
 
-(use-package markdown-mode+
-  :after markdown-mode)
-
 (use-package markdown-toc
   :after markdown-mode)
 
