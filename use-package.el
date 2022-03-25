@@ -238,6 +238,7 @@
   :init
   (add-hook 'prog-mode-hook 'linum-mode)
   (add-hook 'linum-mode-hook 'my-linum-mode-hook)
+  (add-hook 'markdown-mode-hook 'linum-mode)
   (global-git-gutter-mode t))
   ;(add-hook 'linum-mode-hook 'hlinum-activate))
 
