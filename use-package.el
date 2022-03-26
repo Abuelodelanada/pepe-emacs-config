@@ -77,6 +77,7 @@
 
 (use-package company-anaconda
   :after company
+  :diminish
   :init
   (eval-after-load "company"
     '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
@@ -154,6 +155,7 @@
   ;:hook (python-mode)
   :ensure t
   :defer t
+  :diminish
   :init
   (advice-add 'python-mode :before 'elpy-enable)
   (add-hook 'elpy-mode-hook (lambda () (highlight-indentation-mode -1)))
@@ -175,7 +177,8 @@
   :custom-face
   (flycheck-error ((t (:underline "red"))))
   (flycheck-fringe-error ((t (:foreground "red" :weight bold))))
-)
+  )
+
 (use-package flycheck-mypy
   :after (flycheck))
 
@@ -320,7 +323,7 @@
 
 (use-package projectile
   :after centaur-tabs
-  :diminish "Proj"
+  :diminish
   :custom
   (projectile-use-git-grep t)
   :init
