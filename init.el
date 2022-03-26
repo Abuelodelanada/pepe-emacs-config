@@ -41,5 +41,7 @@
 (load "~/.emacs.d/faces")
 ;(load "~/.emacs.d/customfaces") ;; Uncomment if you want to add custom faces here
 
+(set-language-environment "UTF-8")
+
 (provide 'init)
 ;;;
