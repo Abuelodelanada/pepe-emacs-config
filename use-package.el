@@ -151,7 +151,9 @@
   (ecb-tag-header-face ((t (:background "#FF6E27")))))
 
 (use-package elpy
-  :hook (python-mode)
+  ;:hook (python-mode)
+  :ensure t
+  :defer t
   :init
   (advice-add 'python-mode :before 'elpy-enable)
   (add-hook 'elpy-mode-hook (lambda () (highlight-indentation-mode -1)))
