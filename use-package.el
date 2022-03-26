@@ -163,15 +163,11 @@
   (elpy-rpc-virtualenv-path 'default))
 
 (use-package flycheck
+  :ensure t
   :bind (("C-c <down>" . flycheck-next-error)
          ("C-c <up>" . flycheck-previous-error))
   :init
-  (add-hook 'flycheck-mode-hook #'flycheck-pycheckers-setup)
-  (add-hook 'python-mode-hook 'flycheck-mode)
-  (add-hook 'php-mode-hook 'flycheck-mode)
-  (add-hook 'elpy-mode-hook 'flycheck-mode)
-  ;(add-hook 'flycheck-before-syntax-check-hook
-  ;        #'set-flychecker-executables 'local)
+  (global-flycheck-mode)
   :custom
   (flycheck-check-syntax-automatically '(save mode-enabled))
   (flycheck-highlighting-mode '(lines))
