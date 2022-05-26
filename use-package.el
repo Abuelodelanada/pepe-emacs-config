@@ -168,6 +168,12 @@
   :ensure t
   :bind (("C-c <down>" . flycheck-next-error)
          ("C-c <up>" . flycheck-previous-error))
+  :config
+  (setq-default flycheck-disabled-checkers '(python-pylint))
+  (setq-default flycheck-highlighting-mode '(lines))
+  (setq-default flycheck-indication-mode nil)
+  (setq-default flycheck-locate-config-file-functions
+   '(flycheck-locate-config-file-home flycheck-locate-config-file-ancestor-directories flycheck-locate-config-file-by-path))
   :init
   (global-flycheck-mode)
   :custom
@@ -177,8 +183,11 @@
   :custom-face
   (flycheck-error ((t (:underline "red"))))
   (flycheck-fringe-error ((t (:foreground "red" :weight bold))))
+  (flycheck-fringe-warning ((t (:inherit fringe :foreground "gold"))))
+  (flycheck-warning ((t (:underline (:color "gold" :style wave)))))
   )
-
+(use-package flycheck-indicator
+  :hook (flycheck-mode . flycheck-indicator-mode))
 (use-package flycheck-mypy
   :after (flycheck))
 
