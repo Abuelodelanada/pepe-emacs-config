@@ -25,7 +25,7 @@
 (load "~/.emacs.d/hooks")
 (load "~/.emacs.d/shortcuts")
 
-(add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; Maximize window at startup
+;(add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; Maximize window at startup
 (column-number-mode t) ;; Show column number
 (global-whitespace-mode t)
 (ido-mode t)
