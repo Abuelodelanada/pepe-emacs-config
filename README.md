@@ -93,7 +93,6 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 
 3. Open emacs and it will continue the installation by itself installing packages from melpa and elpa. Wait for it to finish... and done! You now have your new shiny powerful emacs :)
 
-4. If you see the following error while editing a Python file: `elpy-rpc--default-error-callback: peculiar error: "exited abnormally with code 1"` run `M-x elpy-rpc-reinstall-virtualenv`.
 
 ## Some Features
 
