@@ -45,6 +45,7 @@ This Emacs config have some useful modules:
 * geben
 * iedit
 * js2-mode
+* lsp-mode
 * magit
 * magit-gitflow
 * markdown-mode
@@ -79,7 +80,9 @@ $ sudo pear channel-update pear.php.net
 
 $ sudo pear install PHP_CodeSniffer
 
-$ sudo pip install sqlparse
+$ pip install sqlparse
+
+$ pip install 'python-lsp-server[all]'
 ```
 
 2. Clone the repository:

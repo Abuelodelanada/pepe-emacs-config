@@ -75,15 +75,6 @@
   (company-tooltip-mouse ((t (:background "orange red" :foreground "#000000"))))
   (company-tooltip-selection ((t (:background "orange red" :foreground "#000000")))))
 
-(use-package company-anaconda
-  :after company
-  :diminish
-  :init
-  (eval-after-load "company"
-    '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
-  (add-hook 'python-mode-hook 'company-mode)
-  (add-hook 'python-mode-hook 'anaconda-mode))
-
 (use-package company-php
   :after company
   :init
@@ -150,19 +141,6 @@
   (ecb-mode-line-data-face ((t (:foreground "#FF6E27"))))
   (ecb-mode-line-prefix-face ((t (:foreground "#FF6E27"))))
   (ecb-tag-header-face ((t (:background "#FF6E27")))))
-
-(use-package elpy
-  ;:hook (python-mode)
-  :ensure t
-  :defer t
-  :diminish
-  :init
-  (advice-add 'python-mode :before 'elpy-enable)
-  (add-hook 'elpy-mode-hook (lambda () (highlight-indentation-mode -1)))
-  :custom
-  (elpy-modules '(elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-yasnippet elpy-module-sane-defaults))
-  (elpy-rpc-python-command "python3")
-  (elpy-rpc-virtualenv-path 'default))
 
 (use-package flycheck
   :ensure t
@@ -251,6 +229,47 @@
   (add-hook 'markdown-mode-hook 'linum-mode)
   (global-git-gutter-mode t))
   ;(add-hook 'linum-mode-hook 'hlinum-activate))
+
+(use-package lsp-mode
+  :commands (lsp)
+  :bind (:map lsp-mode-map
+              ("M-g f" . lsp-format-buffer))
+  :config
+  (setq lsp-auto-guess-root t
+        lsp-keep-workspace-alive nil
+        lsp-file-watch-threshold nil
+        read-process-output-max (* 1024 1024)) ;; 1mb
+  )
+
+(use-package lsp-headerline
+  :ensure nil
+  :config
+  (setq lsp-headerline-breadcrumb-segments '(symbols)
+        lsp-headerline-breadcrumb-mode t)
+  :custom-face
+  (lsp-headerline-breadcrumb-path-face ((t (:foreground "orange red"))))
+  (lsp-headerline-breadcrumb-separator-face ((t (:foreground "light gray"))))
+  (lsp-headerline-breadcrumb-symbols-face ((t (:foreground "dark orange" :weight bold))))
+  (lsp-headerline-breadcrumb-symbols-hint-face ((t (:inherit lsp-headerline-breadcrumb-symbols-face :underline (:color "Green" :style wave)))))
+  (lsp-headerline-breadcrumb-symbols-info-face ((t (:inherit lsp-headerline-breadcrumb-symbols-face :underline (:color "Green" :style wave)))))
+  (lsp-headerline-breadcrumb-symbols-warning-face ((t (:foreground "dark orange"))))
+  (lsp-headerline-breadcrumb-unknown-project-prefix-face ((t (:foreground "light gray" :weight bold))))
+  )
+
+(use-package lsp-ui
+  :commands (lsp-ui-mode)
+  :config
+  (setq lsp-ui-doc-enable t
+        lsp-ui-sideline-enable nil
+        lsp-ui-sideline-ignore-duplicate t
+        lsp-ui-peek-enable nil
+        lsp-ui-doc-position 'at-point))
+
+(use-package lsp-pyright
+  :hook (python-mode . (lambda () (require 'lsp-pyright) (lsp)))
+  :config
+  (setq lsp-pyright-disable-organize-imports t
+        lsp-pyright-log-level "error"))
 
 (use-package magit
   :bind (("C-x g" . magit-status))
