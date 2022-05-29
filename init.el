@@ -25,7 +25,7 @@
 (load "~/.emacs.d/hooks")
 (load "~/.emacs.d/shortcuts")
 
-(add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; Maximize window at startup
+;(add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; Maximize window at startup
 (column-number-mode t) ;; Show column number
 (global-whitespace-mode t)
 (ido-mode t)
@@ -40,6 +40,8 @@
 (diminish 'global-whitespace-mode "")
 (load "~/.emacs.d/faces")
 ;(load "~/.emacs.d/customfaces") ;; Uncomment if you want to add custom faces here
+
+(set-language-environment "UTF-8")
 
 (provide 'init)
 ;;;

@@ -26,9 +26,9 @@
 ;  :config
 ;  ;; To disable collection of benchmark data after init is done.
 ;  (add-hook 'after-init-hook 'benchmark-init/deactivate))
-
 (use-package centaur-tabs
   :after powerline
+  :unless (not (eq window-system 'x))
   :demand
   :bind
   ("C-<prior>" . centaur-tabs-backward)
@@ -57,8 +57,7 @@
   (dired-mode . centaur-tabs-local-mode)
   (helpful-mode . centaur-tabs-local-mode)
   (org-agenda-mode . centaur-tabs-local-mode)
-  (term-mode . centaur-tabs-local-mode)
-)
+  (term-mode . centaur-tabs-local-mode))
 
 (use-package company
   :hook
@@ -75,14 +74,6 @@
   (company-tooltip-common-selection ((t (:background "orange red" :foreground "#000000" :underline t))))
   (company-tooltip-mouse ((t (:background "orange red" :foreground "#000000"))))
   (company-tooltip-selection ((t (:background "orange red" :foreground "#000000")))))
-
-(use-package company-anaconda
-  :after company
-  :init
-  (eval-after-load "company"
-    '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
-  (add-hook 'python-mode-hook 'company-mode)
-  (add-hook 'python-mode-hook 'anaconda-mode))
 
 (use-package company-php
   :after company
@@ -151,26 +142,18 @@
   (ecb-mode-line-prefix-face ((t (:foreground "#FF6E27"))))
   (ecb-tag-header-face ((t (:background "#FF6E27")))))
 
-(use-package elpy
-  :hook (python-mode)
-  :init
-  (advice-add 'python-mode :before 'elpy-enable)
-  (add-hook 'elpy-mode-hook (lambda () (highlight-indentation-mode -1)))
-  :custom
-  (elpy-modules '(elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-yasnippet elpy-module-sane-defaults))
-  (elpy-rpc-python-command "python3")
-  (elpy-rpc-virtualenv-path 'default))
-
 (use-package flycheck
+  :ensure t
   :bind (("C-c <down>" . flycheck-next-error)
          ("C-c <up>" . flycheck-previous-error))
+  :config
+  (setq-default flycheck-disabled-checkers '(python-pylint))
+  (setq-default flycheck-highlighting-mode '(lines))
+  (setq-default flycheck-indication-mode nil)
+  (setq-default flycheck-locate-config-file-functions
+   '(flycheck-locate-config-file-home flycheck-locate-config-file-ancestor-directories flycheck-locate-config-file-by-path))
   :init
-  (add-hook 'flycheck-mode-hook #'flycheck-pycheckers-setup)
-  (add-hook 'python-mode-hook 'flycheck-mode)
-  (add-hook 'php-mode-hook 'flycheck-mode)
-  (add-hook 'elpy-mode-hook 'flycheck-mode)
-  ;(add-hook 'flycheck-before-syntax-check-hook
-  ;        #'set-flychecker-executables 'local)
+  (global-flycheck-mode)
   :custom
   (flycheck-check-syntax-automatically '(save mode-enabled))
   (flycheck-highlighting-mode '(lines))
@@ -178,7 +161,11 @@
   :custom-face
   (flycheck-error ((t (:underline "red"))))
   (flycheck-fringe-error ((t (:foreground "red" :weight bold))))
-)
+  (flycheck-fringe-warning ((t (:inherit fringe :foreground "gold"))))
+  (flycheck-warning ((t (:underline (:color "gold" :style wave)))))
+  )
+(use-package flycheck-indicator
+  :hook (flycheck-mode . flycheck-indicator-mode))
 (use-package flycheck-mypy
   :after (flycheck))
 
@@ -239,8 +226,50 @@
   :init
   (add-hook 'prog-mode-hook 'linum-mode)
   (add-hook 'linum-mode-hook 'my-linum-mode-hook)
+  (add-hook 'markdown-mode-hook 'linum-mode)
   (global-git-gutter-mode t))
   ;(add-hook 'linum-mode-hook 'hlinum-activate))
+
+(use-package lsp-mode
+  :commands (lsp)
+  :bind (:map lsp-mode-map
+              ("M-g f" . lsp-format-buffer))
+  :config
+  (setq lsp-auto-guess-root t
+        lsp-keep-workspace-alive nil
+        lsp-file-watch-threshold nil
+        read-process-output-max (* 1024 1024)) ;; 1mb
+  )
+
+(use-package lsp-headerline
+  :ensure nil
+  :config
+  (setq lsp-headerline-breadcrumb-segments '(symbols)
+        lsp-headerline-breadcrumb-mode t)
+  :custom-face
+  (lsp-headerline-breadcrumb-path-face ((t (:foreground "orange red"))))
+  (lsp-headerline-breadcrumb-separator-face ((t (:foreground "light gray"))))
+  (lsp-headerline-breadcrumb-symbols-face ((t (:foreground "dark orange" :weight bold))))
+  (lsp-headerline-breadcrumb-symbols-hint-face ((t (:inherit lsp-headerline-breadcrumb-symbols-face :underline (:color "Green" :style wave)))))
+  (lsp-headerline-breadcrumb-symbols-info-face ((t (:inherit lsp-headerline-breadcrumb-symbols-face :underline (:color "Green" :style wave)))))
+  (lsp-headerline-breadcrumb-symbols-warning-face ((t (:foreground "dark orange"))))
+  (lsp-headerline-breadcrumb-unknown-project-prefix-face ((t (:foreground "light gray" :weight bold))))
+  )
+
+(use-package lsp-ui
+  :commands (lsp-ui-mode)
+  :config
+  (setq lsp-ui-doc-enable t
+        lsp-ui-sideline-enable nil
+        lsp-ui-sideline-ignore-duplicate t
+        lsp-ui-peek-enable nil
+        lsp-ui-doc-position 'at-point))
+
+(use-package lsp-pyright
+  :hook (python-mode . (lambda () (require 'lsp-pyright) (lsp)))
+  :config
+  (setq lsp-pyright-disable-organize-imports t
+        lsp-pyright-log-level "error"))
 
 (use-package magit
   :bind (("C-x g" . magit-status))
@@ -269,9 +298,6 @@
    :mode (("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)
          ("\\.text\\'" . markdown-mode)))
-
-(use-package markdown-mode+
-  :after markdown-mode)
 
 (use-package markdown-toc
   :after markdown-mode)
@@ -325,7 +351,7 @@
 
 (use-package projectile
   :after centaur-tabs
-  :diminish "Proj"
+  :diminish
   :custom
   (projectile-use-git-grep t)
   :init
@@ -340,6 +366,20 @@
 (use-package sqlformat
   :commands sqlformat
   :bind (("C-c <tab>" . sqlformat)))
+
+(use-package guess-language         ; Automatically detect language for Flyspell
+  :ensure t
+  :defer t
+  :init (add-hook 'text-mode-hook #'guess-language-mode)
+  :config
+  (setq guess-language-langcodes '((en . ("en_GB" "English"))
+                                   (it . ("es_AR" "Español AR")))
+        guess-language-languages '(en it)
+        guess-language-min-paragraph-length 45)
+  :diminish guess-language-mode)
+
+(use-package vlf)
+
 
 (use-package web-mode
   :mode "\\.html?\\'"
