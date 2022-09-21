@@ -37,7 +37,11 @@
 (put 'downcase-region 'disabled nil)
 (set-default 'case-fold-search nil) ; Case sensitive TAGS search
 (diminish 'abbrev-mode "Abv")
+(diminish 'auto-revert-mode "")
+(diminish 'eldoc-mode "")
+(diminish 'git-gutter-mode "")
 (diminish 'global-whitespace-mode "")
+(diminish 'lsp-lens "")
 (load "~/.emacs.d/faces")
 ;(load "~/.emacs.d/customfaces") ;; Uncomment if you want to add custom faces here
 

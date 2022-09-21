@@ -186,6 +186,19 @@
   :custom
   (git-gutter:hide-gutter t))
 
+(use-package go-mode
+  :defer t
+  :config
+  (add-hook 'go-mode-hook 'lsp-deferred)
+  :hook ((before-save . gofmt-before-save)))
+
+
+(use-package go-guru
+  :after (go-mode)
+  :hook (go-mode . go-guru-hl-identifier-mode)
+  :config
+  (setq go-guru-command "~/go/bin/guru"))
+
 (use-package highlight-parentheses
   :defer t
   :init
@@ -227,6 +240,7 @@
   (add-hook 'prog-mode-hook 'linum-mode)
   (add-hook 'linum-mode-hook 'my-linum-mode-hook)
   (add-hook 'markdown-mode-hook 'linum-mode)
+  (add-hook 'yaml-mode-hook 'linum-mode)
   (global-git-gutter-mode t))
   ;(add-hook 'linum-mode-hook 'hlinum-activate))
 
@@ -373,7 +387,7 @@
   :init (add-hook 'text-mode-hook #'guess-language-mode)
   :config
   (setq guess-language-langcodes '((en . ("en_GB" "English"))
-                                   (it . ("es_AR" "Español AR")))
+                                   (es . ("es_AR" "Español AR")))
         guess-language-languages '(en it)
         guess-language-min-paragraph-length 45)
   :diminish guess-language-mode)
@@ -405,10 +419,13 @@
 
 (use-package yasnippet
   :hook
+  (go-mode . yas-minor-mode)
   (php-mode . yas-minor-mode)
   (python-mode . yas-minor-mode)
   :diminish)
 
 (use-package yasnippet-snippets
-  :after yasnippet)
+  :after yasnippet
+  :diminish
+  )
 ;;;
