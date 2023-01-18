@@ -241,7 +241,9 @@
   (add-hook 'linum-mode-hook 'my-linum-mode-hook)
   (add-hook 'markdown-mode-hook 'linum-mode)
   (add-hook 'yaml-mode-hook 'linum-mode)
-  (global-git-gutter-mode t))
+  (global-git-gutter-mode t)
+  :custom-face
+  (linum ((t (:foreground "dark gray")))))
   ;(add-hook 'linum-mode-hook 'hlinum-activate))
 
 (use-package lsp-mode
