@@ -184,7 +184,12 @@
   :after (linum)
   :diminish
   :custom
-  (git-gutter:hide-gutter t))
+  (git-gutter:hide-gutter t)
+  :custom-face
+  (git-gutter-fr:deleted ((t (:inherit fringe :foreground "orange red"))))
+  (git-gutter-fr:modified ((t (:inherit fringe :foreground "cyan"))))
+  (git-gutter-fr:added ((t (:inherit fringe :foreground "chartreuse")))))
+
 
 (use-package go-mode
   :defer t
