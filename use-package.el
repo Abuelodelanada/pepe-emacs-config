@@ -401,7 +401,6 @@
 
 (use-package vlf)
 
-
 (use-package web-mode
   :mode "\\.html?\\'"
   :mode "\\.phtml\\'"
