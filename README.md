@@ -140,7 +140,6 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 
 
 
-
 ## Shortcuts
 
 * `%`:  go to match paren
