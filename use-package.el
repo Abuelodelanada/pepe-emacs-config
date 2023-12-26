@@ -215,13 +215,6 @@
   (add-hook 'prog-mode-hook 'highlight-parentheses-mode)
   :diminish)
 
-(use-package hlinum
-  :defer t
-  :init
-  (add-hook 'linum-mode-hook 'hlinum-activate)
-  :custom-face
-  (linum-highlight-face ((t (:inherit default :foreground "#FF6E27" :slant normal :weight bold)))))
-
 (use-package iedit
   :defer t
   :bind (("C-;" . iedit-mode))
@@ -237,19 +230,6 @@
 
 (use-package json-mode
   :mode "\\.json\\'")
-
-(use-package linum
-  :defer t
-  ;:after centaur-tabs
-  :init
-  (add-hook 'prog-mode-hook 'linum-mode)
-  (add-hook 'linum-mode-hook 'my-linum-mode-hook)
-  (add-hook 'markdown-mode-hook 'linum-mode)
-  (add-hook 'yaml-mode-hook 'linum-mode)
-  (global-git-gutter-mode t)
-  :custom-face
-  (linum ((t (:foreground "dark gray")))))
-  ;(add-hook 'linum-mode-hook 'hlinum-activate))
 
 (use-package lsp-mode
   :commands (lsp)
