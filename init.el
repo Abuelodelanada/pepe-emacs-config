@@ -28,6 +28,7 @@
 ;(add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; Maximize window at startup
 (column-number-mode t) ;; Show column number
 (global-whitespace-mode t)
+(global-display-line-numbers-mode t)
 (ido-mode t)
 (menu-bar-mode -1) ;; Hide menubar
 (put 'upcase-region 'disabled nil)

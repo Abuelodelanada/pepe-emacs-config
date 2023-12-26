@@ -125,7 +125,7 @@ ARG."
 (defun my-inhibit-global-linum-mode ()
   "Counter-act `global-linum-mode'."
   (add-hook 'after-change-major-mode-hook
-            (lambda () (linum-mode 0))
+            (lambda () (display-line-numbers-mode 0))
             :append :local))
 
 ;; Preset `linum-format' for minimum width.
