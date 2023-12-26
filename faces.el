@@ -20,5 +20,8 @@
 (set-face-attribute 'whitespace-tab t :foreground "#FD971F" :weight 'bold)
 (set-face-attribute 'whitespace-trailing t :foreground "orange" :inverse-video t)
 
+(set-face-attribute 'line-number t :inherit 'default :foreground "dark gray" :slant 'italic :weight 'extra-bold)
+(set-face-attribute 'line-number-current-line t :weight 'bold :slant 'italic :foreground "orange")
+
 (provide 'faces)
 ;;; faces.el ends here
