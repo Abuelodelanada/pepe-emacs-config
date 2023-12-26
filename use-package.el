@@ -384,10 +384,6 @@
 (use-package smarty-mode
   :mode "\\.tpl$")
 
-(use-package sqlformat
-  :commands sqlformat
-  :bind (("C-c <tab>" . sqlformat)))
-
 (use-package guess-language         ; Automatically detect language for Flyspell
   :ensure t
   :defer t
