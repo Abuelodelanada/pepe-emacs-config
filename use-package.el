@@ -180,16 +180,14 @@
 (use-package geben
   :commands geben)
 
-(use-package git-gutter-fringe
-  :after (linum)
-  :diminish
-  :custom
-  (git-gutter:hide-gutter t)
-  :custom-face
-  (git-gutter-fr:deleted ((t (:inherit fringe :foreground "orange red"))))
-  (git-gutter-fr:modified ((t (:inherit fringe :foreground "cyan"))))
-  (git-gutter-fr:added ((t (:inherit fringe :foreground "chartreuse")))))
+(use-package git-gutter
+  :hook (prog-mode . git-gutter-mode))
 
+(use-package git-gutter-fringe
+  :config
+  (define-fringe-bitmap 'git-gutter-fr:added [224] nil nil '(center repeated))
+  (define-fringe-bitmap 'git-gutter-fr:modified [224] nil nil '(center repeated))
+  (define-fringe-bitmap 'git-gutter-fr:deleted [128 192 224 240] nil nil 'bottom))
 
 (use-package go-mode
   :defer t
