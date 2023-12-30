@@ -45,6 +45,10 @@
 (setq-default whitespace-global-modes '(adoc-mode dockerfile-mode js2-mode json-mode markdown-mode php-mode python-mode smarty-mode web-mode yaml-mode))
 ;(setq projectile-project-search-path '("~/projects/" "~/work/")) ;; Set your project's direcotries copying this line in customvariables.el
 
+(setq-default warning-minimum-level :error)
+
+(setq vc-handled-backends nil)
+
 ;; Taken from doom-emacs
 ;; Adopt a sneaky garbage collection strategy of waiting until idle time to
 ;; collect; staving off the collector while the user is working.

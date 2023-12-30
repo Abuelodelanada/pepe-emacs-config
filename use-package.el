@@ -226,7 +226,7 @@
         lsp-keep-workspace-alive nil
         lsp-file-watch-threshold nil
         read-process-output-max (* 1024 1024)) ;; 1mb
-  )
+  :diminish "LSP")
 
 (use-package lsp-headerline
   :ensure nil
