@@ -10,9 +10,6 @@
   :after markup-faces
   :mode "\\.adoc")
 
-(use-package ag
-  :after dumb-jump)
-
 (use-package all-the-icons
   :after centaur-tabs)
 
@@ -109,20 +106,6 @@
   (doom-themes-neotree-config) ;; Enable custom neotree theme (all-the-icons must be installed!)
   ;(doom-themes-org-config) ;; Corrects (and improves) org-mode's native fontification.
 )
-
-(use-package dumb-jump
-  :after powerline
-  :bind (("C-M-g" . dumb-jump-go)
-         ("C-M-p" . dumb-jump-back))
-  :init
-  (add-hook 'js2-mode-hook 'dumb-jump-mode)
-  (add-hook 'php-mode-hook 'dumb-jump-mode)
-  (add-hook 'python-mode-hook 'dumb-jump-mode)
-  :custom
-  (dumb-jump-default-project "~")
-  (dumb-jump-force-searcher nil)
-  (dumb-jump-prefer-searcher 'ag)
-  (dumb-jump-quiet nil))
 
 (use-package ecb
   :commands ecb-minor-mode
