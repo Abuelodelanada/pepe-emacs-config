@@ -39,7 +39,6 @@ This Emacs config have some useful modules:
 
 * adoc-mode
 * company
-* dumb-jump
 * emacs code browser (ecb)
 * flycheck
 * geben
@@ -164,8 +163,8 @@ $ git clone https://github.com/Abuelodelanada/pepe-emacs-config ~/.emacs.d
 * `C-<next>`: centaur-tabs-forward's
 * `C-up` : beginning-of-buffer
 * `C-down`: end-of-buffer
-* `C-M-g`: dumb-jump-go (Go to definition)
-* `C-M-p`: dumb-jump-back (Return from definition)
+* `C-M-g`: lsp-goto-type-definition (Go to definition)
+* `C-M-p`: xref-go-back (Return from definition)
 * `S-M-down` : enlarge window
 * `S-M-left`: enlarge window horizontally
 * `S-M-right`: shrink window horizontally

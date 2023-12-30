@@ -215,7 +215,8 @@
 (use-package lsp-mode
   :commands (lsp)
   :bind (:map lsp-mode-map
-              ("M-g f" . lsp-format-buffer))
+              ("M-g f" . lsp-format-buffer)
+              ("C-M-g" . lsp-goto-type-definition))
   :config
   (setq lsp-auto-guess-root t
         lsp-keep-workspace-alive nil
