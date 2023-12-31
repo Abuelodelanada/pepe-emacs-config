@@ -154,6 +154,8 @@ ARG."
   (mapc (lambda (pair) (push pair prettify-symbols-alist))
         '(("lambda" . 955)
           ("->" . 8594)
+          ("<-" . 8592)
+          ("=>" . 8658)
           (">=" . "≥")
           ("<=" . "≤")
           ("!=" . "≠")))
