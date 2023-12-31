@@ -19,5 +19,8 @@
   (lambda ()
     (setq file-name-handler-alist pepe--file-name-handler-alist)))
 
+(add-hook 'text-mode-hook (lambda () (setq-local line-spacing 0.1)))
+(add-hook 'prog-mode-hook 'ha-prettify-prog)
+
 (provide 'hooks)
 ;;; hooks ends here

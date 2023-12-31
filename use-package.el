@@ -216,6 +216,41 @@
 (use-package json-mode
   :mode "\\.json\\'")
 
+(use-package ligature
+  :config
+  ;; Enable the "www" ligature in every possible major mode
+  (ligature-set-ligatures 't '("www"))
+
+  ;; Enable traditional ligature support in eww-mode, if the
+  ;; `variable-pitch' face supports it
+  (ligature-set-ligatures '(org-mode eww-mode) '("ff" "fi" "ffi"))
+
+  (ligature-set-ligatures '(html-mode nxml-mode web-mode)
+                          '("<!--" "-->" "</>" "</" "/>" "://"))
+
+  ;; Create a new ligature:
+  (ligature-set-ligatures 'markdown-mode '(("=" (rx (+ "=") (? (| ">" "<"))))
+                                           ("-" (rx (+ "-")))))
+
+  ;; Enable all Cascadia Code ligatures in programming modes
+  (ligature-set-ligatures
+   'prog-mode '("|||>" "<|||" "<==>" "<!--" "####" "~~>" "***" "||=" "||>"
+                ":::" "::=" "=:=" "===" "==>" "=!=" "=>>" "=<<" "=/=" "!=="
+                "!!." ">=>" ">>=" ">>>" ">>-" ">->" "->>" "-->" "---" "-<<"
+                "<~~" "<~>" "<*>" "<||" "<|>" "<$>" "<==" "<=>" "<=<" "<->"
+                "<--" "<-<" "<<=" "<<-" "<<<" "<+>" "</>" "###" "#_(" "..<"
+                "..." "+++" "/==" "///" "_|_" "www" "&&" "^=" "~~" "~@" "~="
+                "~>" "~-" "**" "*>" "*/" "||" "|}" "|]" "|=" "|>" "|-" "{|"
+                "[|" "]#" "::" ":=" ":>" ":<" "$>" "==" "=>" "!=" "!!" ">:"
+                ">=" ">>" ">-" "-~" "-|" "->" "--" "-<" "<~" "<*" "<|" "<:"
+                "<$" "<=" "<>" "<-" "<<" "<+" "</" "#{" "#[" "#:" "#=" "#!"
+                "##" "#(" "#?" "#_" "%%" ".=" ".-" ".." ".?" "+>" "++" "?:"
+                "?=" "?." "??" ";;" "/*" "/=" "/>" "//" "__" "~~" "(*" "*)"
+                "\\\\" "://"))
+  ;; Enables ligature checks globally in all buffers. You can also do it
+  ;; per mode with `ligature-mode'.
+  (global-ligature-mode t))
+
 (use-package lsp-mode
   :commands (lsp)
   :bind (:map lsp-mode-map
@@ -360,6 +395,11 @@
         guess-language-languages '(en it)
         guess-language-min-paragraph-length 45)
   :diminish guess-language-mode)
+
+(use-package unicode-fonts
+   :ensure t
+   :config
+    (unicode-fonts-setup))
 
 (use-package vlf)
 

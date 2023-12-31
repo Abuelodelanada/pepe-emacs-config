@@ -46,6 +46,9 @@
 (load "~/.emacs.d/faces")
 ;(load "~/.emacs.d/customfaces") ;; Uncomment if you want to add custom faces here
 
+(global-prettify-symbols-mode +1)
+(prettify-symbols-mode +1)
+
 (set-language-environment "UTF-8")
 
 (provide 'init)

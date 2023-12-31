@@ -149,5 +149,15 @@ ARG."
     (flycheck-set-checker-executable (quote python-pylint)
                                      (get-current-buffer-pylint))))
 
+(defun ha-prettify-prog ()
+  "Extends the `prettify-symbols-alist' for programming."
+  (mapc (lambda (pair) (push pair prettify-symbols-alist))
+        '(("lambda" . 955)
+          ("->" . 8594)
+          (">=" . "≥")
+          ("<=" . "≤")
+          ("!=" . "≠")))
+  (prettify-symbols-mode))
+
 (provide 'functions)
 ;;; functions.el ends here
