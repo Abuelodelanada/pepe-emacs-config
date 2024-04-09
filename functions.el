@@ -161,5 +161,12 @@ ARG."
           ("!=" . "≠")))
   (prettify-symbols-mode))
 
+
+(defun my-minibuffer-setup-hook ()
+  (setq gc-cons-threshold most-positive-fixnum))
+
+(defun my-minibuffer-exit-hook ()
+  (setq gc-cons-threshold 800000))
+
 (provide 'functions)
 ;;; functions.el ends here
