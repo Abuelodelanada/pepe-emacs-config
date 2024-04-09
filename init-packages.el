@@ -4,6 +4,9 @@
 ;;; Code:
 
 (require 'package)
+
+; https://github.com/kiwanami/emacs-epc/issues/35#issuecomment-660639327
+(setq byte-compile-warnings '(cl-functions))
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
 (when (< emacs-major-version 24)
