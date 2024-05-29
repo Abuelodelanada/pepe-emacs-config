@@ -11,5 +11,6 @@
 (defalias 'fd 'find-dired)
 (defalias 'tt 'tramp-term)
 
+
 (provide 'alias)
 ;;; alias.el ends here
