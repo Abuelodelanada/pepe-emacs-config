@@ -209,6 +209,9 @@
         lsp-keep-workspace-alive nil
         lsp-file-watch-threshold nil
         read-process-output-max (* 1024 1024)) ;; 1mb
+  :hook (
+         ;; if you want which-key integration
+         (lsp-mode . lsp-enable-which-key-integration))
   :diminish "LSP")
 
 (use-package lsp-headerline
@@ -236,6 +239,7 @@
         lsp-ui-doc-position 'at-point))
 
 (use-package lsp-pyright
+  :ensure t
   :hook (python-mode . (lambda () (require 'lsp-pyright) (lsp)))
   :config
   (setq lsp-pyright-disable-organize-imports t
