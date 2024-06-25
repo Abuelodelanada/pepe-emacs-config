@@ -9,6 +9,8 @@
 (defvar path-to-ctags)
 (defvar pepe-debug-p)
 (defvar pepe--file-name-handler-alist file-name-handler-alist)
+;; Define the path to the marker file
+(defvar my/font-install-marker-file "~/.emacs.d/.fonts-installed")
 
 (setq-default auto-save-default nil) ;; Stop creating auto #autosave# files
 (setq-default auto-window-vscroll nil)

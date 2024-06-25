@@ -23,6 +23,7 @@
 
 (add-hook 'minibuffer-setup-hook #'my-minibuffer-setup-hook)
 (add-hook 'minibuffer-exit-hook #'my-minibuffer-exit-hook)
+(add-hook 'emacs-startup-hook 'my/install-all-the-icons-fonts)
 
 (provide 'hooks)
 ;;; hooks ends here

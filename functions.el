@@ -155,5 +155,19 @@ ARG."
 (defun my-minibuffer-exit-hook ()
   (setq gc-cons-threshold 800000))
 
+
+;; Function to install fonts if the marker file doesn't exist
+(defun my/install-all-the-icons-fonts ()
+  (unless (file-exists-p my/font-install-marker-file)
+    (let ((old-fn (symbol-function 'y-or-n-p)))
+      (unwind-protect
+          (progn
+            (fset 'y-or-n-p (lambda (prompt) t))
+            (all-the-icons-install-fonts))
+        (fset 'y-or-n-p old-fn)))
+    ;; Create the marker file
+    (with-temp-buffer
+      (write-file my/font-install-marker-file))))
+
 (provide 'functions)
 ;;; functions.el ends here
