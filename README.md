@@ -81,7 +81,7 @@ $ sudo pear install PHP_CodeSniffer
 
 $ pip install sqlparse
 
-$ pip install 'python-lsp-server[all]'
+$ sudo snap install pyright --classic
 
 $ go install golang.org/x/tools/gopls@latest  # Make sure gopls is in your PATH
 ```
