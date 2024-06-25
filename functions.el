@@ -149,19 +149,6 @@ ARG."
     (flycheck-set-checker-executable (quote python-pylint)
                                      (get-current-buffer-pylint))))
 
-(defun ha-prettify-prog ()
-  "Extends the `prettify-symbols-alist' for programming."
-  (mapc (lambda (pair) (push pair prettify-symbols-alist))
-        '(("lambda" . 955)
-          ("->" . 8594)
-          ("<-" . 8592)
-          ("=>" . 8658)
-          (">=" . "≥")
-          ("<=" . "≤")
-          ("!=" . "≠")))
-  (prettify-symbols-mode))
-
-
 (defun my-minibuffer-setup-hook ()
   (setq gc-cons-threshold most-positive-fixnum))
 

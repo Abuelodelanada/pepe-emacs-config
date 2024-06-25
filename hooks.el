@@ -20,7 +20,6 @@
     (setq file-name-handler-alist pepe--file-name-handler-alist)))
 
 (add-hook 'text-mode-hook (lambda () (setq-local line-spacing 0.1)))
-(add-hook 'prog-mode-hook 'ha-prettify-prog)
 
 (add-hook 'minibuffer-setup-hook #'my-minibuffer-setup-hook)
 (add-hook 'minibuffer-exit-hook #'my-minibuffer-exit-hook)
