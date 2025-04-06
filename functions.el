@@ -169,5 +169,10 @@ ARG."
     (with-temp-buffer
       (write-file my/font-install-marker-file))))
 
+(defun efs/org-mode-setup ()
+  (org-indent-mode)
+  (variable-pitch-mode 1)
+  (visual-line-mode 1))
+
 (provide 'functions)
 ;;; functions.el ends here

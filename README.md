@@ -84,6 +84,8 @@ $ pip install sqlparse
 $ sudo snap install pyright --classic
 
 $ go install golang.org/x/tools/gopls@latest  # Make sure gopls is in your PATH
+
+$ sudo npm install -g @mermaid-js/mermaid-cli
 ```
 
 2. Clone the repository:

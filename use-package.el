@@ -172,6 +172,17 @@
   :config
   (setq go-guru-command "~/go/bin/guru"))
 
+(use-package guess-language         ; Automatically detect language for Flyspell
+  :ensure t
+  :defer t
+  :init (add-hook 'text-mode-hook #'guess-language-mode)
+  :config
+  (setq guess-language-langcodes '((en . ("en_GB" "English"))
+                                   (es . ("es_AR" "Español AR")))
+        guess-language-languages '(en it)
+        guess-language-min-paragraph-length 45)
+  :diminish guess-language-mode)
+
 (use-package highlight-parentheses
   :defer t
   :init
@@ -198,6 +209,11 @@
 
 (use-package json-mode
   :mode "\\.json\\'")
+
+(use-package keychain-environment
+  :defer t
+  :init
+  (keychain-refresh-environment))
 
 (use-package lsp-mode
   :commands (lsp)
@@ -291,6 +307,41 @@
   (neo-dir-link-face ((t (:foreground "#FF6E27"))))
   (neo-root-dir-face ((t (:background "#000000" :foreground "gold")))))
 
+(use-package ob-mermaid
+  :init
+  (setq ob-mermaid-cli-path "/usr/local/bin/mmdc"))
+
+(use-package org
+  ;:hook (org-mode . efs/org-mode-setup)
+  :config
+  (setq org-ellipsis " ▾")
+  (setq org-babel-python-command "python3")
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((mermaid . t)
+     (python . t))))
+
+(use-package org-bullets
+  :after org
+  :hook (org-mode . org-bullets-mode)
+  :custom
+  (org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●")))
+
+(use-package org-roam
+  :ensure t
+  :init
+  (setq org-roam-v2-ack t)
+  :custom
+  (org-roam-directory "~/org-mode")
+  (org-roam-completion-everywhere t)
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+         ("C-c n f" . org-roam-node-find)
+         ("C-c n i" . org-roam-node-insert)
+         :map org-mode-map
+         ("C-M-i"    . completion-at-point))
+  :config
+  (org-roam-setup))
+
 (use-package php-mode
   :mode "\\.php"
   :mode "\\.module$"
@@ -336,17 +387,6 @@
 
 (use-package smarty-mode
   :mode "\\.tpl$")
-
-(use-package guess-language         ; Automatically detect language for Flyspell
-  :ensure t
-  :defer t
-  :init (add-hook 'text-mode-hook #'guess-language-mode)
-  :config
-  (setq guess-language-langcodes '((en . ("en_GB" "English"))
-                                   (es . ("es_AR" "Español AR")))
-        guess-language-languages '(en it)
-        guess-language-min-paragraph-length 45)
-  :diminish guess-language-mode)
 
 (use-package unicode-fonts
    :ensure t
